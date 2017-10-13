@@ -75,7 +75,7 @@
             // 
             this.checkbox_soundeffects.AutoSize = true;
             this.checkbox_soundeffects.Location = new System.Drawing.Point(391, 95);
-            this.checkbox_soundeffects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkbox_soundeffects.Margin = new System.Windows.Forms.Padding(2);
             this.checkbox_soundeffects.Name = "checkbox_soundeffects";
             this.checkbox_soundeffects.Size = new System.Drawing.Size(15, 14);
             this.checkbox_soundeffects.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.checkbox_backgroundmusic.AutoSize = true;
             this.checkbox_backgroundmusic.Location = new System.Drawing.Point(391, 145);
-            this.checkbox_backgroundmusic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkbox_backgroundmusic.Margin = new System.Windows.Forms.Padding(2);
             this.checkbox_backgroundmusic.Name = "checkbox_backgroundmusic";
             this.checkbox_backgroundmusic.Size = new System.Drawing.Size(15, 14);
             this.checkbox_backgroundmusic.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             this.checkbox_mute.AutoSize = true;
             this.checkbox_mute.Location = new System.Drawing.Point(391, 197);
-            this.checkbox_mute.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkbox_mute.Margin = new System.Windows.Forms.Padding(2);
             this.checkbox_mute.Name = "checkbox_mute";
             this.checkbox_mute.Size = new System.Drawing.Size(15, 14);
             this.checkbox_mute.TabIndex = 5;
@@ -116,12 +116,13 @@
             // 
             this.button_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_back.Location = new System.Drawing.Point(382, 297);
-            this.button_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_back.Margin = new System.Windows.Forms.Padding(2);
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(64, 35);
             this.button_back.TabIndex = 7;
             this.button_back.Text = "Back";
             this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // Options
             // 
@@ -137,7 +138,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_backgroundmusic);
             this.Controls.Add(this.Label_soundeffects);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Options";
             this.Text = "Memory Game";
             this.ResumeLayout(false);

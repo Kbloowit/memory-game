@@ -17,6 +17,9 @@ namespace MemoryGame
             InitializeComponent();
         }
 
-       
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

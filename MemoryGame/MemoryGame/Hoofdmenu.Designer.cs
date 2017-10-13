@@ -77,6 +77,7 @@
             this.button_highscore.TabIndex = 3;
             this.button_highscore.Text = "Highscores";
             this.button_highscore.UseVisualStyleBackColor = true;
+            this.button_highscore.Click += new System.EventHandler(this.button_highscore_Click);
             // 
             // Hoofdmenu
             // 

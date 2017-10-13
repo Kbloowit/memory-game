@@ -31,9 +31,9 @@ namespace MemoryGame
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
             Options opties = new Options();
-            opties.Show();
+            opties.ShowDialog();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
-            this.Close();
+            
                
         }
 
@@ -43,6 +43,13 @@ namespace MemoryGame
             game.ShowDialog();
             this.Close();
             
+        }
+
+        private void button_highscore_Click(object sender, EventArgs e)
+        {
+            Highscores highscores = new Highscores();
+            highscores.ShowDialog();
+                
         }
     }
 }
