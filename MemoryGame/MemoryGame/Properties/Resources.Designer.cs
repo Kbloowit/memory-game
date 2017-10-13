@@ -63,9 +63,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap bleck_widor {
+        public static System.Drawing.Bitmap america {
             get {
-                object obj = ResourceManager.GetObject("bleck_widor", resourceCulture);
+                object obj = ResourceManager.GetObject("america", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap captainamerica_hero {
+        public static System.Drawing.Bitmap fury {
             get {
-                object obj = ResourceManager.GetObject("captainamerica_hero", resourceCulture);
+                object obj = ResourceManager.GetObject("fury", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,19 +103,9 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hluk {
+        public static System.Drawing.Bitmap hulk {
             get {
-                object obj = ResourceManager.GetObject("hluk", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap kony_stark {
-            get {
-                object obj = ResourceManager.GetObject("kony_stark", resourceCulture);
+                object obj = ResourceManager.GetObject("hulk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,16 +116,6 @@ namespace MemoryGame.Properties {
         public static System.Drawing.Bitmap meme {
             get {
                 object obj = ResourceManager.GetObject("meme", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap nook_furry {
-            get {
-                object obj = ResourceManager.GetObject("nook_furry", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -152,9 +132,29 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap thurr {
+        public static System.Drawing.Bitmap stark {
             get {
-                object obj = ResourceManager.GetObject("thurr", resourceCulture);
+                object obj = ResourceManager.GetObject("stark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap thor {
+            get {
+                object obj = ResourceManager.GetObject("thor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap widow {
+            get {
+                object obj = ResourceManager.GetObject("widow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
