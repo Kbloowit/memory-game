@@ -12,7 +12,7 @@ namespace MemoryGame
 {
     public partial class Hoofdmenu : Form
     {
-        /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet*/
+        /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet(hoe is wat onder tutorials)*/
         
         
         
@@ -31,9 +31,9 @@ namespace MemoryGame
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
             Options opties = new Options();
-            opties.Show();
+            opties.ShowDialog();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
-            this.Close();
+            
                
         }
 
@@ -43,6 +43,13 @@ namespace MemoryGame
             game.ShowDialog();
             this.Close();
             
+        }
+
+        private void button_highscore_Click(object sender, EventArgs e)
+        {
+            Highscores highscores = new Highscores();
+            highscores.ShowDialog();
+                
         }
     }
 }

@@ -16,5 +16,10 @@ namespace MemoryGame
         {
             InitializeComponent();
         }
+
+        private void button_menu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

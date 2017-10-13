@@ -93,7 +93,7 @@
       <DependentUpon>Player_import.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -114,6 +114,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thurr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nook furry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bleck widor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\captainamerica_hero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hawkeyes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hluk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kony stark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gay.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,15 @@ namespace MemoryGame
         {
             InitializeComponent();
         }
+        List<>
 
-       
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.meme;
+        }
+
+
     }
 }
