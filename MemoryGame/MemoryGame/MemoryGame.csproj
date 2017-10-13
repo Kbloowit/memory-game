@@ -142,5 +142,8 @@
   <ItemGroup>
     <None Include="Resources\gay.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pentakill - Lightbringer.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
