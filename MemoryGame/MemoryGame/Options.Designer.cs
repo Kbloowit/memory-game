@@ -36,6 +36,8 @@
             this.checkbox_mute = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button_back = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_soundeffects
@@ -124,12 +126,20 @@
             this.button_back.UseVisualStyleBackColor = true;
             this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(198, 95);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(177, 45);
+            this.trackBar1.TabIndex = 8;
+            // 
             // Options
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 343);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkbox_mute);
@@ -141,6 +151,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Options";
             this.Text = "Memory Game";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +167,6 @@
         private System.Windows.Forms.CheckBox checkbox_mute;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }

@@ -145,5 +145,8 @@
   <ItemGroup>
     <None Include="Resources\Pentakill - Lightbringer.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banjo_Tooie_Incorrect_Sound_Effect_-_Incorrect_Sou.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
