@@ -16,7 +16,8 @@ namespace MemoryGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            /*wat hier onder staat na new is het form wat hij als eerste opent*/
+            Application.Run(new Hoofdmenu());
         }
     }
 }
