@@ -173,6 +173,7 @@
             this.pictureBox16.Size = new System.Drawing.Size(100, 104);
             this.pictureBox16.TabIndex = 16;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox15
             // 
@@ -184,6 +185,7 @@
             this.pictureBox15.Size = new System.Drawing.Size(100, 104);
             this.pictureBox15.TabIndex = 15;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox14
             // 
@@ -195,6 +197,7 @@
             this.pictureBox14.Size = new System.Drawing.Size(100, 104);
             this.pictureBox14.TabIndex = 14;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox13
             // 
@@ -206,6 +209,7 @@
             this.pictureBox13.Size = new System.Drawing.Size(100, 104);
             this.pictureBox13.TabIndex = 13;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox12
             // 
@@ -217,6 +221,7 @@
             this.pictureBox12.Size = new System.Drawing.Size(100, 104);
             this.pictureBox12.TabIndex = 12;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox11
             // 
@@ -228,6 +233,7 @@
             this.pictureBox11.Size = new System.Drawing.Size(100, 104);
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox10
             // 
@@ -239,6 +245,7 @@
             this.pictureBox10.Size = new System.Drawing.Size(100, 104);
             this.pictureBox10.TabIndex = 10;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox9
             // 
@@ -250,6 +257,7 @@
             this.pictureBox9.Size = new System.Drawing.Size(100, 104);
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox8
             // 
@@ -272,6 +280,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(100, 104);
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox6
             // 
@@ -283,6 +292,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(100, 104);
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox5
             // 
@@ -294,6 +304,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(100, 104);
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox4
             // 
@@ -305,34 +316,42 @@
             this.pictureBox4.Size = new System.Drawing.Size(100, 104);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox3.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::MemoryGame.Properties.Resources.gay;
             this.pictureBox3.Location = new System.Drawing.Point(252, 64);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 104);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox2.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::MemoryGame.Properties.Resources.gay;
             this.pictureBox2.Location = new System.Drawing.Point(129, 64);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 104);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::MemoryGame.Properties.Resources.gay;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(10, 64);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
