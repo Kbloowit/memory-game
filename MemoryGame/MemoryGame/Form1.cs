@@ -12,15 +12,17 @@ namespace MemoryGame
 {
     public partial class Form1 : Form
     {
-        /* maakt een lijst aan met de foto's van avengers die in de resources staan */
-        
-          
-        
+        /*aanroep naam voor hoofdmenu form in de code*/
+        Hoofdmenu hoofdm;
 
-        public Form1()
+
+       
+        /*geeft naam aan form waar deze vanaf geopend is*/
+        public Form1(Hoofdmenu callingForm)
         {
             InitializeComponent();
             /*maakt een array aan met alle imagefiles ze staan er elk 2 keer in*/
+            hoofdm = callingForm;
             Bitmap[] avengers = new Bitmap[16];
             avengers[0] = Properties.Resources.america;
             avengers[1] = Properties.Resources.america;
@@ -67,7 +69,9 @@ namespace MemoryGame
             /*Picturebox array, zodat alle pictureboxes een afbeelding toekennen makkelijker is*/
             PictureBox[] boxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16 };
             Random rand = new Random();
+
             /*dit geeft elke picturebox een afbeelding*/
+            
             for (int i = 0; i < avengers.Length; i++ )
             {
                 /*label voor de goto, zie else statement voor uitleg*/
@@ -105,6 +109,22 @@ namespace MemoryGame
 
         }
 
-        
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+            hoofdm.button1_Click(button_reset, e);
+            
+            
+        }
+
+        private void button_opties_Click(object sender, EventArgs e)
+        {
+            Options opties = new Options(hoofdm);
+            opties.ShowDialog();
+
+        }
+
+       
     }
 }
