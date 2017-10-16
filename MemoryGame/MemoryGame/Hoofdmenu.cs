@@ -41,7 +41,7 @@ namespace MemoryGame
         public void button1_Click(object sender, EventArgs e)
         {
             /* geeft aan waar weg hij gecalled wordt*/
-            Form1 game = new Form1(this);
+            Player_import game = new Player_import();
             /*opent het game form*/
             game.Show();
             

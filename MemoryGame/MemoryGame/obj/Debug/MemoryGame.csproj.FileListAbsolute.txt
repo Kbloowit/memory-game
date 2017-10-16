@@ -46,3 +46,17 @@ C:\Users\Aletta\Desktop\Project\Groep22\MemoryGame\MemoryGame\obj\Debug\MemoryGa
 C:\Users\Aletta\Desktop\Project\Groep22\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Player_import.resources
 C:\Users\Aletta\Desktop\Project\Groep22\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
 C:\Users\Aletta\Desktop\Project\Groep22\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form1.resources
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Options.resources
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Player_import.resources
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+\\Mac\Home\Documents\GitHub Projects\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
