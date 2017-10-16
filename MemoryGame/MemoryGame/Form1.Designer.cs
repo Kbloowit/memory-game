@@ -83,6 +83,7 @@
             this.button_opties.Text = "Opties";
             this.button_opties.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button_opties.UseVisualStyleBackColor = false;
+            this.button_opties.Click += new System.EventHandler(this.button_opties_Click);
             // 
             // Button_quitorsave
             // 
@@ -111,6 +112,7 @@
             this.button_reset.Text = "Reset";
             this.button_reset.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button_reset.UseVisualStyleBackColor = false;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // label1
             // 
@@ -167,6 +169,7 @@
             // 
             this.pictureBox16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox16.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox16.Location = new System.Drawing.Point(376, 422);
             this.pictureBox16.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox16.Name = "pictureBox16";
@@ -179,6 +182,7 @@
             // 
             this.pictureBox15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox15.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox15.Location = new System.Drawing.Point(252, 422);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
@@ -191,6 +195,7 @@
             // 
             this.pictureBox14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox14.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox14.Location = new System.Drawing.Point(128, 421);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
@@ -203,6 +208,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox13.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Location = new System.Drawing.Point(10, 422);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
@@ -215,6 +221,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox12.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Location = new System.Drawing.Point(376, 304);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
@@ -227,6 +234,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox11.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Location = new System.Drawing.Point(252, 304);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
@@ -239,6 +247,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox10.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Location = new System.Drawing.Point(128, 304);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
@@ -251,6 +260,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox9.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Location = new System.Drawing.Point(10, 304);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
@@ -263,6 +273,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox8.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Location = new System.Drawing.Point(376, 186);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
@@ -274,6 +285,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox7.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Location = new System.Drawing.Point(252, 186);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
@@ -286,6 +298,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox6.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Location = new System.Drawing.Point(128, 186);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
@@ -298,6 +311,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox5.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Location = new System.Drawing.Point(10, 186);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
@@ -310,6 +324,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox4.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(376, 64);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
@@ -351,6 +366,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.BackgroundImage = global::MemoryGame.Properties.Resources.gay;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::MemoryGame.Properties.Resources.gay;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(10, 64);
@@ -365,7 +381,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(681, 542);
             this.Controls.Add(this.count_player1);
             this.Controls.Add(this.count_player2);
