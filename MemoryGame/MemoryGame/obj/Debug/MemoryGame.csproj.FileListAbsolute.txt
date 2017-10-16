@@ -33,3 +33,6 @@ C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryG
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.CoreCompileInputs.cache
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\Aletta\Desktop\Project\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\Aletta\Desktop\Project\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\Aletta\Desktop\Project\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
