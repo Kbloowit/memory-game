@@ -37,11 +37,14 @@ namespace MemoryGame
                
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            Form1 game = new Form1();
-            game.ShowDialog();
-            this.Close();
+            /* geeft aan waar weg hij gecalled wordt*/
+            Form1 game = new Form1(this);
+            /*opent het game form*/
+            game.Show();
+            
+            
             
         }
 
