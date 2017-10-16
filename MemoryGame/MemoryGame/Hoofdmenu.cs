@@ -30,18 +30,22 @@ namespace MemoryGame
         private void button_options_Click(object sender, EventArgs e)
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
-            Options opties = new Options();
-            opties.ShowDialog();
+            Options opties = new Options(this);
+            opties.Show();
+            this.Hide();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
             
                
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            Form1 game = new Form1();
-            game.ShowDialog();
-            this.Close();
+            /* geeft aan waar weg hij gecalled wordt*/
+            Form1 game = new Form1(this);
+            /*opent het game form*/
+            game.Show();
+            
+            
             
         }
 
