@@ -12,13 +12,17 @@ namespace MemoryGame
 {
     public partial class Options : Form
     {
-        public Options()
+        Hoofdmenu hfd;
+        public Options(Hoofdmenu call)
         {
             InitializeComponent();
+            hfd = call;
         }
 
         private void button_back_Click(object sender, EventArgs e)
         {
+            
+            hfd.Show();
             this.Close();
         }
     }

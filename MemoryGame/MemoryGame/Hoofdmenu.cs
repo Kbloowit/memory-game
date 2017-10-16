@@ -30,8 +30,9 @@ namespace MemoryGame
         private void button_options_Click(object sender, EventArgs e)
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
-            Options opties = new Options();
-            opties.ShowDialog();
+            Options opties = new Options(this);
+            opties.Show();
+            this.Hide();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
             
                

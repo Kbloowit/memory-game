@@ -120,9 +120,11 @@ namespace MemoryGame
 
         private void button_opties_Click(object sender, EventArgs e)
         {
-            Options opties = new Options();
+            Options opties = new Options(hoofdm);
             opties.ShowDialog();
 
         }
+
+       
     }
 }
