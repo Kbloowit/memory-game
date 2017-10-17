@@ -46,10 +46,10 @@
             // 
             this.Label_soundeffects.AutoSize = true;
             this.Label_soundeffects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_soundeffects.Location = new System.Drawing.Point(46, 95);
-            this.Label_soundeffects.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_soundeffects.Location = new System.Drawing.Point(92, 183);
+            this.Label_soundeffects.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_soundeffects.Name = "Label_soundeffects";
-            this.Label_soundeffects.Size = new System.Drawing.Size(109, 20);
+            this.Label_soundeffects.Size = new System.Drawing.Size(212, 37);
             this.Label_soundeffects.TabIndex = 0;
             this.Label_soundeffects.Text = "Sound effects";
             // 
@@ -57,10 +57,10 @@
             // 
             this.label_backgroundmusic.AutoSize = true;
             this.label_backgroundmusic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_backgroundmusic.Location = new System.Drawing.Point(46, 140);
-            this.label_backgroundmusic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_backgroundmusic.Location = new System.Drawing.Point(92, 269);
+            this.label_backgroundmusic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_backgroundmusic.Name = "label_backgroundmusic";
-            this.label_backgroundmusic.Size = new System.Drawing.Size(140, 20);
+            this.label_backgroundmusic.Size = new System.Drawing.Size(282, 37);
             this.label_backgroundmusic.TabIndex = 1;
             this.label_backgroundmusic.Text = "Background music";
             // 
@@ -68,40 +68,42 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 191);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(92, 367);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(241, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mute all sounds";
             // 
             // checkbox_soundeffects
             // 
             this.checkbox_soundeffects.AutoSize = true;
-            this.checkbox_soundeffects.Location = new System.Drawing.Point(391, 95);
-            this.checkbox_soundeffects.Margin = new System.Windows.Forms.Padding(2);
+            this.checkbox_soundeffects.Location = new System.Drawing.Point(782, 183);
+            this.checkbox_soundeffects.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkbox_soundeffects.Name = "checkbox_soundeffects";
-            this.checkbox_soundeffects.Size = new System.Drawing.Size(15, 14);
+            this.checkbox_soundeffects.Size = new System.Drawing.Size(28, 27);
             this.checkbox_soundeffects.TabIndex = 3;
             this.checkbox_soundeffects.UseVisualStyleBackColor = true;
             // 
             // checkbox_backgroundmusic
             // 
             this.checkbox_backgroundmusic.AutoSize = true;
-            this.checkbox_backgroundmusic.Location = new System.Drawing.Point(391, 145);
-            this.checkbox_backgroundmusic.Margin = new System.Windows.Forms.Padding(2);
+            this.checkbox_backgroundmusic.Location = new System.Drawing.Point(782, 279);
+            this.checkbox_backgroundmusic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkbox_backgroundmusic.Name = "checkbox_backgroundmusic";
-            this.checkbox_backgroundmusic.Size = new System.Drawing.Size(15, 14);
+            this.checkbox_backgroundmusic.Size = new System.Drawing.Size(28, 27);
             this.checkbox_backgroundmusic.TabIndex = 4;
             this.checkbox_backgroundmusic.UseVisualStyleBackColor = true;
             // 
             // checkbox_mute
             // 
             this.checkbox_mute.AutoSize = true;
-            this.checkbox_mute.Location = new System.Drawing.Point(391, 197);
-            this.checkbox_mute.Margin = new System.Windows.Forms.Padding(2);
+            this.checkbox_mute.Checked = true;
+            this.checkbox_mute.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox_mute.Location = new System.Drawing.Point(782, 379);
+            this.checkbox_mute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkbox_mute.Name = "checkbox_mute";
-            this.checkbox_mute.Size = new System.Drawing.Size(15, 14);
+            this.checkbox_mute.Size = new System.Drawing.Size(28, 27);
             this.checkbox_mute.TabIndex = 5;
             this.checkbox_mute.UseVisualStyleBackColor = true;
             // 
@@ -109,20 +111,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 43);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(92, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.Size = new System.Drawing.Size(154, 42);
             this.label2.TabIndex = 6;
             this.label2.Text = "Options";
             // 
             // button_back
             // 
             this.button_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_back.Location = new System.Drawing.Point(382, 297);
-            this.button_back.Margin = new System.Windows.Forms.Padding(2);
+            this.button_back.Location = new System.Drawing.Point(764, 571);
+            this.button_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_back.Name = "button_back";
-            this.button_back.Size = new System.Drawing.Size(64, 35);
+            this.button_back.Size = new System.Drawing.Size(128, 67);
             this.button_back.TabIndex = 7;
             this.button_back.Text = "Back";
             this.button_back.UseVisualStyleBackColor = true;
@@ -130,24 +132,26 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(198, 86);
+            this.trackBar1.Location = new System.Drawing.Point(396, 165);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(177, 45);
+            this.trackBar1.Size = new System.Drawing.Size(354, 90);
             this.trackBar1.TabIndex = 8;
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(198, 147);
+            this.trackBar2.Location = new System.Drawing.Point(396, 283);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(177, 45);
+            this.trackBar2.Size = new System.Drawing.Size(354, 90);
             this.trackBar2.TabIndex = 9;
             // 
             // Options
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 343);
+            this.ClientSize = new System.Drawing.Size(960, 660);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button_back);
@@ -158,7 +162,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_backgroundmusic);
             this.Controls.Add(this.Label_soundeffects);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Options";
             this.Text = "Memory Game";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
@@ -175,10 +179,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkbox_soundeffects;
         private System.Windows.Forms.CheckBox checkbox_backgroundmusic;
-        private System.Windows.Forms.CheckBox checkbox_mute;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TrackBar trackBar2;
+        public System.Windows.Forms.CheckBox checkbox_mute;
     }
 }
