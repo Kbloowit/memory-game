@@ -13,16 +13,19 @@ namespace MemoryGame
     public partial class Form1 : Form
     {
         /*aanroep naam voor hoofdmenu form in de code*/
-        Hoofdmenu hoofdm;
+        Player_import hoofdm;
+        Hoofdmenu meme;
 
-
-       
         /*geeft naam aan form waar deze vanaf geopend is*/
-        public Form1(Hoofdmenu callingForm)
+        public Form1(string P1, string P2) 
         {
             InitializeComponent();
+            
+            namep1.Text = P1;
+            NameP2.Text = P2;
+
             /*maakt een array aan met alle imagefiles ze staan er elk 2 keer in*/
-            hoofdm = callingForm;
+            
             Bitmap[] avengers = new Bitmap[16];
             avengers[0] = Properties.Resources.america;
             avengers[1] = Properties.Resources.america;
@@ -113,18 +116,16 @@ namespace MemoryGame
         {
             
             this.Close();
-            hoofdm.button1_Click(button_reset, e);
+            hoofdm.button_start_Click(button_reset, e);
             
             
         }
 
         private void button_opties_Click(object sender, EventArgs e)
         {
-            Options opties = new Options(hoofdm);
+            Options opties = new Options(meme);
             opties.ShowDialog();
 
         }
-
-       
     }
 }

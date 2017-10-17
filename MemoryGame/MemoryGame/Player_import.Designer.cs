@@ -81,6 +81,7 @@
             this.button_start.TabIndex = 5;
             this.button_start.Text = "Start";
             this.button_start.UseVisualStyleBackColor = true;
+            this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
             // label1
             // 
@@ -119,4 +120,5 @@
         private System.Windows.Forms.Button button_start;
         private System.Windows.Forms.Label label1;
     }
+
 }
