@@ -23,9 +23,10 @@ namespace MemoryGame
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-             startmuziek.Play();
+             
             
         }
+        
 
         private void button_options_Click(object sender, EventArgs e)
         {
@@ -54,6 +55,11 @@ namespace MemoryGame
             Highscores highscores = new Highscores();
             highscores.ShowDialog();
                 
+        }
+
+        private void Hoofdmenu_Load(object sender, EventArgs e)
+        {
+            startmuziek.Play();
         }
     }
 }
