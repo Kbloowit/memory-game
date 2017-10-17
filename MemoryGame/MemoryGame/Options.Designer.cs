@@ -36,10 +36,6 @@
             this.checkbox_mute = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button_back = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_soundeffects
@@ -49,9 +45,9 @@
             this.Label_soundeffects.Location = new System.Drawing.Point(46, 95);
             this.Label_soundeffects.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_soundeffects.Name = "Label_soundeffects";
-            this.Label_soundeffects.Size = new System.Drawing.Size(109, 20);
+            this.Label_soundeffects.Size = new System.Drawing.Size(135, 20);
             this.Label_soundeffects.TabIndex = 0;
-            this.Label_soundeffects.Text = "Sound effects";
+            this.Label_soundeffects.Text = "Sound effects Off";
             // 
             // label_backgroundmusic
             // 
@@ -60,9 +56,9 @@
             this.label_backgroundmusic.Location = new System.Drawing.Point(46, 140);
             this.label_backgroundmusic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_backgroundmusic.Name = "label_backgroundmusic";
-            this.label_backgroundmusic.Size = new System.Drawing.Size(140, 20);
+            this.label_backgroundmusic.Size = new System.Drawing.Size(166, 20);
             this.label_backgroundmusic.TabIndex = 1;
-            this.label_backgroundmusic.Text = "Background music";
+            this.label_backgroundmusic.Text = "Background music Off";
             // 
             // label1
             // 
@@ -94,6 +90,7 @@
             this.checkbox_backgroundmusic.Size = new System.Drawing.Size(15, 14);
             this.checkbox_backgroundmusic.TabIndex = 4;
             this.checkbox_backgroundmusic.UseVisualStyleBackColor = true;
+            this.checkbox_backgroundmusic.CheckedChanged += new System.EventHandler(this.checkbox_backgroundmusic_CheckedChanged);
             // 
             // checkbox_mute
             // 
@@ -128,28 +125,12 @@
             this.button_back.UseVisualStyleBackColor = true;
             this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(198, 86);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(177, 45);
-            this.trackBar1.TabIndex = 8;
-            // 
-            // trackBar2
-            // 
-            this.trackBar2.Location = new System.Drawing.Point(198, 147);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(177, 45);
-            this.trackBar2.TabIndex = 9;
-            // 
             // Options
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 343);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkbox_mute);
@@ -161,8 +142,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Options";
             this.Text = "Memory Game";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +157,5 @@
         private System.Windows.Forms.CheckBox checkbox_mute;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_back;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.TrackBar trackBar2;
     }
 }

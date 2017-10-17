@@ -25,5 +25,31 @@ namespace MemoryGame
             hfd.Show();
             this.Close();
         }
+
+        private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void Options_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbox_mute_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbox_backgroundmusic_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
+            {
+                hfd.Hoofdmenu_Load(checkbox_backgroundmusic, e);
+            }
+        }
+
     }
 }

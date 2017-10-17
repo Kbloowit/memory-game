@@ -57,7 +57,11 @@ namespace MemoryGame
                 
         }
 
+<<<<<<< HEAD
         private void Hoofdmenu_Load(object sender, EventArgs e)
+=======
+        public void Hoofdmenu_Load(object sender, EventArgs e)
+>>>>>>> 23c0051c0a5fb272ac88ad4c4327100151ae44bc
         {
             startmuziek.Play();
         }
