@@ -94,6 +94,7 @@
             this.checkbox_backgroundmusic.Size = new System.Drawing.Size(15, 14);
             this.checkbox_backgroundmusic.TabIndex = 4;
             this.checkbox_backgroundmusic.UseVisualStyleBackColor = true;
+            this.checkbox_backgroundmusic.CheckedChanged += new System.EventHandler(this.checkbox_backgroundmusic_CheckedChanged);
             // 
             // checkbox_mute
             // 
@@ -127,20 +128,6 @@
             this.button_back.Text = "Back";
             this.button_back.UseVisualStyleBackColor = true;
             this.button_back.Click += new System.EventHandler(this.button_back_Click);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(198, 86);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(177, 45);
-            this.trackBar1.TabIndex = 8;
-            // 
-            // trackBar2
-            // 
-            this.trackBar2.Location = new System.Drawing.Point(198, 147);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(177, 45);
-            this.trackBar2.TabIndex = 9;
             // 
             // Options
             // 
