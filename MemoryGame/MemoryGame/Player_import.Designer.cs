@@ -71,6 +71,7 @@
             this.importP1.Name = "importP1";
             this.importP1.Size = new System.Drawing.Size(250, 44);
             this.importP1.TabIndex = 4;
+            this.importP1.TextChanged += new System.EventHandler(this.importP1_TextChanged);
             // 
             // button_start
             // 

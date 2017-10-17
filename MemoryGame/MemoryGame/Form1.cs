@@ -17,12 +17,12 @@ namespace MemoryGame
         Hoofdmenu meme;
 
         /*geeft naam aan form waar deze vanaf geopend is*/
-        public Form1(string P1, string P2) 
+        public Form1(string[] players)
         {
             InitializeComponent();
-            
-            namep1.Text = P1;
-            NameP2.Text = P2;
+
+            namep1.Text = players[0];
+            NameP2.Text = players[1];
 
             /*maakt een array aan met alle imagefiles ze staan er elk 2 keer in*/
             
@@ -95,13 +95,7 @@ namespace MemoryGame
                     goto Retry;
                 }
             }
-
-
         }
-        
-        
-
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -127,5 +121,7 @@ namespace MemoryGame
             opties.ShowDialog();
 
         }
+
+     
     }
 }
