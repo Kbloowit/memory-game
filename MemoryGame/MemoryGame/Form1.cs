@@ -13,7 +13,7 @@ namespace MemoryGame
     public partial class Form1 : Form
     {
         /*aanroep naam voor hoofdmenu form in de code*/
-        Player_import hoofdm;
+        Player_import hoofd;
         Hoofdmenu meme;
 
         /*geeft naam aan form waar deze vanaf geopend is*/
@@ -23,9 +23,10 @@ namespace MemoryGame
             
             namep1.Text = P1;
             NameP2.Text = P2;
+            
 
             /*maakt een array aan met alle imagefiles ze staan er elk 2 keer in*/
-            
+
             Bitmap[] avengers = new Bitmap[16];
             avengers[0] = Properties.Resources.america;
             avengers[1] = Properties.Resources.america;
@@ -114,9 +115,12 @@ namespace MemoryGame
 
         private void button_reset_Click(object sender, EventArgs e)
         {
+            Player_import killme = new Player_import();
+            killme.Show();
+           
+            this.Dispose();
+
             
-            this.Close();
-            hoofdm.button_start_Click(button_reset, e);
             
             
         }

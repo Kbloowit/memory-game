@@ -21,8 +21,11 @@ namespace MemoryGame
         {
             Form1 game = new Form1(importP1.Text, importP2.Text); // In deze regel worden de namen meegestuurd in het volgende window
             game.Show();
-            this.Hide();
-           
+            this.Dispose();
+            
+
         }
-    }
+
+
+    } 
 }
