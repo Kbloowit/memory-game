@@ -19,7 +19,7 @@ namespace MemoryGame
 
         public void button_start_Click(object sender, EventArgs e)
         {
-            Form1 game = new Form1(importP1.Text, importP2.Text); // In deze regel worden de namen meegestuurd in het volgende window
+            Form2 game = new Form2(importP1.Text, importP2.Text); // In deze regel worden de namen meegestuurd in het volgende window
             game.Show();
             this.Dispose();
             

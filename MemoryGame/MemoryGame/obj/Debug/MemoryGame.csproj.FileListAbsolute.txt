@@ -74,3 +74,4 @@ C:\Users\Co\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryG
 C:\Users\Co\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
 C:\Users\Co\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
 C:\Users\Co\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form2.resources
