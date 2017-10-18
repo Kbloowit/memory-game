@@ -42,9 +42,10 @@ namespace MemoryGame
         public void button1_Click(object sender, EventArgs e)
         {
             /* geeft aan waar weg hij gecalled wordt*/
-            Form1 game = new Form1(this);
+            Player_import game = new Player_import();
             /*opent het game form*/
             game.Show();
+            this.Hide();
             
             
             
@@ -57,9 +58,19 @@ namespace MemoryGame
                 
         }
 
-        private void Hoofdmenu_Load(object sender, EventArgs e)
+        public void Muziek_Stop(object sender, EventArgs e)
+        {
+            startmuziek.Stop();
+        }
+
+
+        public void Hoofdmenu_Load(object sender, EventArgs e)
         {
             startmuziek.Play();
         }
+
+
+
+
     }
 }
