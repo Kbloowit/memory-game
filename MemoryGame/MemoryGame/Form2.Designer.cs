@@ -209,6 +209,7 @@
             this.pictureBox14.Location = new System.Drawing.Point(560, 2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(124, 117);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 15;
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.clickImage);
@@ -218,6 +219,7 @@
             this.pictureBox15.Location = new System.Drawing.Point(381, 2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(124, 117);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 16;
             this.pictureBox15.TabStop = false;
             this.pictureBox15.Click += new System.EventHandler(this.clickImage);
@@ -273,6 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(887, 494);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
