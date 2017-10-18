@@ -95,6 +95,39 @@ namespace MemoryGame
                     goto Retry;
                 }
             }
+
+            // Hieronder staat de uitwerking om te kijken of de kaarten overeenkomen
+
+            foreach (var pair in )
+            {
+
+            }
+                int count_pairs;
+
+
+
+
+            // Hieronder staat de uitwerking van wie aan de beurt is.
+
+            do
+            {
+                string P1 = players[0];
+                string P2 = players[1];
+                int countP1, countP2;
+
+                
+
+
+
+            } while (count_pairs <= 8);
+            
+            
+
+            if (true)
+            {
+
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -121,7 +154,6 @@ namespace MemoryGame
             opties.ShowDialog();
 
         }
-
      
     }
 }

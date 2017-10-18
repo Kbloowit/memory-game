@@ -382,7 +382,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(1362, 1042);
+            this.ClientSize = new System.Drawing.Size(1446, 1042);
             this.Controls.Add(this.count_player1);
             this.Controls.Add(this.count_player2);
             this.Controls.Add(this.NameP2);
