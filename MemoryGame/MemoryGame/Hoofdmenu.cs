@@ -32,8 +32,9 @@ namespace MemoryGame
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
             Options opties = new Options(this);
-            opties.Show();
             this.Hide();
+            opties.ShowDialog();
+            this.Show();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
             
                
@@ -44,8 +45,9 @@ namespace MemoryGame
             /* geeft aan waar weg hij gecalled wordt*/
             Player_import import = new Player_import();
             /*opent het game form*/
-            import.Show();
             this.Hide();
+            import.ShowDialog();
+            
             
             
             
@@ -65,7 +67,13 @@ namespace MemoryGame
             Soundplayers.Startmuziek();
         }
 
-
+        public void endme()
+        {
+            if (Application.OpenForms.Count == 1)
+            {
+                this.Show();
+            }
+        }
 
 
     }

@@ -23,16 +23,10 @@ namespace MemoryGame
 
         private void button_back_Click(object sender, EventArgs e)
         {
-            if (hfd.Visible == false)
-            {
+                     
                 this.Dispose();
-                hfd.Show();
-            }
-            else
-            {
-                this.Dispose();
-            }
-            
+                 
+                       
         }
 
         private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)

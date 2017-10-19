@@ -8,7 +8,7 @@ namespace MemoryGame
 {
     class Forms
     {
-        public void Game()
+        public void hoofdmenualleen()
         {
             
 
