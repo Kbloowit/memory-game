@@ -13,12 +13,12 @@ namespace MemoryGame
     public partial class Hoofdmenu : Form
     {
         /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet(hoe is wat onder tutorials)*/
-        
-        
-        
+
+
+
 
         /* dit stuk hieronder zet de muziek voor het startmenu klaar, ik heb hier eerst als placeholder Pentakill - Lightbringer gebruikt*/
-        System.Media.SoundPlayer startmuziek = new System.Media.SoundPlayer(Properties.Resources.Pentakill);
+        
         public Hoofdmenu()
         {
             InitializeComponent();
@@ -42,9 +42,9 @@ namespace MemoryGame
         public void button1_Click(object sender, EventArgs e)
         {
             /* geeft aan waar weg hij gecalled wordt*/
-            Player_import game = new Player_import();
+            Player_import import = new Player_import();
             /*opent het game form*/
-            game.Show();
+            import.Show();
             this.Hide();
             
             
@@ -58,15 +58,11 @@ namespace MemoryGame
                 
         }
 
-        public void Muziek_Stop(object sender, EventArgs e)
-        {
-            startmuziek.Stop();
-        }
-
+        
 
         public void Hoofdmenu_Load(object sender, EventArgs e)
         {
-            startmuziek.Play();
+            Soundplayers.Startmuziek();
         }
 
 

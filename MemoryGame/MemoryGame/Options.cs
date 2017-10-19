@@ -13,7 +13,7 @@ namespace MemoryGame
     public partial class Options : Form
     {
         private readonly Hoofdmenu hfd;
-        Form1 uhh;
+        Form2 uhh;
         public Options(Hoofdmenu call)
         {
             InitializeComponent();
@@ -23,9 +23,16 @@ namespace MemoryGame
 
         private void button_back_Click(object sender, EventArgs e)
         {
-
-            hfd.Show();
-            this.Dispose();
+            if (hfd.Visible == false)
+            {
+                this.Dispose();
+                hfd.Show();
+            }
+            else
+            {
+                this.Dispose();
+            }
+            
         }
 
         private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)
@@ -49,13 +56,14 @@ namespace MemoryGame
         {
             if (checkbox_backgroundmusic.CheckState == CheckState.Unchecked)
             {
-                hfd.Hoofdmenu_Load(checkbox_backgroundmusic, e);
+                Soundplayers.Startmuziek();
             }
             else if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
             {
-                hfd.Muziek_Stop(checkbox_backgroundmusic, e);
+                Soundplayers.Stopmuziek();
             }
         }
 
+       
     }
 }
