@@ -45,6 +45,7 @@ namespace MemoryGame
             Player_import game = new Player_import();
             /*opent het game form*/
             game.Show();
+            this.Hide();
             
             
             
@@ -57,13 +58,19 @@ namespace MemoryGame
                 
         }
 
-<<<<<<< HEAD
-       
-=======
-        private void Hoofdmenu_Load(object sender, EventArgs e)
+        public void Muziek_Stop(object sender, EventArgs e)
+        {
+            startmuziek.Stop();
+        }
+
+
+        public void Hoofdmenu_Load(object sender, EventArgs e)
         {
             startmuziek.Play();
         }
->>>>>>> c2c4f725d7b354463c18eaf9e082689d3185544f
+
+
+
+
     }
 }
