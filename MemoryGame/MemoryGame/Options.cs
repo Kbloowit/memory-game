@@ -21,7 +21,7 @@ namespace MemoryGame
             
         }
 
-        private void button_back_Click(object sender, EventArgs e)
+        public void button_back_Click(object sender, EventArgs e)
         {
 
             hfd.Show();
@@ -32,8 +32,6 @@ namespace MemoryGame
         {
 
         }
-
-        
 
         private void Options_Load(object sender, EventArgs e)
         {

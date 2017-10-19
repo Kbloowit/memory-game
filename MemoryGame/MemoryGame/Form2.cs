@@ -21,12 +21,12 @@ namespace MemoryGame
         Timer timer = new Timer { Interval = 1000 };
         Hoofdmenu meme;
 
-        public Form2(String P1, String P2)
+        public Form2(string[] players)
         {
             InitializeComponent();
 
-            NameP1.Text = P1;
-            NameP2.Text = P2;
+            NameP1.Text = players[0];
+            NameP2.Text = players[1];
 
         }
 
