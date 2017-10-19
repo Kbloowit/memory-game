@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +161,102 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Banjo Tooie Correct Sound Effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
