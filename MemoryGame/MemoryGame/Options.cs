@@ -14,10 +14,10 @@ namespace MemoryGame
     {
         private readonly Hoofdmenu hfd;
         Form2 uhh;
-        public Options(Hoofdmenu call)
+        public Options()
         {
             InitializeComponent();
-            hfd = call;
+            
             
         }
 
@@ -50,11 +50,11 @@ namespace MemoryGame
         {
             if (checkbox_backgroundmusic.CheckState == CheckState.Unchecked)
             {
-                Soundplayers.Startmuziek();
+                Sounds.Startmuziek();
             }
             else if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
             {
-                Soundplayers.Stopmuziek();
+                Sounds.Stopmuziek();
             }
         }
 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
+
 
 namespace MemoryGame
 {
@@ -23,6 +25,7 @@ namespace MemoryGame
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
+            new Directory();
              
             
         }
@@ -31,7 +34,7 @@ namespace MemoryGame
         private void button_options_Click(object sender, EventArgs e)
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
-            Options opties = new Options(this);
+            Options opties = new Options();
             this.Hide();
             opties.ShowDialog();
             this.Show();
@@ -47,6 +50,7 @@ namespace MemoryGame
             /*opent het game form*/
             this.Hide();
             import.ShowDialog();
+            this.Show();
             
             
             
@@ -64,7 +68,7 @@ namespace MemoryGame
 
         public void Hoofdmenu_Load(object sender, EventArgs e)
         {
-            Soundplayers.Startmuziek();
+            Sounds.Startmuziek();
         }
 
         public void endme()

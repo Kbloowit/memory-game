@@ -103,8 +103,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_options;
         private System.Windows.Forms.Button button_highscore;
-
-       
     }
     
 

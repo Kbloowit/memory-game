@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MemoryGame
 {
-    public class Soundplayers
+    public class Sounds
     {
         int Muziek = 1;
         int Soundeffects = 1;

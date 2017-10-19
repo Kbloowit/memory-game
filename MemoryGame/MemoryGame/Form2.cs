@@ -13,16 +13,52 @@ namespace MemoryGame
     public partial class Form2 : Form
 
     {
+        #region allowClick
+        /// <summary>
+        /// Bool die de plaatjes klikbaar kan maken of juist niet.
+        /// </summary>
         bool allowClick = false;
+        #endregion
+        #region
+        /// <summary>
+        /// Eerste gekozen plaatje.
+        /// </summary>
         PictureBox firstGuess;
+        #endregion
+        #region rnd
+        /// <summary>
+        /// Geeft een Random getal.
+        /// </summary>
         Random rnd = new Random();
+        #endregion
+        #region
+        /// <summary>
+        /// Tijd voordat je weer op de plaatjes mag klikken
+        /// </summary>
         Timer clickTimer = new Timer();
+        #endregion
         int time = 60;
+        #region
+        /// <summary>
+        /// Timer van de game
+        /// </summary>
         Timer timer = new Timer { Interval = 1000 };
-        Hoofdmenu meme;
-        int countP1 = 0;
-        int countP2 = 0;
+        #endregion
 
+
+        #region
+        /// <summary>
+        /// Score Speler 1
+        /// </summary>
+        int countP1 = 0;
+        #endregion
+        #region
+        /// <summary>
+        /// Score Speler 2
+        /// </summary>
+        int countP2 = 0;
+        #endregion
+        /* neemt de namen mee van het Player_Import Form*/
         public Form2(String P1, String P2)
         {
             InitializeComponent();
@@ -31,18 +67,19 @@ namespace MemoryGame
             NameP2.Text = P2;
 
         }
-
+        /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
-
+        /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
             get
             {
                 return new Image[]
                 {
+                    /* o shit onze image files*/
                     Properties.Resources.meme,
                     Properties.Resources.america,
                     Properties.Resources.fury,
@@ -58,10 +95,11 @@ namespace MemoryGame
                 };
             }
         }
-
+        /*deze method start de Gametimer op, zodat hij naar beneden loopt*/
         private void startGameTimer()
         {
             timer.Start();
+            /*delegate*/
             timer.Tick += delegate
             {
                 time--;
@@ -158,7 +196,7 @@ namespace MemoryGame
                 {
                     P2Score();
                 }
-                Soundplayers.Correct();
+                Sounds.Correct();
 
             }
 
@@ -166,7 +204,7 @@ namespace MemoryGame
             {
                 allowClick = false;
                 clickTimer.Start();
-                Soundplayers.Incorrect();
+                Sounds.Incorrect();
                 Turn();
             }
 
@@ -248,7 +286,7 @@ namespace MemoryGame
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Options opties = new Options(meme);
+            Options opties = new Options();
             opties.ShowDialog();
         }
 

@@ -51,7 +51,7 @@ namespace MemoryGame
 
         private void button_opties_Click(object sender, EventArgs e)
         {
-            Options opties = new Options(meme);
+            Options opties = new Options();
             opties.ShowDialog();
 
         }
