@@ -50,6 +50,13 @@
             this.NameP2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.score1 = new System.Windows.Forms.Label();
+            this.score2 = new System.Windows.Forms.Label();
+            this.x1 = new System.Windows.Forms.Label();
+            this.x2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -250,7 +257,7 @@
             // NameP1
             // 
             this.NameP1.AutoSize = true;
-            this.NameP1.Location = new System.Drawing.Point(716, 33);
+            this.NameP1.Location = new System.Drawing.Point(716, 63);
             this.NameP1.Name = "NameP1";
             this.NameP1.Size = new System.Drawing.Size(35, 13);
             this.NameP1.TabIndex = 18;
@@ -259,7 +266,7 @@
             // NameP2
             // 
             this.NameP2.AutoSize = true;
-            this.NameP2.Location = new System.Drawing.Point(827, 33);
+            this.NameP2.Location = new System.Drawing.Point(716, 89);
             this.NameP2.Name = "NameP2";
             this.NameP2.Size = new System.Drawing.Size(35, 13);
             this.NameP2.TabIndex = 19;
@@ -285,12 +292,82 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // score1
+            // 
+            this.score1.AutoSize = true;
+            this.score1.Location = new System.Drawing.Point(780, 63);
+            this.score1.Name = "score1";
+            this.score1.Size = new System.Drawing.Size(13, 13);
+            this.score1.TabIndex = 22;
+            this.score1.Text = "0";
+            // 
+            // score2
+            // 
+            this.score2.AutoSize = true;
+            this.score2.Location = new System.Drawing.Point(780, 89);
+            this.score2.Name = "score2";
+            this.score2.Size = new System.Drawing.Size(13, 13);
+            this.score2.TabIndex = 23;
+            this.score2.Text = "0";
+            // 
+            // x1
+            // 
+            this.x1.AutoSize = true;
+            this.x1.Location = new System.Drawing.Point(832, 63);
+            this.x1.Name = "x1";
+            this.x1.Size = new System.Drawing.Size(12, 13);
+            this.x1.TabIndex = 24;
+            this.x1.Text = "x";
+            // 
+            // x2
+            // 
+            this.x2.AutoSize = true;
+            this.x2.Location = new System.Drawing.Point(832, 89);
+            this.x2.Name = "x2";
+            this.x2.Size = new System.Drawing.Size(16, 13);
+            this.x2.TabIndex = 26;
+            this.x2.Text = "...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(769, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Score";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(819, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Turn";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(716, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Name";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(887, 494);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.x2);
+            this.Controls.Add(this.x1);
+            this.Controls.Add(this.score2);
+            this.Controls.Add(this.score1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.NameP2);
@@ -360,5 +437,12 @@
         private System.Windows.Forms.Label NameP2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label score1;
+        private System.Windows.Forms.Label score2;
+        private System.Windows.Forms.Label x1;
+        private System.Windows.Forms.Label x2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -20,6 +20,8 @@ namespace MemoryGame
         int time = 60;
         Timer timer = new Timer { Interval = 1000 };
         Hoofdmenu meme;
+        int countP1 = 0;
+        int countP2 = 0;
 
         public Form2(String P1, String P2)
         {
@@ -67,6 +69,7 @@ namespace MemoryGame
                 {
                     timer.Stop();
                     MessageBox.Show("You are Retarded");
+                    ResetScore();
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
@@ -147,18 +150,36 @@ namespace MemoryGame
                 }
                 HideImages();
 
+                if (x1.Text == "x")
+                {
+                    P1Score();
+                }
+                else if (x2.Text == "x")
+                {
+                    P2Score();
+                }
+                Soundplayers.Correct();
+
             }
 
             else
             {
                 allowClick = false;
                 clickTimer.Start();
+                Soundplayers.Incorrect();
+                Turn();
             }
+
+            
 
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             MessageBox.Show("Congrats you aren't retarded");
+            ResetScore();
             ResetImages();
+            
+
+            
 
         }
         private void startGame(object sender, EventArgs e)
@@ -172,6 +193,52 @@ namespace MemoryGame
             button1.Enabled = false;
         }
 
+        public void P1Score()
+        {
+            countP1++;
+            score1.Text = countP1.ToString();
+        }
+
+
+        public void P2Score()
+        {
+            countP2++;
+            score2.Text = countP2.ToString();
+            
+        }
+
+
+        public void Turn()
+        {
+            if (x1.Text == "x")
+            {
+                x1.Text = "...";
+                x2.Text = "x";
+            }
+            else if (x2.Text == "x")
+            {
+                x1.Text = "x";
+                x2.Text = "...";
+            }
+            
+                
+            
+
+        }
+
+        public void ResetScore()
+        {
+            x1.Text = "x";
+            x2.Text = "...";
+            score1.Text = "0";
+            score2.Text = "0";
+            countP1 = 0;
+            countP2 = 0;
+        }
+
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             Player_import killme = new Player_import();
@@ -184,6 +251,8 @@ namespace MemoryGame
             Options opties = new Options(meme);
             opties.ShowDialog();
         }
+
+       
     }
        
 }
