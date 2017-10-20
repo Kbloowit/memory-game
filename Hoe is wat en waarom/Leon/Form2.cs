@@ -13,15 +13,52 @@ namespace MemoryGame
     public partial class Form2 : Form
 
     {
-        //variabelen
+        #region allowClick
+        /// <summary>
+        /// Bool die de plaatjes klikbaar kan maken of juist niet.
+        /// </summary>
         bool allowClick = false;
-        PictureBox firstGuess; //We creëren een voorbeeld van een picturebox in een variabele en noemen het first guess
-        Random rnd = new Random(); //dit creëert een voorbeeld van de willekeurige nummer generator die we nodig hebben voor de memory plaatjes
-        Timer clickTimer = new Timer(); //timer variabele
-        int time = 60; //tijd variabele
-        Timer timer = new Timer { Interval = 1000 };//tijd variabele
-        Hoofdmenu meme;
+        #endregion
+        #region
+        /// <summary>
+        /// Eerste gekozen plaatje.
+        /// </summary>
+        PictureBox firstGuess;
+        #endregion
+        #region rnd
+        /// <summary>
+        /// Geeft een Random getal.
+        /// </summary>
+        Random rnd = new Random();
+        #endregion
+        #region
+        /// <summary>
+        /// Tijd voordat je weer op de plaatjes mag klikken
+        /// </summary>
+        Timer clickTimer = new Timer();
+        #endregion
+        int time = 60;
+        #region
+        /// <summary>
+        /// Timer van de game
+        /// </summary>
+        Timer timer = new Timer { Interval = 1000 };
+        #endregion
 
+
+        #region
+        /// <summary>
+        /// Score Speler 1
+        /// </summary>
+        int countP1 = 0;
+        #endregion
+        #region
+        /// <summary>
+        /// Score Speler 2
+        /// </summary>
+        int countP2 = 0;
+        #endregion
+        /* neemt de namen mee van het Player_Import Form*/
         public Form2(String P1, String P2)
         {
             InitializeComponent();
@@ -30,18 +67,19 @@ namespace MemoryGame
             NameP2.Text = P2;
 
         }
-
+        /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
         {
-            get { return Controls.OfType<PictureBox>().ToArray(); } //Dit is de PictureBox-functie, we gaan alle pictureboxes toevoegen aan een array.
+            get { return Controls.OfType<PictureBox>().ToArray(); }
         }
-
-        private static IEnumerable<Image> images  //Dit functionele doel is om de images die we eerder importeerde naar de bronnen te koppelen. Merk op dat we een statische IEnumerable <image> gebruiken in de titel van deze functie. Wat dit betekent, zullen we een scala van Image klasse creëren en we moeten toegang hebben tot die bestanden. Door het gebruik van IEnumerable maakt het ons makkelijker een toegang te creëren om die bestanden te vragen.
+        /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
+        private static IEnumerable<Image> images
         {
             get
             {
                 return new Image[]
                 {
+                    /* o shit onze image files*/
                     Properties.Resources.meme,
                     Properties.Resources.america,
                     Properties.Resources.fury,
@@ -57,10 +95,11 @@ namespace MemoryGame
                 };
             }
         }
-
-        private void startGameTimer() //Dit functionele doel is om de timer te starten en de resterende tijd weer te geven op het label dat we eerder hebben toegevoegd
+        /*deze method start de Gametimer op, zodat hij naar beneden loopt*/
+        private void startGameTimer()
         {
             timer.Start();
+            /*delegate*/
             timer.Tick += delegate
             {
                 time--;
@@ -68,6 +107,7 @@ namespace MemoryGame
                 {
                     timer.Stop();
                     MessageBox.Show("You are Retarded");
+                    ResetScore();
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
@@ -75,7 +115,7 @@ namespace MemoryGame
             };
         }
 
-        private void ResetImages() //Met deze functie worden de pictureboxes opnieuw ingesteld. Deze functie wordt gebruikt wanneer we de gebruiker toestaan ​​het spel na hun eerste ronde opnieuw te spelen
+        private void ResetImages()
         {
             foreach (var pic in pictureBoxes)
             {
@@ -87,7 +127,7 @@ namespace MemoryGame
             time = 60;
             timer.Start();
         }
-        private void HideImages() //Deze functie loopt een foreach loop door het formulier op zoek naar pictureboxes en het zal ze maskeren met de cover van de memoryplaatjes die we al eerder hadden geimporteerd 
+        private void HideImages()
         {
             foreach (var pic in pictureBoxes)
             {
@@ -95,7 +135,7 @@ namespace MemoryGame
             }
         }
 
-        private PictureBox getFreeSlot() //deze functie heeft een data return die door alle pictureboxes loopt zodat we een aantal willekeurige pictureboxes kunnen selecteren door het controleren van tags
+        private PictureBox getFreeSlot()
         {
             int num;
 
@@ -108,7 +148,7 @@ namespace MemoryGame
 
         }
 
-        private void setRandomImages() //In deze functie hierboven draaien we nog een lus, deze keer in plaats van een DO WHILE-lus te doen, doen we een voor elke lus. Deze lus kijkt naar afbeeldingen en probeert een paar slots te vinden waar beide met dezelfde naam kunnen worden getagd , waardoor we paren bij elkaar kunnen zoeken
+        private void setRandomImages()
         {
             foreach (var image in images)
             {
@@ -116,7 +156,7 @@ namespace MemoryGame
                 getFreeSlot().Tag = image;
             }
         }
-        private void CLICKTIMER_TICK(object sender, EventArgs e) //deze functie is simpel, deze functie verbergt eerst alle beelden door de functie HideImages () te gebruiken vervolgens verandert ie de allow click boolean naar true en daarna stopt ie de timer.
+        private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
             HideImages();
 
@@ -124,20 +164,25 @@ namespace MemoryGame
             clickTimer.Stop();
         }
 
-        private void clickImage(object sender, EventArgs e) //eerst voeren we een if statement uit, is isClicked false dan gaat ie terug naar het programma zonder iets anders te doen.
+        private void clickImage(object sender, EventArgs e)
         {
             if (!allowClick) return;
 
-            var pic = (PictureBox)sender; //In deze lijn maken we een lokale variabele, die alleen in deze functie genaamd pic wordt gebruikt. Deze variabele zal identificeren op welke picturebox geklikt is of waar de gebeurtenis vandaan kwam.
+            var pic = (PictureBox)sender;
 
             if (firstGuess == null)
             {
-                firstGuess = pic;
-                pic.Image = (Image)pic.Tag;  //Als de eerste guess leeg is, dan laten we de pic-variabele onze eerste gok maken, omdat de pic-variabele een soort picturebox is, die dezelfde eigenschappen heeft als eentje  kunnen we de pic.Image gebruiken eigenschap om eventuele afbeeldingen op te stellen.
+                
+				
+				
+				
+				firstGuess = pic;
+                pic.Image = (Image)pic.Tag;
                 return;
+
             }
 
-            pic.Image = (Image)pic.Tag; // wanneer de afbeeldingen worden gevonden, plaatst  de juiste tag in de picturebox
+            pic.Image = (Image)pic.Tag;
 
 
             if (pic.Image == firstGuess.Image && pic != firstGuess)
@@ -146,7 +191,20 @@ namespace MemoryGame
                 {
                     firstGuess = pic;
                 }
-                HideImages(); //afbeeldingen verbergen
+                HideImages();
+			else if (pic.Image == firstGuess.Image && pic != firstGuess)
+            {
+                pic.Visible = firstGuess.Visible = false;
+				}
+                if (x1.Text == "x")
+                {
+                    P1Score();
+                }
+                else if (x2.Text == "x")
+                {
+                    P2Score();
+                }
+                Sounds.Correct();
 
             }
 
@@ -154,12 +212,20 @@ namespace MemoryGame
             {
                 allowClick = false;
                 clickTimer.Start();
+                Sounds.Incorrect();
+                Turn();
             }
 
+            
+
             firstGuess = null;
-            if (pictureBoxes.Any(p => p.Visible)) return; //controleert of er nog zichtbare pictureboxes op het scherm zo niet dan laat ie het bericht hieronder zien
-            MessageBox.Show("Congrats you aren't retarded"); //het bericht
-            ResetImages(); //vervolgens de images resetten
+            if (pictureBoxes.Any(p => p.Visible)) return;
+            MessageBox.Show("Congrats you aren't retarded");
+            ResetScore();
+            ResetImages();
+            
+
+            
 
         }
         private void startGame(object sender, EventArgs e)
@@ -173,6 +239,52 @@ namespace MemoryGame
             button1.Enabled = false;
         }
 
+        public void P1Score()
+        {
+            countP1++;
+            score1.Text = countP1.ToString();
+        }
+
+
+        public void P2Score()
+        {
+            countP2++;
+            score2.Text = countP2.ToString();
+            
+        }
+
+
+        public void Turn()
+        {
+            if (x1.Text == "x")
+            {
+                x1.Text = "...";
+                x2.Text = "x";
+            }
+            else if (x2.Text == "x")
+            {
+                x1.Text = "x";
+                x2.Text = "...";
+            }
+            
+                
+            
+
+        }
+
+        public void ResetScore()
+        {
+            x1.Text = "x";
+            x2.Text = "...";
+            score1.Text = "0";
+            score2.Text = "0";
+            countP1 = 0;
+            countP2 = 0;
+        }
+
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             Player_import killme = new Player_import();
@@ -182,14 +294,11 @@ namespace MemoryGame
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Options opties = new Options(meme);
+            Options opties = new Options();
             opties.ShowDialog();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
        
 }
