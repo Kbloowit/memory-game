@@ -37,7 +37,7 @@ namespace MemoryGame
         /// </summary>
         Timer clickTimer = new Timer();
         #endregion
-        int time = 60;
+        int time = 160;
         #region
         /// <summary>
         /// Timer van de game
@@ -111,7 +111,7 @@ namespace MemoryGame
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
-                label1.Text = "00:" + time.ToString();
+                label1.Text = time.ToString();
             };
         }
 
