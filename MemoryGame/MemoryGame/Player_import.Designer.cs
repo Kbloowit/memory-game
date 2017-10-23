@@ -65,7 +65,7 @@
             this.importP2.Margin = new System.Windows.Forms.Padding(2);
             this.importP2.Name = "importP2";
             this.importP2.Size = new System.Drawing.Size(127, 26);
-            this.importP2.TabIndex = 3;
+            this.importP2.TabIndex = 4;
             // 
             // importP1
             // 
@@ -74,7 +74,7 @@
             this.importP1.Margin = new System.Windows.Forms.Padding(2);
             this.importP1.Name = "importP1";
             this.importP1.Size = new System.Drawing.Size(127, 26);
-            this.importP1.TabIndex = 4;
+            this.importP1.TabIndex = 3;
             // 
             // button_start
             // 

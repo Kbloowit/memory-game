@@ -2,7 +2,6 @@ C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryG
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
-C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form1.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form2.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources

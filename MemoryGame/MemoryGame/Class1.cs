@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WMPLib;
 
 namespace MemoryGame
 {
     public class Sounds
     {
-        int Muziek = 1;
-        int Soundeffects = 1;
-        System.Media.SoundPlayer startmuziek = new System.Media.SoundPlayer(Properties.Resources.Pentakill);
+        
+        
+        
         
         
         public static void Startmuziek()
         {
+
+            WindowsMediaPlayer startmuziek = new WindowsMediaPlayer();
+            startmuziek.URL = Directory.Basedirectory() + "/muziek/Pent.mp3";
+            startmuziek.controls.play();
             
-            System.Media.SoundPlayer startmuziek = new System.Media.SoundPlayer(Properties.Resources.Pentakill);
-            startmuziek.Play();   
+
         }
         public static void Stopmuziek()
         {
             System.Media.SoundPlayer startmuziek = new System.Media.SoundPlayer(Properties.Resources.Pentakill);
             startmuziek.Stop();
+            
             
         }
 

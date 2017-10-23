@@ -59,12 +59,12 @@ namespace MemoryGame
         int countP2 = 0;
         #endregion
         /* neemt de namen mee van het Player_Import Form*/
-        public Form2(String P1, String P2)
+        public Form2(String[] players)
         {
             InitializeComponent();
 
-            NameP1.Text = P1;
-            NameP2.Text = P2;
+            NameP1.Text = players[0];
+            NameP2.Text = players[1];
 
         }
         /* maakt een picturebox array*/
@@ -106,7 +106,7 @@ namespace MemoryGame
                 if (time < 0)
                 {
                     timer.Stop();
-                    MessageBox.Show("You are Retarded");
+                    MessageBox.Show("De tijd is om!");
                     ResetScore();
                     ResetImages();
                 }
@@ -212,7 +212,21 @@ namespace MemoryGame
 
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
-            MessageBox.Show("Congrats you aren't retarded");
+            timer.Stop();
+            if (countP1 > countP2)
+            {
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!");
+            }
+                
+            else if (countP2 > countP1)
+            {
+                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten!");
+            }
+             else if (countP1 == countP2)
+            {
+                MessageBox.Show("Gelijkspel!");
+            }
+            
             ResetScore();
             ResetImages();
             
@@ -290,7 +304,12 @@ namespace MemoryGame
             opties.ShowDialog();
         }
 
-       
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.OpenForms[0].Show();
+        }
+
+        
     }
        
 }
