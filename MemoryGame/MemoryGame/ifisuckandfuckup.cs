@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Memorie
+namespace Memorygame
 {
-    class Directory
+    class Killme
     {
 
         #region properties
@@ -22,7 +22,7 @@ namespace Memorie
         /// <summary>
         /// starts the constructor;
         /// </summary>
-        public Directory()
+        public Killme()
         {
             BasePath = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName;
         }

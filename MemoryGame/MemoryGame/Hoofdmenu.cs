@@ -25,7 +25,8 @@ namespace MemoryGame
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-            new Directory();
+            
+            this.TopMost = true;
              
             
         }
@@ -50,11 +51,11 @@ namespace MemoryGame
             /*opent het game form*/
             this.Hide();
             import.ShowDialog();
-            this.Show();
             
             
-            
-            
+
+
+
         }
 
         private void button_highscore_Click(object sender, EventArgs e)
@@ -69,16 +70,11 @@ namespace MemoryGame
         public void Hoofdmenu_Load(object sender, EventArgs e)
         {
             Sounds.Startmuziek();
+            MessageBox.Show(Directory.Basedirectory());
+
+
         }
 
-        public void endme()
-        {
-            if (Application.OpenForms.Count == 1)
-            {
-                this.Show();
-            }
-        }
-
-
+        
     }
 }

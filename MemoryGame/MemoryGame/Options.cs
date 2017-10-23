@@ -12,8 +12,7 @@ namespace MemoryGame
 {
     public partial class Options : Form
     {
-        private readonly Hoofdmenu hfd;
-        Form2 uhh;
+        
         public Options()
         {
             InitializeComponent();

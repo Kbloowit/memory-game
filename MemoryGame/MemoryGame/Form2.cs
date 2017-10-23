@@ -37,7 +37,7 @@ namespace MemoryGame
         /// </summary>
         Timer clickTimer = new Timer();
         #endregion
-        int time = 160;
+        int time = 60;
         #region
         /// <summary>
         /// Timer van de game
@@ -59,12 +59,12 @@ namespace MemoryGame
         int countP2 = 0;
         #endregion
         /* neemt de namen mee van het Player_Import Form*/
-        public Form2(String P1, String P2)
+        public Form2(String[] players)
         {
             InitializeComponent();
 
-            NameP1.Text = P1;
-            NameP2.Text = P2;
+            NameP1.Text = players[0];
+            NameP2.Text = players[1];
 
         }
         /* maakt een picturebox array*/
@@ -106,12 +106,12 @@ namespace MemoryGame
                 if (time < 0)
                 {
                     timer.Stop();
-                    MessageBox.Show("You are Retarded");
+                    MessageBox.Show("De tijd is om!");
                     ResetScore();
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
-                label1.Text = time.ToString();
+                label1.Text = "00:" + time.ToString();
             };
         }
 
@@ -199,25 +199,47 @@ namespace MemoryGame
                 Sounds.Correct();
 
             }
+            else if (pic.Image == firstGuess.Image && pic == firstGuess)
+            {
+                pic.Visible = firstGuess.Visible = true;
+                {
+                    firstGuess = pic;
+                }
+                HideImages();
+            }
 
             else
             {
                 allowClick = false;
                 clickTimer.Start();
-                Sounds.Incorrect();
                 Turn();
+                Sounds.Incorrect();
             }
 
-            
+
 
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
-            MessageBox.Show("Congrats you aren't retarded");
+            timer.Stop();
+            if (countP1 > countP2)
+            {
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!");
+            }
+
+            else if (countP2 > countP1)
+            {
+                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten!");
+            }
+            else if (countP1 == countP2)
+            {
+                MessageBox.Show("Gelijkspel!");
+            }
+
             ResetScore();
             ResetImages();
-            
 
-            
+
+
 
         }
         private void startGame(object sender, EventArgs e)
@@ -242,7 +264,7 @@ namespace MemoryGame
         {
             countP2++;
             score2.Text = countP2.ToString();
-            
+
         }
 
 
@@ -258,9 +280,9 @@ namespace MemoryGame
                 x1.Text = "x";
                 x2.Text = "...";
             }
-            
-                
-            
+
+
+
 
         }
 
@@ -290,7 +312,11 @@ namespace MemoryGame
             opties.ShowDialog();
         }
 
-       
-    }
-       
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.OpenForms[0].Show();
+        }
+
+
+    } 
 }
