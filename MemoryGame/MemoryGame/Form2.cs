@@ -199,16 +199,24 @@ namespace MemoryGame
                 Sounds.Correct();
 
             }
+            else if (pic.Image == firstGuess.Image && pic == firstGuess)
+            {
+                pic.Visible = firstGuess.Visible = true;
+                {
+                    firstGuess = pic;
+                }
+                HideImages();
+            }
 
             else
             {
                 allowClick = false;
                 clickTimer.Start();
-                Sounds.Incorrect();
                 Turn();
+                Sounds.Incorrect();
             }
 
-            
+
 
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
@@ -217,21 +225,21 @@ namespace MemoryGame
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!");
             }
-                
+
             else if (countP2 > countP1)
             {
                 MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten!");
             }
-             else if (countP1 == countP2)
+            else if (countP1 == countP2)
             {
                 MessageBox.Show("Gelijkspel!");
             }
-            
+
             ResetScore();
             ResetImages();
-            
 
-            
+
+
 
         }
         private void startGame(object sender, EventArgs e)
@@ -256,7 +264,7 @@ namespace MemoryGame
         {
             countP2++;
             score2.Text = countP2.ToString();
-            
+
         }
 
 
@@ -272,9 +280,9 @@ namespace MemoryGame
                 x1.Text = "x";
                 x2.Text = "...";
             }
-            
-                
-            
+
+
+
 
         }
 
@@ -309,7 +317,6 @@ namespace MemoryGame
             Application.OpenForms[0].Show();
         }
 
-        
-    }
-       
+
+    } 
 }

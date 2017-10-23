@@ -7,13 +7,13 @@ using WMPLib;
 
 namespace MemoryGame
 {
-    public class Sounds
+    public  class Sounds
     {
         
-        
-        
-        
-        
+
+
+
+
         public static void Startmuziek()
         {
 
@@ -25,23 +25,25 @@ namespace MemoryGame
         }
         public static void Stopmuziek()
         {
-            System.Media.SoundPlayer startmuziek = new System.Media.SoundPlayer(Properties.Resources.Pentakill);
-            startmuziek.Stop();
-            
-            
+            WindowsMediaPlayer stopmuziek = new WindowsMediaPlayer();
+            stopmuziek.URL = Directory.Basedirectory() + "/muziek/Pent.mp3";
+            stopmuziek.controls.play();
+
+
         }
 
         public static void Correct()
         {
-            System.Media.SoundPlayer correct = new System.Media.SoundPlayer(Properties.Resources.Correct);
-            correct.Play();
+            WindowsMediaPlayer correct = new WindowsMediaPlayer();
+            correct.URL = Directory.Basedirectory() + "/muziek/SoundFX/correct.wav";
+            correct.controls.play();
         }
 
         public static void Incorrect()
         {
-            System.Media.SoundPlayer incorrect = new System.Media.SoundPlayer(Properties.Resources.Incorrect);
-            
-            incorrect.Play();
+            WindowsMediaPlayer incorrect = new WindowsMediaPlayer();
+            incorrect.URL = Directory.Basedirectory() + "/muziek/SoundFX/incorrect.wav";
+            incorrect.controls.play();
         }
 
 
