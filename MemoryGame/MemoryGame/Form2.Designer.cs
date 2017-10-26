@@ -344,7 +344,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Score";
+            this.label3.Text = "Paren";
             // 
             // label4
             // 
