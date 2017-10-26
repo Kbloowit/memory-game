@@ -330,7 +330,7 @@
             // 
             this.x2.AutoSize = true;
             this.x2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x2.Location = new System.Drawing.Point(835, 95);
+            this.x2.Location = new System.Drawing.Point(836, 112);
             this.x2.Name = "x2";
             this.x2.Size = new System.Drawing.Size(25, 24);
             this.x2.TabIndex = 26;
@@ -416,6 +416,7 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

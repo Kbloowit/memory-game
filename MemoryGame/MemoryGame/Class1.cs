@@ -9,15 +9,15 @@ namespace MemoryGame
 {
     public  class Sounds
     {
-        
 
 
 
 
+       public static WindowsMediaPlayer startmuziek = new WindowsMediaPlayer();
         public static void Startmuziek()
         {
 
-            WindowsMediaPlayer startmuziek = new WindowsMediaPlayer();
+            
             startmuziek.URL = Directory.Basedirectory() + "/muziek/Pent.mp3";
             startmuziek.controls.play();
             
@@ -25,9 +25,9 @@ namespace MemoryGame
         }
         public static void Stopmuziek()
         {
-            WindowsMediaPlayer stopmuziek = new WindowsMediaPlayer();
-            stopmuziek.URL = Directory.Basedirectory() + "/muziek/Pent.mp3";
-            stopmuziek.controls.play();
+            
+            
+            startmuziek.controls.stop();
 
 
         }
