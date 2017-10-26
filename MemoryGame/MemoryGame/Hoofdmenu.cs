@@ -70,8 +70,7 @@ namespace MemoryGame
         public void Hoofdmenu_Load(object sender, EventArgs e)
         {
             Sounds.Startmuziek();
-            MessageBox.Show(Directory.Basedirectory());
-
+            
 
         }
 

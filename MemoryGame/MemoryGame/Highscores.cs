@@ -15,6 +15,7 @@ namespace MemoryGame
         public Highscores()
         {
             InitializeComponent();
+
         }
 
         private void button_menu_Click(object sender, EventArgs e)
