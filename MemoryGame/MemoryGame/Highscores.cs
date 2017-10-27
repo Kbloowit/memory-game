@@ -15,7 +15,14 @@ namespace MemoryGame
         public Highscores()
         {
             InitializeComponent();
+            List<string> names = new List<string>
+            {
 
+            };
+            List<int> score = new List<int>
+            {
+
+            };
         }
 
         private void button_menu_Click(object sender, EventArgs e)

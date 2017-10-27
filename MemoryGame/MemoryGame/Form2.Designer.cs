@@ -58,6 +58,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Timername = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -78,7 +79,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(719, 308);
+            this.button1.Location = new System.Drawing.Point(721, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 41);
             this.button1.TabIndex = 0;
@@ -278,7 +279,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(719, 371);
+            this.button2.Location = new System.Drawing.Point(719, 355);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 46);
             this.button2.TabIndex = 20;
@@ -288,7 +289,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(719, 436);
+            this.button3.Location = new System.Drawing.Point(719, 423);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(135, 46);
             this.button3.TabIndex = 21;
@@ -376,13 +377,24 @@
             this.Timername.TabIndex = 30;
             this.Timername.Text = "Timer";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(719, 488);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(135, 46);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "Save/Quit";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(888, 401);
+            this.ClientSize = new System.Drawing.Size(888, 546);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -470,5 +482,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Timername;
+        private System.Windows.Forms.Button button4;
     }
 }

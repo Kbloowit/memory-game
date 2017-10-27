@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace MemoryGame
 {
@@ -345,6 +346,25 @@ namespace MemoryGame
         private void Form2_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.NewLineOnAttributes = true;
+            settings.Indent = true;
+            using (XmlWriter write = XmlWriter.Create("Game.sav", settings))
+            {
+                write.WriteStartDocument();
+                write.WriteStartElement("pictureboxes");
+                foreach(var pic in pictureBoxes)
+                {
+                    write.WriteStartElement("pic");
+                    write.WriteElementString(Form2.pic.Tag);
+                }
+            }
+
+
         }
     } 
 }
