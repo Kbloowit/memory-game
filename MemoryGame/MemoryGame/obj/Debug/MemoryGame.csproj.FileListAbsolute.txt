@@ -17,3 +17,9 @@ C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\AxInter
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\Interop.WMPLib.dll
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
