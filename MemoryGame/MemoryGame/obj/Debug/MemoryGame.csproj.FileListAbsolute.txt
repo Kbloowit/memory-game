@@ -17,11 +17,6 @@ C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\AxInter
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
-C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
-C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
-C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
-C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\Interop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\AxInterop.WMPLib.dll
@@ -36,3 +31,8 @@ C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debu
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.CoreCompileInputs.cache
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
+C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace MemoryGame
 {
@@ -19,7 +20,7 @@ namespace MemoryGame
         /// </summary>
         bool allowClick = false;
         #endregion
-        #region
+        #region firstguess
         /// <summary>
         /// Eerste gekozen plaatje.
         /// </summary>
@@ -31,7 +32,7 @@ namespace MemoryGame
         /// </summary>
         Random rnd = new Random();
         #endregion
-        #region
+        #region clicktimer
         /// <summary>
         /// Tijd voordat je weer op de plaatjes mag klikken
         /// </summary>
@@ -58,6 +59,14 @@ namespace MemoryGame
         /// </summary>
         int countP2 = 0;
         #endregion
+        #region
+        /// <summary>
+        /// geeft aan hoe vaak speler x een kaart heeft omgedraaid
+        /// </summary>
+        int omgedraaid1 = 0;
+        int omgedraaid2 = 0;
+        #endregion 
+
         /* neemt de namen mee van het Player_Import Form*/
         public Form2(String[] players)
         {
@@ -115,7 +124,7 @@ namespace MemoryGame
             };
         }
 
-        private void ResetImages()
+        public void ResetImages()
         {
             foreach (var pic in pictureBoxes)
             {
@@ -127,7 +136,7 @@ namespace MemoryGame
             time = 60;
             timer.Start();
         }
-        private void HideImages()
+        public void HideImages()
         {
             foreach (var pic in pictureBoxes)
             {
@@ -148,7 +157,7 @@ namespace MemoryGame
 
         }
 
-        private void setRandomImages()
+        public void setRandomImages()
         {
             foreach (var image in images)
             {
@@ -158,16 +167,26 @@ namespace MemoryGame
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
+            
             HideImages();
 
             allowClick = true;
+            Sounds.Incorrect();
             clickTimer.Stop();
         }
 
-        private void clickImage(object sender, EventArgs e)
+        public void clickImage(object sender, EventArgs e)
         {
             if (!allowClick) return;
+            if (x1.Text == "x")
 
+            {
+                omgedraaid1++;
+            }
+            else if (x2.Text == "x")
+            {
+                omgedraaid2++;
+            }
             var pic = (PictureBox)sender;
 
             if (firstGuess == null)
@@ -210,10 +229,11 @@ namespace MemoryGame
 
             else
             {
+                
                 allowClick = false;
                 clickTimer.Start();
                 Turn();
-                Sounds.Incorrect();
+                
             }
 
 
@@ -221,20 +241,23 @@ namespace MemoryGame
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
+            countP1 = countP1 * (60 - (60 - time)*(1/omgedraaid1));
+            countP2 = countP2 * (60 - (60 - time)*(1/omgedraaid2));
             if (countP1 > countP2)
             {
-                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!");
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
             }
 
             else if (countP2 > countP1)
             {
-                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten!");
+                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
             }
             else if (countP1 == countP2)
             {
                 MessageBox.Show("Gelijkspel!");
             }
 
+            
             ResetScore();
             ResetImages();
 
@@ -280,7 +303,7 @@ namespace MemoryGame
                 x1.Text = "x";
                 x2.Text = "...";
             }
-
+            
 
 
 
@@ -294,6 +317,9 @@ namespace MemoryGame
             score2.Text = "0";
             countP1 = 0;
             countP2 = 0;
+            omgedraaid1 = 0;
+            omgedraaid2 = 0;
+
         }
 
 
@@ -317,6 +343,34 @@ namespace MemoryGame
             Application.OpenForms[0].Show();
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+        }
 
+        
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            // Staat even in comments, zodat het spel werkt zonder de save functie
+
+            /*
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.NewLineOnAttributes = true;
+            settings.Indent = true;
+            using (XmlWriter write = XmlWriter.Create("Game.sav", settings))
+            {
+                write.WriteStartDocument();
+                write.WriteStartElement("pictureboxes");
+                foreach(var pic in pictureBoxes)
+                {
+                    write.WriteStartElement("pic");
+                    write.WriteElementString(Form2.pic.Tag);
+                }
+            }
+
+            */
+        }
+        
     } 
 }
