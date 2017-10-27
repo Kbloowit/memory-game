@@ -40,9 +40,9 @@
         private void InitializeComponent()
         {
             this.titel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_options = new System.Windows.Forms.Button();
-            this.button_highscore = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.buttonOptions = new System.Windows.Forms.Button();
+            this.buttonHighscore = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titel
@@ -56,47 +56,47 @@
             this.titel.TabIndex = 0;
             this.titel.Text = "Memory Game";
             // 
-            // button1
+            // buttonPlay
             // 
-            this.button1.Location = new System.Drawing.Point(228, 118);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Play";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPlay.Location = new System.Drawing.Point(228, 118);
+            this.buttonPlay.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(136, 54);
+            this.buttonPlay.TabIndex = 1;
+            this.buttonPlay.Text = "Play";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button_options
+            // buttonOptions
             // 
-            this.button_options.Location = new System.Drawing.Point(228, 193);
-            this.button_options.Margin = new System.Windows.Forms.Padding(2);
-            this.button_options.Name = "button_options";
-            this.button_options.Size = new System.Drawing.Size(136, 54);
-            this.button_options.TabIndex = 2;
-            this.button_options.Text = "Options";
-            this.button_options.UseVisualStyleBackColor = true;
-            this.button_options.Click += new System.EventHandler(this.button_options_Click);
+            this.buttonOptions.Location = new System.Drawing.Point(228, 193);
+            this.buttonOptions.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOptions.Name = "buttonOptions";
+            this.buttonOptions.Size = new System.Drawing.Size(136, 54);
+            this.buttonOptions.TabIndex = 2;
+            this.buttonOptions.Text = "Options";
+            this.buttonOptions.UseVisualStyleBackColor = true;
+            this.buttonOptions.Click += new System.EventHandler(this.button_options_Click);
             // 
-            // button_highscore
+            // buttonHighscore
             // 
-            this.button_highscore.Location = new System.Drawing.Point(228, 267);
-            this.button_highscore.Margin = new System.Windows.Forms.Padding(2);
-            this.button_highscore.Name = "button_highscore";
-            this.button_highscore.Size = new System.Drawing.Size(136, 54);
-            this.button_highscore.TabIndex = 3;
-            this.button_highscore.Text = "Highscores";
-            this.button_highscore.UseVisualStyleBackColor = true;
-            this.button_highscore.Click += new System.EventHandler(this.button_highscore_Click);
+            this.buttonHighscore.Location = new System.Drawing.Point(228, 267);
+            this.buttonHighscore.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHighscore.Name = "buttonHighscore";
+            this.buttonHighscore.Size = new System.Drawing.Size(136, 54);
+            this.buttonHighscore.TabIndex = 3;
+            this.buttonHighscore.Text = "Highscores";
+            this.buttonHighscore.UseVisualStyleBackColor = true;
+            this.buttonHighscore.Click += new System.EventHandler(this.button_highscore_Click);
             // 
             // Hoofdmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 381);
-            this.Controls.Add(this.button_highscore);
-            this.Controls.Add(this.button_options);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonHighscore);
+            this.Controls.Add(this.buttonOptions);
+            this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.titel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Hoofdmenu";
@@ -110,9 +110,9 @@
         #endregion
 
         private System.Windows.Forms.Label titel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button_options;
-        private System.Windows.Forms.Button button_highscore;
+        private System.Windows.Forms.Button buttonPlay;
+        private System.Windows.Forms.Button buttonOptions;
+        private System.Windows.Forms.Button buttonHighscore;
     }
     
 
