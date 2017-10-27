@@ -348,8 +348,13 @@ namespace MemoryGame
             
         }
 
+        
         private void button4_Click(object sender, EventArgs e)
         {
+
+            // Staat even in comments, zodat het spel werkt zonder de save functie
+
+            /*
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.NewLineOnAttributes = true;
             settings.Indent = true;
@@ -364,7 +369,8 @@ namespace MemoryGame
                 }
             }
 
-
+            */
         }
+        
     } 
 }
