@@ -21,6 +21,16 @@
             base.Dispose(disposing);
         }
 
+        
+        
+          
+        
+
+
+
+
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -91,6 +101,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Hoofdmenu";
             this.Text = "Hoofdmenu";
+            this.Load += new System.EventHandler(this.Hoofdmenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,8 +113,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_options;
         private System.Windows.Forms.Button button_highscore;
-
-       
     }
     
 

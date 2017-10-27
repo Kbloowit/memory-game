@@ -45,11 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Class1.cs" />
+    <Compile Include="Directory.cs" />
+    <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Highscores.cs">
       <SubType>Form</SubType>
@@ -63,6 +65,7 @@
     <Compile Include="Hoofdmenu.Designer.cs">
       <DependentUpon>Hoofdmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ifisuckandfuckup.cs" />
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Savemefromthenothingivebecome.cs" />
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Highscores.resx">
       <DependentUpon>Highscores.cs</DependentUpon>
@@ -150,6 +154,121 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Banjo Tooie Correct Sound Effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disney8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koningshuis7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rugrats8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winx8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

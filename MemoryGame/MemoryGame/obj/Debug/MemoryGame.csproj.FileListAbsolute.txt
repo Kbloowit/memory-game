@@ -1,29 +1,8 @@
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/bin/Debug/MemoryGame.exe.config
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/bin/Debug/MemoryGame.exe
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/bin/Debug/MemoryGame.pdb
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.csprojResolveAssemblyReference.cache
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.Form1.resources
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.Properties.Resources.resources
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.csproj.GenerateResource.Cache
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.csproj.CoreCompileInputs.cache
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.exe
-//Mac/Home/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.pdb
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/bin/Debug/MemoryGame.exe.config
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/bin/Debug/MemoryGame.exe
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/bin/Debug/MemoryGame.pdb
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.csprojResolveAssemblyReference.cache
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.Form1.resources
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.Hoofdmenu.resources
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.Properties.Resources.resources
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.csproj.GenerateResource.Cache
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.csproj.CoreCompileInputs.cache
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.exe
-/Users/jesperkruyt/Documents/GitHub/memory-game/MemoryGame/MemoryGame/obj/Debug/MemoryGame.pdb
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
-C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form1.resources
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form2.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Options.resources
@@ -33,9 +12,8 @@ C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryG
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.CoreCompileInputs.cache
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
-C:\Users\Aletta\Desktop\Project\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
-C:\Users\Aletta\Desktop\Project\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
-C:\Users\Aletta\Desktop\Project\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
-C:\Users\Alett\Desktop\Project Memroy Game groep 22\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
-C:\Users\Alett\Desktop\Project Memroy Game groep 22\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
-C:\Users\Alett\Desktop\Project Memroy Game groep 22\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\Interop.WMPLib.dll
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll

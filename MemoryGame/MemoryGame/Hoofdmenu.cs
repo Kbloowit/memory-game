@@ -7,42 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
+
 
 namespace MemoryGame
 {
     public partial class Hoofdmenu : Form
     {
         /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet(hoe is wat onder tutorials)*/
-        
-        
-        
+
+
+
 
         /* dit stuk hieronder zet de muziek voor het startmenu klaar, ik heb hier eerst als placeholder Pentakill - Lightbringer gebruikt*/
-        System.Media.SoundPlayer startmuziek = new System.Media.SoundPlayer(Properties.Resources.Pentakill);
+        
         public Hoofdmenu()
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-             startmuziek.Play();
+            
+            this.TopMost = true;
+             
             
         }
+        
 
         private void button_options_Click(object sender, EventArgs e)
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
             Options opties = new Options();
+            this.Hide();
             opties.ShowDialog();
+            this.Show();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
             
                
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            Form1 game = new Form1();
-            game.ShowDialog();
-            this.Close();
+            /* geeft aan waar weg hij gecalled wordt*/
+            Player_import import = new Player_import();
+            /*opent het game form*/
+            this.Hide();
+            import.ShowDialog();
             
+            
+
+
+
         }
 
         private void button_highscore_Click(object sender, EventArgs e)
@@ -51,5 +64,17 @@ namespace MemoryGame
             highscores.ShowDialog();
                 
         }
+
+        
+
+        public void Hoofdmenu_Load(object sender, EventArgs e)
+        {
+            Sounds.Startmuziek();
+            MessageBox.Show(Directory.Basedirectory());
+
+
+        }
+
+        
     }
 }
