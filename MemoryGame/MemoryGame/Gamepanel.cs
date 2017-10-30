@@ -14,11 +14,11 @@ namespace MemoryGame
     public partial class GamePanel : Form
 
     {
-        public static List<string> Players = new List<string>();
+        public static List<string> Players = new List<string>(); // hierin zijn de namen opgeslagen op ze aanroepbaar te maken voor de save class
 
         public static int Turn = 1;
-        public static List<int> Time = new List<int>();
-        public static List<string> Cards = new List<string>();
+        //public static List<int> Time = new List<int>();
+       //public static List<string> Cards = new List<string>();
 
         #region allowClick
         /// <summary>
@@ -89,7 +89,7 @@ namespace MemoryGame
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
-        public int[] pictures = new int[16];
+        public int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -174,7 +174,8 @@ namespace MemoryGame
             {
                 getFreeSlot(plaatje).Tag = image;
                 getFreeSlot(plaatje).Tag = image;
-                plaatje++;
+                plaatje++;  // Tel een bij de int van plaatje op wanneer hij twee pictures in de picturebox heeft gezet. Dit weer in verband met save-game. 
+                //Omdat wij in de tag een afbeelding mee sturen en geen cijfer.
             }
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
@@ -311,13 +312,13 @@ namespace MemoryGame
             {
                 x1.Text = "...";
                 x2.Text = "x";
-                Turn = 2;
+                Turn = 2; // Toegevoegd voor het opslaan wie er aan de beurt is
             }
             else if (x2.Text == "x")
             {
                 x1.Text = "x";
                 x2.Text = "...";
-                Turn = 1;
+                Turn = 1; // Toegevoegd voor het opslaan wie er aan de beurt is
             }
 
 
@@ -367,7 +368,7 @@ namespace MemoryGame
 
         private void buttonSaveQuit_Click(object sender, EventArgs e)
         {
-            SaveXML.button_click();
+            SaveXML.button_click(); // Hier word de saveXML class aangeroepen
         }
     }
 }
