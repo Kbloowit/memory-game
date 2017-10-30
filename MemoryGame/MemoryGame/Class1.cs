@@ -14,11 +14,12 @@ namespace MemoryGame
 
 
        public static WindowsMediaPlayer startmuziek = new WindowsMediaPlayer();
+        public static WindowsMediaPlayer grunty = new WindowsMediaPlayer();
         public static void Startmuziek()
         {
 
             
-            startmuziek.URL = Directory.Basedirectory() + "/muziek/Pent.mp3";
+            startmuziek.URL = Directory.Basedirectory() + "/muziek/Bloodthirster.mp3";
             startmuziek.controls.play();
             
 
@@ -28,7 +29,7 @@ namespace MemoryGame
             
             
             startmuziek.controls.stop();
-
+            grunty.controls.stop();
 
         }
 
@@ -46,7 +47,13 @@ namespace MemoryGame
             incorrect.controls.play();
         }
 
-
+        public static void Grunty()
+        {
+            
+            grunty.URL = Directory.Basedirectory() + "/muziek/Grunty industries.mp3";
+            grunty.controls.play();
+            
+        }
 
 
     }

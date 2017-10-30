@@ -65,7 +65,6 @@
     <Compile Include="Hoofdmenu.Designer.cs">
       <DependentUpon>Hoofdmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ifisuckandfuckup.cs" />
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
     </Compile>

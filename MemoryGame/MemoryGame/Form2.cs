@@ -340,31 +340,19 @@ namespace MemoryGame
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms[0].Show();
+            
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            Sounds.Stopmuziek();
+            Sounds.Grunty();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.NewLineOnAttributes = true;
-            settings.Indent = true;
-            using (XmlWriter write = XmlWriter.Create("Game.sav", settings))
-            {
-                write.WriteStartDocument();
-                write.WriteStartElement("pictureboxes");
-                foreach(var pic in pictureBoxes)
-                {
-                    write.WriteStartElement("pic");
-                    write.WriteElementString(Form2.pic.Tag);
-                }
-            }
+        
 
 
-        }
+        
     } 
 }
