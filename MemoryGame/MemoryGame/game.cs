@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace MemoryGame
 {
-    public partial class Form2 : Form
+    public partial class Game : Form
 
     {
         #region allowClick
@@ -68,7 +68,7 @@ namespace MemoryGame
         #endregion 
 
         /* neemt de namen mee van het Player_Import Form*/
-        public Form2(String[] players)
+        public Game(String[] players)
         {
             InitializeComponent();
 

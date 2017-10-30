@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace MemoryGame
 {
-    class Savemefromthenothingivebecome
+    class Save
     {
 
 
