@@ -385,7 +385,7 @@
             this.buttonSaveQuit.TabIndex = 4;
             this.buttonSaveQuit.Text = "Save/Quit";
             this.buttonSaveQuit.UseVisualStyleBackColor = true;
-            this.buttonSaveQuit.Click += new System.EventHandler(this.button4_Click);
+            this.buttonSaveQuit.Click += new System.EventHandler(this.buttonSaveQuit_Click);
             // 
             // GamePanel
             // 
