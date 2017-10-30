@@ -169,9 +169,9 @@ namespace MemoryGame
         {
             
             HideImages();
-
-            allowClick = true;
             Sounds.Incorrect();
+            allowClick = true;
+            
             clickTimer.Stop();
         }
 
