@@ -10,10 +10,7 @@ namespace MemoryGame
     class Savemefromthenothingivebecome
     {
 
-<<<<<<< HEAD
-    
-        
-=======
+
         /*
          public static void button_click ()
          {
@@ -57,6 +54,6 @@ namespace MemoryGame
 
          }
          */
->>>>>>> 5caeb31642c2b758d73d311f17be814253c7234d
+
     }
 }
