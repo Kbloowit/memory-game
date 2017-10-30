@@ -23,3 +23,15 @@ C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 okt
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form2.resources
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Options.resources
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Player_import.resources
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
