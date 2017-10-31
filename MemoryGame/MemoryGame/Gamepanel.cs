@@ -312,6 +312,7 @@ namespace MemoryGame
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
+<<<<<<< HEAD:MemoryGame/MemoryGame/Gamepanel.cs
 <<<<<<< HEAD
             countP1 = countP1 * (60 - (60 - time)*(1/omgedraaid1));
             countP2 = countP2 * (60 - (60 - time)*(1/omgedraaid2));
@@ -325,15 +326,26 @@ namespace MemoryGame
             {
                 MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten! " + NameP2.Text + " had " + countP2 + " punten");
 >>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
+=======
+            countP1 = countP1 * ((100 - (60 - time) * -100));
+            countP2 = countP2 * ((100 - (60 - time) * -100));
+            if (countP1 > countP2)
+            {
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + " Punten");
+>>>>>>> b53348351857d16bd868a4272ffc35903204841d:MemoryGame/MemoryGame/game.cs
             }
 
             else if (countP2 > countP1)
             {
+<<<<<<< HEAD:MemoryGame/MemoryGame/Gamepanel.cs
 <<<<<<< HEAD
                 MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
 =======
                 MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
 >>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
+=======
+                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + " Punten");
+>>>>>>> b53348351857d16bd868a4272ffc35903204841d:MemoryGame/MemoryGame/game.cs
             }
             else if (countP1 == countP2)
             {
