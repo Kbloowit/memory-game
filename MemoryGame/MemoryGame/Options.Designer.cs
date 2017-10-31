@@ -80,7 +80,6 @@
             this.checkbox_soundeffects.Size = new System.Drawing.Size(15, 14);
             this.checkbox_soundeffects.TabIndex = 3;
             this.checkbox_soundeffects.UseVisualStyleBackColor = true;
-            
             // 
             // checkbox_backgroundmusic
             // 

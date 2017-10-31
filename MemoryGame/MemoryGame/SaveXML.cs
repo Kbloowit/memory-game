@@ -48,7 +48,7 @@ namespace MemoryGame
             }
 
             // Als je wilt zien hoe het XML-bestand eruit is komen te zien. Dan moet je na het opslaan het volgende path gebruiken
-            // GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug/Savegame.xml
+            // (locatie githubfolder)\(naam github map)\MemoryGame\MemoryGame\bin\Debug/Savegame.xml
 
 
 

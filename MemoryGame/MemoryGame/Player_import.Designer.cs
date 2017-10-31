@@ -61,27 +61,25 @@
             // importP2
             // 
             this.importP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importP2.Location = new System.Drawing.Point(146, 155);
+            this.importP2.Location = new System.Drawing.Point(123, 155);
             this.importP2.Margin = new System.Windows.Forms.Padding(2);
+            this.importP2.MaxLength = 15;
             this.importP2.Name = "importP2";
-            this.importP2.Size = new System.Drawing.Size(127, 26);
-            this.importP2.TabIndex = 4;
-
+            this.importP2.Size = new System.Drawing.Size(152, 26);
+            this.importP2.TabIndex = 2;
             // 
             // importP1
             // 
             this.importP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importP1.Location = new System.Drawing.Point(146, 100);
+            this.importP1.Location = new System.Drawing.Point(123, 100);
             this.importP1.Margin = new System.Windows.Forms.Padding(2);
+            this.importP1.MaxLength = 15;
             this.importP1.Name = "importP1";
-            this.importP1.Size = new System.Drawing.Size(127, 26);
-            this.importP1.TabIndex = 3;
+            this.importP1.Size = new System.Drawing.Size(152, 26);
+            this.importP1.TabIndex = 1;
             // 
             // buttonStart
             // 
-
-           
-
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart.Location = new System.Drawing.Point(337, 119);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
@@ -91,7 +89,6 @@
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
-
             // 
             // label1
             // 

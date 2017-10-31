@@ -11,7 +11,6 @@ using System.Xml;
 
 namespace MemoryGame
 {
-
     public partial class GamePanel : Form
 
     {
@@ -58,17 +57,13 @@ namespace MemoryGame
         /// <summary>
         /// Score Speler 1
         /// </summary>
-
-       public static int countP1 = 0;
-
+        public static int countP1 = 0;
         #endregion
         #region
         /// <summary>
         /// Score Speler 2
         /// </summary>
-
-       public static int countP2 = 0;
-
+        public static int countP2 = 0;
         #endregion
         #region
         /// <summary>
@@ -79,10 +74,7 @@ namespace MemoryGame
         #endregion 
 
         /* neemt de namen mee van het Player_Import Form*/
-
-        public void Gamepanel(String[] players)
-
-
+        public GamePanel(String[] players)
         {
             InitializeComponent();
 
@@ -98,7 +90,6 @@ namespace MemoryGame
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
-
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -138,9 +129,7 @@ namespace MemoryGame
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
-
-                label1.Text = "00:" + time.ToString();
-
+                Timertime.Text = "00:" + time.ToString();
             };
         }
 
@@ -178,32 +167,19 @@ namespace MemoryGame
 
         }
 
-    
-        
-
         public void setRandomImages()
         {
             int plaatje = 0;
-
             foreach (var image in images)
             {
                 getFreeSlot(plaatje).Tag = image;
                 getFreeSlot(plaatje).Tag = image;
-
                 plaatje++;  // Tel een bij de int van plaatje op wanneer hij twee pictures in de picturebox heeft gezet. Dit weer in verband met save-game. 
                 //Omdat wij in de tag een afbeelding mee sturen en geen cijfer.
-
             }
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
-
-            
-            HideImages();
-            Sounds.Incorrect();
-            allowClick = true;
-            
-
 
             HideImages();
 
@@ -267,11 +243,9 @@ namespace MemoryGame
             else
             {
 
-
                 allowClick = false;
                 clickTimer.Start();
                 ToTurn();
-
 
             }
 
@@ -280,21 +254,16 @@ namespace MemoryGame
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
-
-            countP1 = countP1 * ((100 - (60 - time) * -100));
-            countP2 = countP2 * ((100 - (60 - time) * -100));
+            countP1 = countP1 * (60 - (60 - time) * (1 / omgedraaid1));
+            countP2 = countP2 * (60 - (60 - time) * (1 / omgedraaid2));
             if (countP1 > countP2)
             {
-                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten!" + NameP2.Text + " had " + countP2 + " punten");
-
+                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten! " + NameP2.Text + " had " + countP2 + " punten");
             }
 
             else if (countP2 > countP1)
             {
-                          
-               MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
-
-
+                MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
             }
             else if (countP1 == countP2)
             {
@@ -317,9 +286,7 @@ namespace MemoryGame
             startGameTimer();
             clickTimer.Interval = 1000;
             clickTimer.Tick += CLICKTIMER_TICK;
-
-            button1.Enabled = false;
-
+            buttonStart.Enabled = false;
         }
 
         public void P1Score()
@@ -339,21 +306,13 @@ namespace MemoryGame
         }
 
 
-        
-
-    
-        
-
-
         public void ToTurn()
-
         {
             if (x1.Text == "x")
             {
                 x1.Text = "...";
                 x2.Text = "x";
                 Turn = 2; // Toegevoegd voor het opslaan wie er aan de beurt is
-
             }
             else if (x2.Text == "x")
             {
@@ -361,7 +320,6 @@ namespace MemoryGame
                 x2.Text = "...";
                 Turn = 1; // Toegevoegd voor het opslaan wie er aan de beurt is
             }
-
 
 
 
@@ -384,18 +342,14 @@ namespace MemoryGame
 
 
 
-
-        private void button2_Click(object sender, EventArgs e)
-
+        private void buttonReset_Click(object sender, EventArgs e)
         {
             Player_import killme = new Player_import();
             killme.Show();
             this.Dispose();
         }
 
-
-        private void button3_Click(object sender, EventArgs e)
-
+        private void buttonOptions_Click(object sender, EventArgs e)
         {
             Options opties = new Options();
             opties.ShowDialog();
@@ -403,25 +357,18 @@ namespace MemoryGame
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-            
-
-
             Application.OpenForms[0].Show();
-
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
-            Sounds.Stopmuziek();
-            Sounds.Grunty();
         }
-                       
+
+
         private void buttonSaveQuit_Click(object sender, EventArgs e)
         {
-            Save.button_click(); // Hier word de saveXML class aangeroepen
+            SaveXML.button_click(); // Hier word de saveXML class aangeroepen
         }
     }
-
 }

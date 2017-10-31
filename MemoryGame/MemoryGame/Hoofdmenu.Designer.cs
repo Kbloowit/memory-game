@@ -1,8 +1,3 @@
-
-
-    
-
-
 ﻿namespace MemoryGame
 {
     partial class Hoofdmenu
@@ -120,6 +115,5 @@
         private System.Windows.Forms.Button buttonHighscore;
     }
     
-
 
 }

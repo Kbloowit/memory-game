@@ -49,26 +49,10 @@ namespace MemoryGame
         {
             if (checkbox_backgroundmusic.CheckState == CheckState.Unchecked)
             {
-<<<<<<< HEAD
-                if (Application.OpenForms.Count == 3)
-                {
-                    Sounds.Grunty();
-                }
-                else
-                {
-                    Sounds.Startmuziek();
-                }
-                
-            }
-            else if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
-            {
-                
-=======
                 Sounds.Startmuziek();
             }
             else if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
             {
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
                 Sounds.Stopmuziek();
             }
         }
