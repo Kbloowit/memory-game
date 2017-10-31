@@ -35,5 +35,4 @@ C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debu
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Game.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Gamepanel.resources
