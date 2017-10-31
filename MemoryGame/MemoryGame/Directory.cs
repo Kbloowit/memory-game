@@ -11,10 +11,17 @@ namespace MemoryGame
     {
         public static string Basedirectory()
         {
+<<<<<<< HEAD
             string based = AppDomain.CurrentDomain.BaseDirectory; 
             return based;
         }
 
             
+=======
+            string based = AppDomain.CurrentDomain.BaseDirectory;
+            return based;
+
+        }
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
     }
 }
