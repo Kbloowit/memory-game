@@ -2,6 +2,10 @@ C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryG
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+=======
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form2.resources
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Options.resources
@@ -20,7 +24,10 @@ C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debu
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\Interop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
+<<<<<<< HEAD
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Form2.resources
+=======
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Options.resources
@@ -35,4 +42,8 @@ C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debu
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
+<<<<<<< HEAD
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Game.resources
+=======
+C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GamePanel.resources
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd

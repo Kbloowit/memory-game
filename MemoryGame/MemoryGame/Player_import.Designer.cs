@@ -32,7 +32,7 @@
             this.labelP2 = new System.Windows.Forms.Label();
             this.importP2 = new System.Windows.Forms.TextBox();
             this.importP1 = new System.Windows.Forms.TextBox();
-            this.button_start = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -61,23 +61,42 @@
             // importP2
             // 
             this.importP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.importP2.Location = new System.Drawing.Point(146, 155);
             this.importP2.Margin = new System.Windows.Forms.Padding(2);
             this.importP2.Name = "importP2";
             this.importP2.Size = new System.Drawing.Size(127, 26);
             this.importP2.TabIndex = 4;
+=======
+            this.importP2.Location = new System.Drawing.Point(123, 155);
+            this.importP2.Margin = new System.Windows.Forms.Padding(2);
+            this.importP2.MaxLength = 15;
+            this.importP2.Name = "importP2";
+            this.importP2.Size = new System.Drawing.Size(152, 26);
+            this.importP2.TabIndex = 2;
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             // 
             // importP1
             // 
             this.importP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.importP1.Location = new System.Drawing.Point(146, 100);
             this.importP1.Margin = new System.Windows.Forms.Padding(2);
             this.importP1.Name = "importP1";
             this.importP1.Size = new System.Drawing.Size(127, 26);
             this.importP1.TabIndex = 3;
+=======
+            this.importP1.Location = new System.Drawing.Point(123, 100);
+            this.importP1.Margin = new System.Windows.Forms.Padding(2);
+            this.importP1.MaxLength = 15;
+            this.importP1.Name = "importP1";
+            this.importP1.Size = new System.Drawing.Size(152, 26);
+            this.importP1.TabIndex = 1;
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             // 
-            // button_start
+            // buttonStart
             // 
+<<<<<<< HEAD
             this.button_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_start.Location = new System.Drawing.Point(337, 119);
             this.button_start.Margin = new System.Windows.Forms.Padding(2);
@@ -87,6 +106,17 @@
             this.button_start.Text = "Start";
             this.button_start.UseVisualStyleBackColor = true;
             this.button_start.Click += new System.EventHandler(this.button_start_Click);
+=======
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStart.Location = new System.Drawing.Point(337, 119);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(102, 42);
+            this.buttonStart.TabIndex = 3;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             // 
             // label1
             // 
@@ -105,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 301);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button_start);
+            this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.importP1);
             this.Controls.Add(this.importP2);
             this.Controls.Add(this.labelP2);
@@ -124,7 +154,7 @@
         private System.Windows.Forms.Label labelP2;
         private System.Windows.Forms.TextBox importP2;
         private System.Windows.Forms.TextBox importP1;
-        private System.Windows.Forms.Button button_start;
+        private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label label1;
     }
 

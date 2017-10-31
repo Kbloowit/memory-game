@@ -14,12 +14,19 @@ namespace MemoryGame
 
 
        public static WindowsMediaPlayer startmuziek = new WindowsMediaPlayer();
+<<<<<<< HEAD
         public static WindowsMediaPlayer grunty = new WindowsMediaPlayer();
+=======
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         public static void Startmuziek()
         {
 
             
+<<<<<<< HEAD
             startmuziek.URL = Directory.Basedirectory() + "/muziek/Bloodthirster.mp3";
+=======
+            startmuziek.URL = Directory.Basedirectory() + "/muziek/Pent.mp3";
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             startmuziek.controls.play();
             
 
@@ -29,7 +36,11 @@ namespace MemoryGame
             
             
             startmuziek.controls.stop();
+<<<<<<< HEAD
             grunty.controls.stop();
+=======
+
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
 
         }
 
@@ -47,6 +58,7 @@ namespace MemoryGame
             incorrect.controls.play();
         }
 
+<<<<<<< HEAD
         public static void Grunty()
         {
             
@@ -55,6 +67,9 @@ namespace MemoryGame
             grunty.controls.play();
             
         }
+=======
+
+>>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
 
 
     }
