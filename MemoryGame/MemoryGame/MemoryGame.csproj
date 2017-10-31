@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Sounds.cs" />
     <Compile Include="Directory.cs" />
     <Compile Include="Gamepanel.cs">
       <SubType>Form</SubType>
@@ -79,7 +79,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Save.cs" />
+    <Compile Include="SaveXML.cs" />
     <EmbeddedResource Include="Gamepanel.resx">
       <DependentUpon>Gamepanel.cs</DependentUpon>
     </EmbeddedResource>

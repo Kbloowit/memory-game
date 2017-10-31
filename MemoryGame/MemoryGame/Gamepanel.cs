@@ -87,7 +87,7 @@ namespace MemoryGame
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
-        public int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
+        public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
         
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
@@ -152,7 +152,7 @@ namespace MemoryGame
             }
         }
 
-        private PictureBox getFreeSlot()
+        private PictureBox getFreeSlot(int plaatjenummer)
         {
             int num;
 
@@ -161,16 +161,19 @@ namespace MemoryGame
                 num = rnd.Next(0, pictureBoxes.Count());
             }
             while (pictureBoxes[num].Tag != null);
+            pictures[num] = plaatjenummer;
             return pictureBoxes[num];
 
         }
 
         public void setRandomImages()
         {
+            int plaatje = 0;
             foreach (var image in images)
             {
-                getFreeSlot().Tag = image;
-                getFreeSlot().Tag = image;
+                getFreeSlot(plaatje).Tag = image;
+                getFreeSlot(plaatje).Tag = image;
+                plaatje++;
             }
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
@@ -240,7 +243,7 @@ namespace MemoryGame
                 
                 allowClick = false;
                 clickTimer.Start();
-                Turn1();
+                ToTurn();
                 
             }
 
@@ -249,8 +252,8 @@ namespace MemoryGame
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
-            countP1 = countP1 * (60 - (60 - time)*(1/omgedraaid1));
-            countP2 = countP2 * (60 - (60 - time)*(1/omgedraaid2));
+            countP1 = countP1 * ((100 - (60 - time) * -100));
+            countP2 = countP2 * ((100 - (60 - time) * -100));
             if (countP1 > countP2)
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
@@ -299,17 +302,19 @@ namespace MemoryGame
         }
 
 
-        public void Turn1()
+        public void ToTurn()
         {
             if (x1.Text == "x")
             {
                 x1.Text = "...";
                 x2.Text = "x";
+                Turn = 2;
             }
             else if (x2.Text == "x")
             {
                 x1.Text = "x";
                 x2.Text = "...";
+                Turn = 1;
             }
             
 
@@ -335,9 +340,28 @@ namespace MemoryGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Player_import killme = new Player_import();
-            killme.Show();
-            this.Dispose();
+            timer.Stop();
+            DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel);
+            if (dialog == DialogResult.Yes)
+            {
+                SaveXML.button_click();
+                Player_import killme = new Player_import();
+                killme.Show();
+                this.Dispose();
+
+            }
+            else if (dialog == DialogResult.No)
+            {
+                Player_import killme = new Player_import();
+                killme.Show();
+                this.Dispose();
+            }
+            else if (dialog == DialogResult.Cancel)
+            {
+                timer.Start();
+                return;
+                
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -358,9 +382,22 @@ namespace MemoryGame
             Sounds.Grunty();
         }
 
-        
-
-
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het wordt afgesloten?", "Afsluiten", MessageBoxButtons.YesNoCancel);
+            if (dialog == DialogResult.Yes)
+            {
+                SaveXML.button_click();
+                /*Application.Exit();*/
+            }
+            else if (dialog == DialogResult.No)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.Cancel)
+            {
+                return;
+            }
+        }
     } 
 }

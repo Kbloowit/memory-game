@@ -20,17 +20,17 @@ namespace MemoryGame
 
 
         /* dit stuk hieronder zet de muziek voor het startmenu klaar, ik heb hier eerst als placeholder Pentakill - Lightbringer gebruikt*/
-        
+
         public Hoofdmenu()
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-            
+
             this.TopMost = true;
-             
             
+
         }
-        
+
 
         private void button_options_Click(object sender, EventArgs e)
         {
@@ -40,8 +40,8 @@ namespace MemoryGame
             opties.ShowDialog();
             this.Show();
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
-            
-               
+
+
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -51,8 +51,8 @@ namespace MemoryGame
             /*opent het game form*/
             this.Hide();
             import.ShowDialog();
-            
-            
+
+
 
 
 
@@ -62,18 +62,12 @@ namespace MemoryGame
         {
             Highscores highscores = new Highscores();
             highscores.ShowDialog();
-                
+
         }
 
-        
-
-        public void Hoofdmenu_Load(object sender, EventArgs e)
+        private void Hoofdmenu_Load(object sender, EventArgs e)
         {
             Sounds.Startmuziek();
-            
-
         }
-
-        
     }
 }
