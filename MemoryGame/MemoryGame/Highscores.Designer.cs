@@ -31,50 +31,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button_menu = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Highscores));
+            this.listBoxPlayers = new System.Windows.Forms.ListBox();
+            this.listBoxScores = new System.Windows.Forms.ListBox();
+            this.buttonMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxPlayers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(32, 35);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(131, 238);
-            this.listBox1.TabIndex = 0;
+            this.listBoxPlayers.FormattingEnabled = true;
+            this.listBoxPlayers.ItemHeight = 25;
+            this.listBoxPlayers.Location = new System.Drawing.Point(64, 67);
+            this.listBoxPlayers.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxPlayers.Name = "listBoxPlayers";
+            this.listBoxPlayers.Size = new System.Drawing.Size(258, 454);
+            this.listBoxPlayers.TabIndex = 0;
             // 
-            // listBox2
+            // listBoxScores
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(178, 35);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(131, 238);
-            this.listBox2.TabIndex = 1;
+            this.listBoxScores.FormattingEnabled = true;
+            this.listBoxScores.ItemHeight = 25;
+            this.listBoxScores.Location = new System.Drawing.Point(356, 67);
+            this.listBoxScores.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxScores.Name = "listBoxScores";
+            this.listBoxScores.Size = new System.Drawing.Size(258, 454);
+            this.listBoxScores.TabIndex = 1;
             // 
-            // button_menu
+            // buttonMenu
             // 
-            this.button_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_menu.Location = new System.Drawing.Point(356, 246);
-            this.button_menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button_menu.Name = "button_menu";
-            this.button_menu.Size = new System.Drawing.Size(75, 27);
-            this.button_menu.TabIndex = 2;
-            this.button_menu.Text = "Menu";
-            this.button_menu.UseVisualStyleBackColor = true;
-            this.button_menu.Click += new System.EventHandler(this.button_menu_Click);
+            this.buttonMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMenu.Location = new System.Drawing.Point(712, 473);
+            this.buttonMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(150, 52);
+            this.buttonMenu.TabIndex = 2;
+            this.buttonMenu.Text = "Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // Highscores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 290);
-            this.Controls.Add(this.button_menu);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(884, 558);
+            this.Controls.Add(this.buttonMenu);
+            this.Controls.Add(this.listBoxScores);
+            this.Controls.Add(this.listBoxPlayers);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Highscores";
             this.Text = "Memory Game";
             this.ResumeLayout(false);
@@ -83,8 +87,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button_menu;
+        private System.Windows.Forms.ListBox listBoxPlayers;
+        private System.Windows.Forms.ListBox listBoxScores;
+        private System.Windows.Forms.Button buttonMenu;
     }
 }

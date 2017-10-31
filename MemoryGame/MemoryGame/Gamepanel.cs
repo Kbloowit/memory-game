@@ -11,15 +11,14 @@ using System.Xml;
 
 namespace MemoryGame
 {
-    public partial class GamePanel : Form
+    public partial class Gamepanel : Form
 
     {
-        public static List<string> Players = new List<string>(); // hierin zijn de namen opgeslagen op ze aanroepbaar te maken voor de save class
+        public static List<string> Players = new List<string>();
 
         public static int Turn = 1;
-        //public static List<int> Time = new List<int>();
-       //public static List<string> Cards = new List<string>();
-
+        public static List<int> Time = new List<int>();
+        public static List<string> Cards = new List<string>();
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
@@ -57,13 +56,13 @@ namespace MemoryGame
         /// <summary>
         /// Score Speler 1
         /// </summary>
-        public static int countP1 = 0;
+       public static int countP1 = 0;
         #endregion
         #region
         /// <summary>
         /// Score Speler 2
         /// </summary>
-        public static int countP2 = 0;
+       public static int countP2 = 0;
         #endregion
         #region
         /// <summary>
@@ -74,7 +73,7 @@ namespace MemoryGame
         #endregion 
 
         /* neemt de namen mee van het Player_Import Form*/
-        public GamePanel(String[] players)
+        public Gamepanel(String[] players)
         {
             InitializeComponent();
 
@@ -82,7 +81,6 @@ namespace MemoryGame
             NameP2.Text = players[1];
             Players.Add(players[0]);
             Players.Add(players[1]);
-
         }
         /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
@@ -90,6 +88,7 @@ namespace MemoryGame
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
+        
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -106,6 +105,9 @@ namespace MemoryGame
                     Properties.Resources.thor,
                     Properties.Resources.stark,
                     Properties.Resources.hawkeyes
+
+
+
 
                 };
             }
@@ -126,7 +128,7 @@ namespace MemoryGame
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
-                Timertime.Text = "00:" + time.ToString();
+                TimeLeft.Text = "00:" + time.ToString();
             };
         }
 
@@ -171,17 +173,16 @@ namespace MemoryGame
             {
                 getFreeSlot(plaatje).Tag = image;
                 getFreeSlot(plaatje).Tag = image;
-                plaatje++;  // Telt 1 bij de int van plaatje op wanneer hij twee pictures in de picturebox heeft gezet. Dit weer in verband met save-game. 
-                //Omdat wij in de tag een afbeelding mee sturen en geen cijfer.
+                plaatje++;
             }
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
-
+            
             HideImages();
-
-            allowClick = true;
             Sounds.Incorrect();
+            allowClick = true;
+            
             clickTimer.Stop();
         }
 
@@ -207,6 +208,7 @@ namespace MemoryGame
             }
 
             pic.Image = (Image)pic.Tag;
+
 
             if (pic.Image == firstGuess.Image && pic != firstGuess)
             {
@@ -238,34 +240,40 @@ namespace MemoryGame
 
             else
             {
-
+                
                 allowClick = false;
                 clickTimer.Start();
                 ToTurn();
-
+                
             }
+
+
 
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
-            countP1 = countP1 * (60 - (60 - time) * (1 / omgedraaid1));
-            countP2 = countP2 * (60 - (60 - time) * (1 / omgedraaid2));
+            countP1 = countP1 * ((100 - (60 - time) * -100));
+            countP2 = countP2 * ((100 - (60 - time) * -100));
             if (countP1 > countP2)
             {
-                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten! " + NameP2.Text + " had " + countP2 + " punten");
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
             }
 
             else if (countP2 > countP1)
             {
-                MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
+                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
             }
             else if (countP1 == countP2)
             {
                 MessageBox.Show("Gelijkspel!");
             }
 
+            
             ResetScore();
             ResetImages();
+
+
+
 
         }
         private void startGame(object sender, EventArgs e)
@@ -283,7 +291,6 @@ namespace MemoryGame
         {
             countP1++;
             score1.Text = countP1.ToString();
-
         }
 
 
@@ -291,7 +298,6 @@ namespace MemoryGame
         {
             countP2++;
             score2.Text = countP2.ToString();
-
 
         }
 
@@ -302,14 +308,16 @@ namespace MemoryGame
             {
                 x1.Text = "...";
                 x2.Text = "x";
-                Turn = 2; // Toegevoegd voor het opslaan wie er aan de beurt is
+                Turn = 2;
             }
             else if (x2.Text == "x")
             {
                 x1.Text = "x";
                 x2.Text = "...";
-                Turn = 1; // Toegevoegd voor het opslaan wie er aan de beurt is
+                Turn = 1;
             }
+            
+
 
 
         }
@@ -327,31 +335,33 @@ namespace MemoryGame
 
         }
 
+
+
+
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel);
-            if (dialog == DialogResult.No)
+            timer.Stop();
+            DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel);
+            if (dialog == DialogResult.Yes)
             {
+                SaveXML.button_click();
                 Player_import killme = new Player_import();
                 killme.Show();
                 this.Dispose();
-                timer.Stop();
+
             }
-            else if (dialog == DialogResult.Yes)
+            else if (dialog == DialogResult.No)
             {
-                SaveXML.button_click(); // Hier word de saveXML class aangeroepen
                 Player_import killme = new Player_import();
                 killme.Show();
                 this.Dispose();
-                timer.Stop();
             }
             else if (dialog == DialogResult.Cancel)
             {
+                timer.Start();
                 return;
+                
             }
-
-
-
         }
 
         private void buttonOptions_Click(object sender, EventArgs e)
@@ -360,24 +370,19 @@ namespace MemoryGame
             opties.ShowDialog();
         }
 
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.OpenForms[0].Show();
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            Sounds.Stopmuziek();
+            Sounds.Grunty();
         }
 
-
-        private void buttonSaveQuit_Click(object sender, EventArgs e)
+        private void buttonQuitSave_Click(object sender, EventArgs e)
         {
-
-            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het wordt afgesloten?", "Afsluiten", MessageBoxButtons.YesNoCancel);
+            timer.Stop();
+            DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het wordt afgesloten?", "Afsluiten", MessageBoxButtons.YesNoCancel);
             if (dialog == DialogResult.Yes)
             {
-                SaveXML.button_click(); // Hier word de saveXML class aangeroepen
+                SaveXML.button_click();
                 Application.Exit();
             }
             else if (dialog == DialogResult.No)
@@ -386,9 +391,9 @@ namespace MemoryGame
             }
             else if (dialog == DialogResult.Cancel)
             {
+                timer.Start();
                 return;
             }
-            
         }
-    }
+    } 
 }

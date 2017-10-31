@@ -19,8 +19,8 @@ namespace MemoryGame
 
         public void buttonStart_Click(object sender, EventArgs e)
         {
-            string[] players = { importP1.Text, importP2.Text }; // Hiermee worden de ingevulde namen opgeslagen in een array
-            GamePanel game = new GamePanel(players); // In deze regel worden de namen meegestuurd in het volgende window
+            string[] players = { importP1.Text, importP2.Text };
+            Gamepanel game = new Gamepanel(players); // In deze regel worden de namen meegestuurd in het volgende window
             game.Show();
             
             this.Dispose();
