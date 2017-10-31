@@ -11,7 +11,6 @@ using System.Xml;
 
 namespace MemoryGame
 {
-<<<<<<< HEAD
     public partial class Gamepanel : Form
 
     {
@@ -20,17 +19,6 @@ namespace MemoryGame
         public static int Turn = 1;
         public static List<int> Time = new List<int>();
         public static List<string> Cards = new List<string>();
-=======
-    public partial class GamePanel : Form
-
-    {
-        public static List<string> Players = new List<string>(); // hierin zijn de namen opgeslagen op ze aanroepbaar te maken voor de save class
-
-        public static int Turn = 1;
-        //public static List<int> Time = new List<int>();
-       //public static List<string> Cards = new List<string>();
-
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
@@ -68,21 +56,13 @@ namespace MemoryGame
         /// <summary>
         /// Score Speler 1
         /// </summary>
-<<<<<<< HEAD
        public static int countP1 = 0;
-=======
-        public static int countP1 = 0;
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         #endregion
         #region
         /// <summary>
         /// Score Speler 2
         /// </summary>
-<<<<<<< HEAD
        public static int countP2 = 0;
-=======
-        public static int countP2 = 0;
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         #endregion
         #region
         /// <summary>
@@ -93,11 +73,7 @@ namespace MemoryGame
         #endregion 
 
         /* neemt de namen mee van het Player_Import Form*/
-<<<<<<< HEAD
         public Gamepanel(String[] players)
-=======
-        public GamePanel(String[] players)
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         {
             InitializeComponent();
 
@@ -105,10 +81,6 @@ namespace MemoryGame
             NameP2.Text = players[1];
             Players.Add(players[0]);
             Players.Add(players[1]);
-<<<<<<< HEAD
-=======
-
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         }
         /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
@@ -116,10 +88,7 @@ namespace MemoryGame
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
-<<<<<<< HEAD
         
-=======
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -159,11 +128,7 @@ namespace MemoryGame
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
-<<<<<<< HEAD
                 label1.Text = "00:" + time.ToString();
-=======
-                Timertime.Text = "00:" + time.ToString();
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             };
         }
 
@@ -187,7 +152,7 @@ namespace MemoryGame
             }
         }
 
-        private PictureBox getFreeSlot(int plaatjenummer)
+        private PictureBox getFreeSlot()
         {
             int num;
 
@@ -196,45 +161,25 @@ namespace MemoryGame
                 num = rnd.Next(0, pictureBoxes.Count());
             }
             while (pictureBoxes[num].Tag != null);
-            pictures[num] = plaatjenummer;
             return pictureBoxes[num];
 
         }
 
-<<<<<<< HEAD
-        public void setRandomImages(int plaatje)
-        {
-=======
         public void setRandomImages()
         {
-            int plaatje = 0;
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             foreach (var image in images)
             {
-                getFreeSlot(plaatje).Tag = image;
-                getFreeSlot(plaatje).Tag = image;
-<<<<<<< HEAD
-=======
-                plaatje++;  // Tel een bij de int van plaatje op wanneer hij twee pictures in de picturebox heeft gezet. Dit weer in verband met save-game. 
-                //Omdat wij in de tag een afbeelding mee sturen en geen cijfer.
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
+                getFreeSlot().Tag = image;
+                getFreeSlot().Tag = image;
             }
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             
             HideImages();
             Sounds.Incorrect();
             allowClick = true;
             
-=======
-
-            HideImages();
-
-            allowClick = true;
-            Sounds.Incorrect();
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             clickTimer.Stop();
         }
 
@@ -292,19 +237,11 @@ namespace MemoryGame
 
             else
             {
-<<<<<<< HEAD
                 
                 allowClick = false;
                 clickTimer.Start();
                 Turn1();
                 
-=======
-
-                allowClick = false;
-                clickTimer.Start();
-                ToTurn();
-
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             }
 
 
@@ -312,51 +249,23 @@ namespace MemoryGame
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
-<<<<<<< HEAD:MemoryGame/MemoryGame/Gamepanel.cs
-<<<<<<< HEAD
             countP1 = countP1 * (60 - (60 - time)*(1/omgedraaid1));
             countP2 = countP2 * (60 - (60 - time)*(1/omgedraaid2));
             if (countP1 > countP2)
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
-=======
-            countP1 = countP1 * (60 - (60 - time) * (1 / omgedraaid1));
-            countP2 = countP2 * (60 - (60 - time) * (1 / omgedraaid2));
-            if (countP1 > countP2)
-            {
-                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten! " + NameP2.Text + " had " + countP2 + " punten");
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
-=======
-            countP1 = countP1 * ((100 - (60 - time) * -100));
-            countP2 = countP2 * ((100 - (60 - time) * -100));
-            if (countP1 > countP2)
-            {
-                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + " Punten");
->>>>>>> b53348351857d16bd868a4272ffc35903204841d:MemoryGame/MemoryGame/game.cs
             }
 
             else if (countP2 > countP1)
             {
-<<<<<<< HEAD:MemoryGame/MemoryGame/Gamepanel.cs
-<<<<<<< HEAD
                 MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
-=======
-                MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
-=======
-                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + " Punten");
->>>>>>> b53348351857d16bd868a4272ffc35903204841d:MemoryGame/MemoryGame/game.cs
             }
             else if (countP1 == countP2)
             {
                 MessageBox.Show("Gelijkspel!");
             }
 
-<<<<<<< HEAD
             
-=======
-
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             ResetScore();
             ResetImages();
 
@@ -372,21 +281,13 @@ namespace MemoryGame
             startGameTimer();
             clickTimer.Interval = 1000;
             clickTimer.Tick += CLICKTIMER_TICK;
-<<<<<<< HEAD
             button1.Enabled = false;
-=======
-            buttonStart.Enabled = false;
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         }
 
         public void P1Score()
         {
             countP1++;
             score1.Text = countP1.ToString();
-<<<<<<< HEAD
-=======
-
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         }
 
 
@@ -395,40 +296,22 @@ namespace MemoryGame
             countP2++;
             score2.Text = countP2.ToString();
 
-<<<<<<< HEAD
         }
 
 
         public void Turn1()
-=======
-
-        }
-
-
-        public void ToTurn()
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         {
             if (x1.Text == "x")
             {
                 x1.Text = "...";
                 x2.Text = "x";
-<<<<<<< HEAD
-=======
-                Turn = 2; // Toegevoegd voor het opslaan wie er aan de beurt is
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
             }
             else if (x2.Text == "x")
             {
                 x1.Text = "x";
                 x2.Text = "...";
-<<<<<<< HEAD
             }
             
-=======
-                Turn = 1; // Toegevoegd voor het opslaan wie er aan de beurt is
-            }
-
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
 
 
 
@@ -450,22 +333,14 @@ namespace MemoryGame
 
 
 
-<<<<<<< HEAD
         private void button2_Click(object sender, EventArgs e)
-=======
-        private void buttonReset_Click(object sender, EventArgs e)
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         {
             Player_import killme = new Player_import();
             killme.Show();
             this.Dispose();
         }
 
-<<<<<<< HEAD
         private void button3_Click(object sender, EventArgs e)
-=======
-        private void buttonOptions_Click(object sender, EventArgs e)
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         {
             Options opties = new Options();
             opties.ShowDialog();
@@ -473,17 +348,12 @@ namespace MemoryGame
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-<<<<<<< HEAD
             
 
-=======
-            Application.OpenForms[0].Show();
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             Sounds.Stopmuziek();
             Sounds.Grunty();
         }
@@ -493,15 +363,4 @@ namespace MemoryGame
 
         
     } 
-=======
-
-        }
-
-
-        private void buttonSaveQuit_Click(object sender, EventArgs e)
-        {
-            SaveXML.button_click(); // Hier word de saveXML class aangeroepen
-        }
-    }
->>>>>>> fdc3ab5059109bda6008142f3851ebba851efdcd
 }
