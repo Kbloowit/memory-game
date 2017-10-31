@@ -107,9 +107,6 @@ namespace MemoryGame
                     Properties.Resources.stark,
                     Properties.Resources.hawkeyes
 
-
-
-
                 };
             }
         }
@@ -174,7 +171,7 @@ namespace MemoryGame
             {
                 getFreeSlot(plaatje).Tag = image;
                 getFreeSlot(plaatje).Tag = image;
-                plaatje++;  // Tel een bij de int van plaatje op wanneer hij twee pictures in de picturebox heeft gezet. Dit weer in verband met save-game. 
+                plaatje++;  // Telt 1 bij de int van plaatje op wanneer hij twee pictures in de picturebox heeft gezet. Dit weer in verband met save-game. 
                 //Omdat wij in de tag een afbeelding mee sturen en geen cijfer.
             }
         }
@@ -210,7 +207,6 @@ namespace MemoryGame
             }
 
             pic.Image = (Image)pic.Tag;
-
 
             if (pic.Image == firstGuess.Image && pic != firstGuess)
             {
@@ -249,8 +245,6 @@ namespace MemoryGame
 
             }
 
-
-
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
@@ -270,12 +264,8 @@ namespace MemoryGame
                 MessageBox.Show("Gelijkspel!");
             }
 
-
             ResetScore();
             ResetImages();
-
-
-
 
         }
         private void startGame(object sender, EventArgs e)
@@ -322,8 +312,6 @@ namespace MemoryGame
             }
 
 
-
-
         }
 
         public void ResetScore()
@@ -338,9 +326,6 @@ namespace MemoryGame
             omgedraaid2 = 0;
 
         }
-
-
-
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
