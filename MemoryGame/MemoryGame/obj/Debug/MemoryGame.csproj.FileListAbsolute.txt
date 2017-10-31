@@ -35,4 +35,26 @@ C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debu
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
 C:\Users\jesperkruyt\Documents\GitHub\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
+<<<<<<< HEAD
 C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Game.resources
+=======
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\bin\Debug\Interop.WMPLib.dll
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\Interop.WMPLib.dll
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Game.resources
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Highscores.resources
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Hoofdmenu.resources
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Options.resources
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Player_import.resources
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.CoreCompileInputs.cache
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\Co\Documents\Kutgit\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+>>>>>>> b53348351857d16bd868a4272ffc35903204841d

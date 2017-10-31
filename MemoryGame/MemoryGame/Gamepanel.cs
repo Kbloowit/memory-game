@@ -250,16 +250,16 @@ namespace MemoryGame
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
             timer.Stop();
-            countP1 = countP1 * (60 - (60 - time)*(1/omgedraaid1));
-            countP2 = countP2 * (60 - (60 - time)*(1/omgedraaid2));
+            countP1 = countP1 * ((100 - (60 - time) * -100));
+            countP2 = countP2 * ((100 - (60 - time) * -100));
             if (countP1 > countP2)
             {
-                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + " Punten");
             }
 
             else if (countP2 > countP1)
             {
-                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
+                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + " Punten");
             }
             else if (countP1 == countP2)
             {
