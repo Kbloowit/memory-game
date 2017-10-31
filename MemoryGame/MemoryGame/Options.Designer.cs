@@ -34,7 +34,7 @@
             this.checkbox_soundeffects = new System.Windows.Forms.CheckBox();
             this.checkbox_backgroundmusic = new System.Windows.Forms.CheckBox();
             this.checkbox_mute = new System.Windows.Forms.CheckBox();
-            this.labelOptions = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,6 +80,7 @@
             this.checkbox_soundeffects.Size = new System.Drawing.Size(15, 14);
             this.checkbox_soundeffects.TabIndex = 3;
             this.checkbox_soundeffects.UseVisualStyleBackColor = true;
+            
             // 
             // checkbox_backgroundmusic
             // 
@@ -102,16 +103,16 @@
             this.checkbox_mute.TabIndex = 5;
             this.checkbox_mute.UseVisualStyleBackColor = true;
             // 
-            // labelOptions
+            // label2
             // 
-            this.labelOptions.AutoSize = true;
-            this.labelOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOptions.Location = new System.Drawing.Point(46, 43);
-            this.labelOptions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelOptions.Name = "labelOptions";
-            this.labelOptions.Size = new System.Drawing.Size(82, 24);
-            this.labelOptions.TabIndex = 6;
-            this.labelOptions.Text = "Options";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Options";
             // 
             // button_back
             // 
@@ -132,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 343);
             this.Controls.Add(this.button_back);
-            this.Controls.Add(this.labelOptions);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.checkbox_mute);
             this.Controls.Add(this.checkbox_backgroundmusic);
             this.Controls.Add(this.checkbox_soundeffects);
@@ -155,7 +156,7 @@
         private System.Windows.Forms.CheckBox checkbox_soundeffects;
         private System.Windows.Forms.CheckBox checkbox_backgroundmusic;
         private System.Windows.Forms.CheckBox checkbox_mute;
-        private System.Windows.Forms.Label labelOptions;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_back;
     }
 }
