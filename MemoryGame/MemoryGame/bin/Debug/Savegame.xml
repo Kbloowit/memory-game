@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <players>
-  <Player1>Co</Player1>
-  <Player2>Aletta</Player2>
+  <Player1>Jesper</Player1>
+  <Player2>Kruyt</Player2>
   <Score>
     <ScoreP1>1</ScoreP1>
     <ScoreP2>0</ScoreP2>
   </Score>
-  <Turn>1</Turn>
+  <Turn>2</Turn>
+  <Plaatjenummers>6351227143405076</Plaatjenummers>
 </players>

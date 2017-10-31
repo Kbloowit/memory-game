@@ -40,7 +40,14 @@ namespace MemoryGame
                 writer.WriteStartElement("Turn"); // Start opslaan turn
                 writer.WriteString(GamePanel.Turn.ToString()); // turn
                 writer.WriteEndElement(); // Einde opslaan turn
-             
+                writer.WriteStartElement("Plaatjenummers");
+                foreach (int nummer in GamePanel.pictures)
+                {
+                    writer.WriteString(nummer.ToString());
+                }
+                writer.WriteEndElement();
+
+                
 
                 // worden nog meer aan toegevoegd, maar ben ik nog niet aan toe gekomen.
 

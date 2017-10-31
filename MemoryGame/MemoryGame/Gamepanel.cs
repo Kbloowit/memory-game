@@ -89,7 +89,7 @@ namespace MemoryGame
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
-        public int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
+        public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -329,9 +329,22 @@ namespace MemoryGame
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            Player_import killme = new Player_import();
-            killme.Show();
-            this.Dispose();
+            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.No)
+            {
+                Player_import killme = new Player_import();
+                killme.Show();
+                this.Dispose();
+            }
+            else if (dialog == DialogResult.Yes)
+            {
+                SaveXML.button_click(); // Hier word de saveXML class aangeroepen
+                Player_import killme = new Player_import();
+                killme.Show();
+                this.Dispose();
+            }
+
+            
         }
 
         private void buttonOptions_Click(object sender, EventArgs e)
@@ -353,7 +366,18 @@ namespace MemoryGame
 
         private void buttonSaveQuit_Click(object sender, EventArgs e)
         {
-            SaveXML.button_click(); // Hier word de saveXML class aangeroepen
+
+            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het wordt afgesloten?", "Exit", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                SaveXML.button_click(); // Hier word de saveXML class aangeroepen
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }
