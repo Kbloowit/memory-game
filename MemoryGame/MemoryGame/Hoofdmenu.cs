@@ -47,7 +47,7 @@ namespace MemoryGame
         public void button1_Click(object sender, EventArgs e)
         {
             /* geeft aan waar weg hij gecalled wordt*/
-            Player_import import = new Player_import();
+           Thema import= new Thema();
             /*opent het game form*/
             this.Hide();
             import.ShowDialog();

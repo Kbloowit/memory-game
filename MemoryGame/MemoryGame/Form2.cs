@@ -326,8 +326,8 @@ namespace MemoryGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Player_import killme = new Player_import();
-            killme.Show();
+            Thema opnieuw = new Thema();
+           opnieuw.Show();
             this.Dispose();
         }
 

@@ -35,3 +35,4 @@ C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 okt
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Player_import.resources
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+C:\Users\Alett\Desktop\Project Memroy Game groep 22\19 oktober tot en met 26 oktober\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Thema.resources
