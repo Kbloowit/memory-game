@@ -11,10 +11,10 @@ namespace MemoryGame
     {
 
 
-        /*
+        
          public static void button_click ()
          {
-
+            /*
              // Hier mee word de opmaak van het XML-bestand ingesteld
              XmlWriterSettings writerSettings = new XmlWriterSettings();
              writerSettings.NewLineOnAttributes = true;
@@ -41,7 +41,7 @@ namespace MemoryGame
                  writer.WriteStartElement("cards"); // Start opslaan van de cards
                  writer.WriteStartElement("card1");
                  writer.WriteString(pict)
-
+                 */
 
 
 
@@ -53,7 +53,7 @@ namespace MemoryGame
              }
 
          }
-         */
+         
 
     }
-}
+
