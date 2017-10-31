@@ -166,12 +166,12 @@ namespace MemoryGame
 
         }
 
-        public void setRandomImages()
+        public void setRandomImages(int plaatje)
         {
             foreach (var image in images)
             {
-                getFreeSlot().Tag = image;
-                getFreeSlot().Tag = image;
+                getFreeSlot(plaatje).Tag = image;
+                getFreeSlot(plaatje).Tag = image;
             }
         }
         private void CLICKTIMER_TICK(object sender, EventArgs e)
