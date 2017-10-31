@@ -79,9 +79,10 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(721, 292);
+            this.buttonStart.Location = new System.Drawing.Point(1442, 562);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(135, 41);
+            this.buttonStart.Size = new System.Drawing.Size(270, 79);
             this.buttonStart.TabIndex = 1;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -91,17 +92,19 @@
             // 
             this.Timertime.AutoSize = true;
             this.Timertime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timertime.Location = new System.Drawing.Point(750, 217);
+            this.Timertime.Location = new System.Drawing.Point(1500, 417);
+            this.Timertime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timertime.Name = "Timertime";
-            this.Timertime.Size = new System.Drawing.Size(71, 25);
+            this.Timertime.Size = new System.Drawing.Size(129, 48);
             this.Timertime.TabIndex = 1;
             this.Timertime.Text = "00:60";
             // 
             // card1
             // 
-            this.card1.Location = new System.Drawing.Point(25, 26);
+            this.card1.Location = new System.Drawing.Point(50, 50);
+            this.card1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card1.Name = "card1";
-            this.card1.Size = new System.Drawing.Size(125, 117);
+            this.card1.Size = new System.Drawing.Size(250, 225);
             this.card1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card1.TabIndex = 2;
             this.card1.TabStop = false;
@@ -109,9 +112,10 @@
             // 
             // card13
             // 
-            this.card13.Location = new System.Drawing.Point(25, 416);
+            this.card13.Location = new System.Drawing.Point(50, 800);
+            this.card13.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card13.Name = "card13";
-            this.card13.Size = new System.Drawing.Size(125, 117);
+            this.card13.Size = new System.Drawing.Size(250, 225);
             this.card13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card13.TabIndex = 3;
             this.card13.TabStop = false;
@@ -119,9 +123,10 @@
             // 
             // card14
             // 
-            this.card14.Location = new System.Drawing.Point(175, 416);
+            this.card14.Location = new System.Drawing.Point(350, 800);
+            this.card14.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card14.Name = "card14";
-            this.card14.Size = new System.Drawing.Size(125, 117);
+            this.card14.Size = new System.Drawing.Size(250, 225);
             this.card14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card14.TabIndex = 4;
             this.card14.TabStop = false;
@@ -129,9 +134,10 @@
             // 
             // card15
             // 
-            this.card15.Location = new System.Drawing.Point(325, 416);
+            this.card15.Location = new System.Drawing.Point(650, 800);
+            this.card15.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card15.Name = "card15";
-            this.card15.Size = new System.Drawing.Size(125, 117);
+            this.card15.Size = new System.Drawing.Size(250, 225);
             this.card15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card15.TabIndex = 5;
             this.card15.TabStop = false;
@@ -139,9 +145,10 @@
             // 
             // card16
             // 
-            this.card16.Location = new System.Drawing.Point(475, 416);
+            this.card16.Location = new System.Drawing.Point(950, 800);
+            this.card16.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card16.Name = "card16";
-            this.card16.Size = new System.Drawing.Size(125, 117);
+            this.card16.Size = new System.Drawing.Size(250, 225);
             this.card16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card16.TabIndex = 6;
             this.card16.TabStop = false;
@@ -149,9 +156,10 @@
             // 
             // card9
             // 
-            this.card9.Location = new System.Drawing.Point(25, 286);
+            this.card9.Location = new System.Drawing.Point(50, 550);
+            this.card9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card9.Name = "card9";
-            this.card9.Size = new System.Drawing.Size(125, 117);
+            this.card9.Size = new System.Drawing.Size(250, 225);
             this.card9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card9.TabIndex = 7;
             this.card9.TabStop = false;
@@ -159,9 +167,10 @@
             // 
             // card10
             // 
-            this.card10.Location = new System.Drawing.Point(175, 286);
+            this.card10.Location = new System.Drawing.Point(350, 550);
+            this.card10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card10.Name = "card10";
-            this.card10.Size = new System.Drawing.Size(125, 117);
+            this.card10.Size = new System.Drawing.Size(250, 225);
             this.card10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card10.TabIndex = 8;
             this.card10.TabStop = false;
@@ -169,9 +178,10 @@
             // 
             // card11
             // 
-            this.card11.Location = new System.Drawing.Point(325, 286);
+            this.card11.Location = new System.Drawing.Point(650, 550);
+            this.card11.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card11.Name = "card11";
-            this.card11.Size = new System.Drawing.Size(125, 117);
+            this.card11.Size = new System.Drawing.Size(250, 225);
             this.card11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card11.TabIndex = 9;
             this.card11.TabStop = false;
@@ -179,9 +189,10 @@
             // 
             // card12
             // 
-            this.card12.Location = new System.Drawing.Point(475, 286);
+            this.card12.Location = new System.Drawing.Point(950, 550);
+            this.card12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card12.Name = "card12";
-            this.card12.Size = new System.Drawing.Size(125, 117);
+            this.card12.Size = new System.Drawing.Size(250, 225);
             this.card12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card12.TabIndex = 10;
             this.card12.TabStop = false;
@@ -189,9 +200,10 @@
             // 
             // card8
             // 
-            this.card8.Location = new System.Drawing.Point(475, 156);
+            this.card8.Location = new System.Drawing.Point(950, 300);
+            this.card8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card8.Name = "card8";
-            this.card8.Size = new System.Drawing.Size(125, 117);
+            this.card8.Size = new System.Drawing.Size(250, 225);
             this.card8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card8.TabIndex = 11;
             this.card8.TabStop = false;
@@ -199,9 +211,10 @@
             // 
             // card7
             // 
-            this.card7.Location = new System.Drawing.Point(325, 156);
+            this.card7.Location = new System.Drawing.Point(650, 300);
+            this.card7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card7.Name = "card7";
-            this.card7.Size = new System.Drawing.Size(125, 117);
+            this.card7.Size = new System.Drawing.Size(250, 225);
             this.card7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card7.TabIndex = 12;
             this.card7.TabStop = false;
@@ -209,9 +222,10 @@
             // 
             // card6
             // 
-            this.card6.Location = new System.Drawing.Point(175, 156);
+            this.card6.Location = new System.Drawing.Point(350, 300);
+            this.card6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card6.Name = "card6";
-            this.card6.Size = new System.Drawing.Size(125, 117);
+            this.card6.Size = new System.Drawing.Size(250, 225);
             this.card6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card6.TabIndex = 13;
             this.card6.TabStop = false;
@@ -219,9 +233,10 @@
             // 
             // card5
             // 
-            this.card5.Location = new System.Drawing.Point(25, 156);
+            this.card5.Location = new System.Drawing.Point(50, 300);
+            this.card5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card5.Name = "card5";
-            this.card5.Size = new System.Drawing.Size(125, 117);
+            this.card5.Size = new System.Drawing.Size(250, 225);
             this.card5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card5.TabIndex = 14;
             this.card5.TabStop = false;
@@ -229,9 +244,10 @@
             // 
             // card4
             // 
-            this.card4.Location = new System.Drawing.Point(475, 26);
+            this.card4.Location = new System.Drawing.Point(950, 50);
+            this.card4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card4.Name = "card4";
-            this.card4.Size = new System.Drawing.Size(125, 117);
+            this.card4.Size = new System.Drawing.Size(250, 225);
             this.card4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card4.TabIndex = 15;
             this.card4.TabStop = false;
@@ -239,9 +255,10 @@
             // 
             // card3
             // 
-            this.card3.Location = new System.Drawing.Point(325, 26);
+            this.card3.Location = new System.Drawing.Point(650, 50);
+            this.card3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card3.Name = "card3";
-            this.card3.Size = new System.Drawing.Size(125, 117);
+            this.card3.Size = new System.Drawing.Size(250, 225);
             this.card3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card3.TabIndex = 16;
             this.card3.TabStop = false;
@@ -249,9 +266,10 @@
             // 
             // card2
             // 
-            this.card2.Location = new System.Drawing.Point(175, 26);
+            this.card2.Location = new System.Drawing.Point(350, 50);
+            this.card2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.card2.Name = "card2";
-            this.card2.Size = new System.Drawing.Size(125, 117);
+            this.card2.Size = new System.Drawing.Size(250, 225);
             this.card2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.card2.TabIndex = 17;
             this.card2.TabStop = false;
@@ -261,9 +279,10 @@
             // 
             this.NameP1.AutoSize = true;
             this.NameP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameP1.Location = new System.Drawing.Point(642, 63);
+            this.NameP1.Location = new System.Drawing.Point(1284, 121);
+            this.NameP1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameP1.Name = "NameP1";
-            this.NameP1.Size = new System.Drawing.Size(70, 20);
+            this.NameP1.Size = new System.Drawing.Size(140, 37);
             this.NameP1.TabIndex = 18;
             this.NameP1.Text = "NameP1";
             // 
@@ -271,17 +290,19 @@
             // 
             this.NameP2.AutoSize = true;
             this.NameP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameP2.Location = new System.Drawing.Point(642, 112);
+            this.NameP2.Location = new System.Drawing.Point(1284, 215);
+            this.NameP2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameP2.Name = "NameP2";
-            this.NameP2.Size = new System.Drawing.Size(74, 20);
+            this.NameP2.Size = new System.Drawing.Size(151, 37);
             this.NameP2.TabIndex = 19;
             this.NameP2.Text = "Name P2";
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(719, 355);
+            this.buttonReset.Location = new System.Drawing.Point(1438, 683);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(135, 46);
+            this.buttonReset.Size = new System.Drawing.Size(270, 88);
             this.buttonReset.TabIndex = 2;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = true;
@@ -289,9 +310,10 @@
             // 
             // buttonOptions
             // 
-            this.buttonOptions.Location = new System.Drawing.Point(719, 423);
+            this.buttonOptions.Location = new System.Drawing.Point(1438, 813);
+            this.buttonOptions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonOptions.Name = "buttonOptions";
-            this.buttonOptions.Size = new System.Drawing.Size(135, 46);
+            this.buttonOptions.Size = new System.Drawing.Size(270, 88);
             this.buttonOptions.TabIndex = 3;
             this.buttonOptions.Text = "Opties";
             this.buttonOptions.UseVisualStyleBackColor = true;
@@ -301,9 +323,10 @@
             // 
             this.score1.AutoSize = true;
             this.score1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score1.Location = new System.Drawing.Point(780, 63);
+            this.score1.Location = new System.Drawing.Point(1560, 121);
+            this.score1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.score1.Name = "score1";
-            this.score1.Size = new System.Drawing.Size(20, 24);
+            this.score1.Size = new System.Drawing.Size(41, 44);
             this.score1.TabIndex = 22;
             this.score1.Text = "0";
             // 
@@ -311,9 +334,10 @@
             // 
             this.score2.AutoSize = true;
             this.score2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score2.Location = new System.Drawing.Point(780, 112);
+            this.score2.Location = new System.Drawing.Point(1560, 215);
+            this.score2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.score2.Name = "score2";
-            this.score2.Size = new System.Drawing.Size(20, 24);
+            this.score2.Size = new System.Drawing.Size(41, 44);
             this.score2.TabIndex = 23;
             this.score2.Text = "0";
             // 
@@ -321,9 +345,10 @@
             // 
             this.x1.AutoSize = true;
             this.x1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x1.Location = new System.Drawing.Point(867, 63);
+            this.x1.Location = new System.Drawing.Point(1734, 121);
+            this.x1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.x1.Name = "x1";
-            this.x1.Size = new System.Drawing.Size(20, 24);
+            this.x1.Size = new System.Drawing.Size(39, 44);
             this.x1.TabIndex = 24;
             this.x1.Text = "x";
             // 
@@ -331,9 +356,10 @@
             // 
             this.x2.AutoSize = true;
             this.x2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x2.Location = new System.Drawing.Point(860, 108);
+            this.x2.Location = new System.Drawing.Point(1720, 208);
+            this.x2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.x2.Name = "x2";
-            this.x2.Size = new System.Drawing.Size(25, 24);
+            this.x2.Size = new System.Drawing.Size(53, 44);
             this.x2.TabIndex = 26;
             this.x2.Text = "...";
             // 
@@ -341,9 +367,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(769, 20);
+            this.label3.Location = new System.Drawing.Point(1538, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.Size = new System.Drawing.Size(103, 42);
             this.label3.TabIndex = 27;
             this.label3.Text = "Pairs";
             // 
@@ -351,9 +378,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(852, 20);
+            this.label4.Location = new System.Drawing.Point(1704, 38);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 24);
+            this.label4.Size = new System.Drawing.Size(95, 42);
             this.label4.TabIndex = 28;
             this.label4.Text = "Turn";
             // 
@@ -361,9 +389,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(643, 20);
+            this.label5.Location = new System.Drawing.Point(1286, 38);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 24);
+            this.label5.Size = new System.Drawing.Size(117, 42);
             this.label5.TabIndex = 29;
             this.label5.Text = "Name";
             // 
@@ -371,29 +400,31 @@
             // 
             this.Timername.AutoSize = true;
             this.Timername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timername.Location = new System.Drawing.Point(748, 179);
+            this.Timername.Location = new System.Drawing.Point(1496, 344);
+            this.Timername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timername.Name = "Timername";
-            this.Timername.Size = new System.Drawing.Size(71, 25);
+            this.Timername.Size = new System.Drawing.Size(133, 48);
             this.Timername.TabIndex = 30;
             this.Timername.Text = "Timer";
             // 
             // buttonSaveQuit
             // 
-            this.buttonSaveQuit.Location = new System.Drawing.Point(719, 488);
+            this.buttonSaveQuit.Location = new System.Drawing.Point(1438, 938);
+            this.buttonSaveQuit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonSaveQuit.Name = "buttonSaveQuit";
-            this.buttonSaveQuit.Size = new System.Drawing.Size(135, 46);
+            this.buttonSaveQuit.Size = new System.Drawing.Size(270, 88);
             this.buttonSaveQuit.TabIndex = 4;
-            this.buttonSaveQuit.Text = "Save/Quit";
+            this.buttonSaveQuit.Text = "Quit/Save";
             this.buttonSaveQuit.UseVisualStyleBackColor = true;
             this.buttonSaveQuit.Click += new System.EventHandler(this.buttonSaveQuit_Click);
             // 
             // GamePanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(932, 581);
+            this.ClientSize = new System.Drawing.Size(1864, 1117);
             this.Controls.Add(this.buttonSaveQuit);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.label5);
@@ -425,6 +456,7 @@
             this.Controls.Add(this.card1);
             this.Controls.Add(this.Timertime);
             this.Controls.Add(this.buttonStart);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "GamePanel";
             this.Text = "Memory Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);

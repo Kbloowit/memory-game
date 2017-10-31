@@ -329,12 +329,13 @@ namespace MemoryGame
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNo);
+            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel);
             if (dialog == DialogResult.No)
             {
                 Player_import killme = new Player_import();
                 killme.Show();
                 this.Dispose();
+                timer.Stop();
             }
             else if (dialog == DialogResult.Yes)
             {
@@ -342,9 +343,15 @@ namespace MemoryGame
                 Player_import killme = new Player_import();
                 killme.Show();
                 this.Dispose();
+                timer.Stop();
+            }
+            else if (dialog == DialogResult.Cancel)
+            {
+                return;
             }
 
-            
+
+
         }
 
         private void buttonOptions_Click(object sender, EventArgs e)
@@ -367,7 +374,7 @@ namespace MemoryGame
         private void buttonSaveQuit_Click(object sender, EventArgs e)
         {
 
-            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het wordt afgesloten?", "Exit", MessageBoxButtons.YesNo);
+            DialogResult dialog = MessageBox.Show("Wilt uw het spel opslaan voordat het wordt afgesloten?", "Afsluiten", MessageBoxButtons.YesNoCancel);
             if (dialog == DialogResult.Yes)
             {
                 SaveXML.button_click(); // Hier word de saveXML class aangeroepen
@@ -376,6 +383,10 @@ namespace MemoryGame
             else if (dialog == DialogResult.No)
             {
                 Application.Exit();
+            }
+            else if (dialog == DialogResult.Cancel)
+            {
+                return;
             }
             
         }
