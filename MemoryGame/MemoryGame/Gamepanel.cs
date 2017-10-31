@@ -11,9 +11,14 @@ using System.Xml;
 
 namespace MemoryGame
 {
-    public partial class Game : Form
+    public partial class Gamepanel : Form
 
     {
+        public static List<string> Players = new List<string>();
+
+        public static int Turn = 1;
+        public static List<int> Time = new List<int>();
+        public static List<string> Cards = new List<string>();
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
@@ -51,13 +56,13 @@ namespace MemoryGame
         /// <summary>
         /// Score Speler 1
         /// </summary>
-        int countP1 = 0;
+       public static int countP1 = 0;
         #endregion
         #region
         /// <summary>
         /// Score Speler 2
         /// </summary>
-        int countP2 = 0;
+       public static int countP2 = 0;
         #endregion
         #region
         /// <summary>
@@ -68,19 +73,22 @@ namespace MemoryGame
         #endregion 
 
         /* neemt de namen mee van het Player_Import Form*/
-        public Game(String[] players)
+        public Gamepanel(String[] players)
         {
             InitializeComponent();
 
             NameP1.Text = players[0];
             NameP2.Text = players[1];
-
+            Players.Add(players[0]);
+            Players.Add(players[1]);
         }
         /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
+        public int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
+        
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -144,7 +152,7 @@ namespace MemoryGame
             }
         }
 
-        private PictureBox getFreeSlot()
+        private PictureBox getFreeSlot(int plaatjenummer)
         {
             int num;
 
@@ -153,6 +161,7 @@ namespace MemoryGame
                 num = rnd.Next(0, pictureBoxes.Count());
             }
             while (pictureBoxes[num].Tag != null);
+            pictures[num] = plaatjenummer;
             return pictureBoxes[num];
 
         }
@@ -232,7 +241,7 @@ namespace MemoryGame
                 
                 allowClick = false;
                 clickTimer.Start();
-                Turn();
+                Turn1();
                 
             }
 
@@ -291,7 +300,7 @@ namespace MemoryGame
         }
 
 
-        public void Turn()
+        public void Turn1()
         {
             if (x1.Text == "x")
             {

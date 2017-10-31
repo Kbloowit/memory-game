@@ -51,6 +51,7 @@ namespace MemoryGame
         {
             
             grunty.URL = Directory.Basedirectory() + "/muziek/Grunty industries.mp3";
+            grunty.settings.setMode("loop", true);
             grunty.controls.play();
             
         }

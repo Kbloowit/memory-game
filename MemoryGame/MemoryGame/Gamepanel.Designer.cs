@@ -1,6 +1,6 @@
 ﻿namespace MemoryGame
 {
-    partial class Game
+    partial class Gamepanel
     {
         /// <summary>
         /// Required designer variable.

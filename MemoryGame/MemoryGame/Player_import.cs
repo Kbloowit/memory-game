@@ -20,7 +20,7 @@ namespace MemoryGame
         public void button_start_Click(object sender, EventArgs e)
         {
             string[] players = { importP1.Text, importP2.Text };
-            Game game = new Game(players); // In deze regel worden de namen meegestuurd in het volgende window
+            Gamepanel game = new Gamepanel(players); // In deze regel worden de namen meegestuurd in het volgende window
             game.Show();
             
             this.Dispose();
