@@ -22,7 +22,7 @@ namespace MemoryGame
 
 
 
-             using (XmlWriter writer = XmlWriter.Create("Savegame.sav", writerSettings)) // hiermee wordt het document aangemaakt
+             using (XmlWriter writer = XmlWriter.Create("Memory.sav", writerSettings)) // hiermee wordt het document aangemaakt
              {
 
                  writer.WriteStartDocument(); // Hiermee wordt de writer gestart
