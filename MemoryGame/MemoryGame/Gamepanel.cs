@@ -128,7 +128,7 @@ namespace MemoryGame
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time);
-                label1.Text = "00:" + time.ToString();
+                TimeLeft.Text = "00:" + time.ToString();
             };
         }
 
@@ -285,7 +285,7 @@ namespace MemoryGame
             startGameTimer();
             clickTimer.Interval = 1000;
             clickTimer.Tick += CLICKTIMER_TICK;
-            button1.Enabled = false;
+            buttonStart.Enabled = false;
         }
 
         public void P1Score()
@@ -339,7 +339,7 @@ namespace MemoryGame
 
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonReset_Click(object sender, EventArgs e)
         {
             timer.Stop();
             DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel);
@@ -365,16 +365,10 @@ namespace MemoryGame
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonOptions_Click(object sender, EventArgs e)
         {
             Options opties = new Options();
             opties.ShowDialog();
-        }
-
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -383,13 +377,14 @@ namespace MemoryGame
             Sounds.Grunty();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonQuitSave_Click(object sender, EventArgs e)
         {
+            timer.Stop();
             DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het wordt afgesloten?", "Afsluiten", MessageBoxButtons.YesNoCancel);
             if (dialog == DialogResult.Yes)
             {
                 SaveXML.button_click();
-                /*Application.Exit();*/
+                Application.Exit();
             }
             else if (dialog == DialogResult.No)
             {
@@ -397,6 +392,7 @@ namespace MemoryGame
             }
             else if (dialog == DialogResult.Cancel)
             {
+                timer.Start();
                 return;
             }
         }

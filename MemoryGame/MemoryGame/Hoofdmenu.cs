@@ -29,11 +29,10 @@ namespace MemoryGame
 
             this.TopMost = true;
             
-
         }
 
 
-        private void button_options_Click(object sender, EventArgs e)
+        private void buttonOptions_Click(object sender, EventArgs e)
         {
             /*dit stuk maakt een nieuwe instantie van het Opties form aan en opent deze*/
             Options opties = new Options();
@@ -45,7 +44,7 @@ namespace MemoryGame
 
         }
 
-        public void button1_Click(object sender, EventArgs e)
+        public void buttonPlay_Click(object sender, EventArgs e)
         {
             /* geeft aan waar weg hij gecalled wordt*/
             Player_import import = new Player_import();
@@ -53,13 +52,9 @@ namespace MemoryGame
             this.Hide();
             import.ShowDialog();
 
-
-
-
-
         }
 
-        private void button_highscore_Click(object sender, EventArgs e)
+        private void buttonHighscore_Click(object sender, EventArgs e)
         {
             Highscores highscores = new Highscores();
             highscores.ShowDialog();

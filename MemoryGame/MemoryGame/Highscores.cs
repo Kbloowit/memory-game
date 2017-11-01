@@ -25,7 +25,7 @@ namespace MemoryGame
             };
         }
 
-        private void button_menu_Click(object sender, EventArgs e)
+        private void buttonMenu_Click(object sender, EventArgs e)
         {
             this.Close();
         }

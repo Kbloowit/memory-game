@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Game>
   <players>
-    <Player1></Player1>
-    <Player2></Player2>
+    <Player1>A</Player1>
+    <Player2>B</Player2>
   </players>
   <Score>
-    <ScoreP1>0</ScoreP1>
-    <ScoreP2>0</ScoreP2>
+    <ScoreP1>2</ScoreP1>
+    <ScoreP2>3</ScoreP2>
   </Score>
-  <Turn>1</Turn>
-  <Plaatjenummers>1042426535767310</Plaatjenummers>
+  <Turn>2</Turn>
+  <Plaatjenummers>6265241047371053</Plaatjenummers>
 </Game>

@@ -17,7 +17,7 @@ namespace MemoryGame
             InitializeComponent();
         }
 
-        public void button_start_Click(object sender, EventArgs e)
+        public void buttonStart_Click(object sender, EventArgs e)
         {
             string[] players = { importP1.Text, importP2.Text };
             Gamepanel game = new Gamepanel(players); // In deze regel worden de namen meegestuurd in het volgende window
