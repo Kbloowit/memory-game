@@ -12,6 +12,7 @@ using WMPLib;
 
 namespace MemoryGame
 {
+    
     public partial class Hoofdmenu : Form
     {
         /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet(hoe is wat onder tutorials)*/

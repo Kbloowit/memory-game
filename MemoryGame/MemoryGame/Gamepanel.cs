@@ -254,6 +254,7 @@ namespace MemoryGame
             timer.Stop();
             countP1 = countP1 * ((100 - (60 - time) * -100));
             countP2 = countP2 * ((100 - (60 - time) * -100));
+            SaveXML.Compare();
             if (countP1 > countP2)
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");

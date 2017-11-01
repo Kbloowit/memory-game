@@ -22,7 +22,7 @@ namespace MemoryGame
 
 
 
-             using (XmlWriter writer = XmlWriter.Create("Savegame.xml", writerSettings)) // hiermee wordt het document aangemaakt
+             using (XmlWriter writer = XmlWriter.Create("Savegame.sav", writerSettings)) // hiermee wordt het document aangemaakt
              {
 
                  writer.WriteStartDocument(); // Hiermee wordt de writer gestart
@@ -70,7 +70,45 @@ namespace MemoryGame
              }
 
          }
-         
+        public static void Compare()
+        {
+            XmlWriterSettings writerSettings = new XmlWriterSettings();
+            writerSettings.NewLineOnAttributes = true;
+            writerSettings.Indent = true;
+
+            using (XmlWriter writer = XmlWriter.Create("Scorecompare.xml", writerSettings)) // ongeveer hetzelfde als het deel hierboven maar dan specifiek voor de highscores vergelijken, ik maak zo een om de higscores in op te slaan
+            {
+                writer.WriteStartDocument();
+
+                writer.WriteStartElement("Compare");
+                writer.WriteStartElement("Players");
+                writer.WriteStartElement("Player1");
+                writer.WriteString(Gamepanel.Players[0]);
+                writer.WriteEndElement();
+                writer.WriteStartElement("Player2");
+                writer.WriteString(Gamepanel.Players[1]);
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteStartElement("Scores");
+                writer.WriteStartElement("ScoreP1");
+                writer.WriteString(Convert.ToString(Gamepanel.countP1));
+                writer.WriteEndElement();
+                writer.WriteStartElement("ScoreP2");
+                writer.WriteString(Convert.ToString(Gamepanel.countP2));
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+        }
+
+
+
+
+
+
+
+
+
 
     }
 }
