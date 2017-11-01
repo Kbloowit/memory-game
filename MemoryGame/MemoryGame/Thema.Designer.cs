@@ -49,7 +49,6 @@
             this.Pick.TabIndex = 0;
             this.Pick.Text = "Pick a theme";
             this.Pick.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Pick.Click += new System.EventHandler(this.Pick_Click);
             // 
             // Avengers
             // 

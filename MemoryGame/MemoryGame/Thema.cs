@@ -15,14 +15,12 @@ namespace MemoryGame
     {
         public Thema()
         {
-            InitializeComponent();
-        }
-        public void Pick_Click(object sender, EventArgs e)
-        {
 
+            InitializeComponent();
         }
         public void Cars_Click(object sender, EventArgs e)
         {
+            
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();

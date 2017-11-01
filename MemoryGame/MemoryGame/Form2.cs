@@ -13,6 +13,20 @@ namespace MemoryGame
     public partial class Form2 : Form
 
     {
+        public override Color BackColor
+        {
+            get
+            {
+                return base.BackColor;
+            }
+            set
+            {
+                
+                    base.BackColor = Color.Blue;
+                
+            }
+        }
+
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
