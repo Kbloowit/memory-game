@@ -106,9 +106,6 @@ namespace MemoryGame
                     Properties.Resources.stark,
                     Properties.Resources.hawkeyes
 
-
-
-
                 };
             }
         }
@@ -176,6 +173,7 @@ namespace MemoryGame
                 plaatje++;
             }
         }
+
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
             
@@ -284,7 +282,24 @@ namespace MemoryGame
             startGameTimer();
             clickTimer.Interval = 1000;
             clickTimer.Tick += CLICKTIMER_TICK;
-            buttonStart.Enabled = false;
+            buttonStart.Hide();
+            buttonPauze.Show();
+        }
+
+        private void buttonPauze_Click(object sender, EventArgs e)
+        {
+            allowClick = false;
+            timer.Stop();
+            buttonPauze.Hide();
+            buttonResume.Show();
+        }
+
+        private void buttonResume_Click(object sender, EventArgs e)
+        {
+            allowClick = true;
+            timer.Start();
+            buttonPauze.Show();
+
         }
 
         public void P1Score()
@@ -316,9 +331,6 @@ namespace MemoryGame
                 x2.Text = "...";
                 Turn = 1;
             }
-            
-
-
 
         }
 
@@ -334,9 +346,6 @@ namespace MemoryGame
             omgedraaid2 = 0;
 
         }
-
-
-
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
@@ -394,6 +403,11 @@ namespace MemoryGame
                 timer.Start();
                 return;
             }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            SaveXML.button_click();
         }
     } 
 }

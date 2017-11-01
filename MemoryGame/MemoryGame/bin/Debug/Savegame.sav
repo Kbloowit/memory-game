@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Game>
+  <players>
+    <Player1>Jesper</Player1>
+    <Player2>Kruyt</Player2>
+  </players>
+  <Score>
+    <ScoreP1>2</ScoreP1>
+    <ScoreP2>3</ScoreP2>
+  </Score>
+  <Turn>1</Turn>
+  <PicturesBoxes>
+    <Picturebox1>3</Picturebox1>
+  </PicturesBoxes>
+  <Plaatjenummers>3246715020174653</Plaatjenummers>
+</Game>

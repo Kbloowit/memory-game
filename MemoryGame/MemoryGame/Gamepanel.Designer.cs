@@ -59,7 +59,10 @@
             this.labelTurn = new System.Windows.Forms.Label();
             this.labelPlayers = new System.Windows.Forms.Label();
             this.Timername = new System.Windows.Forms.Label();
-            this.buttonQuitSave = new System.Windows.Forms.Button();
+            this.buttonQuit = new System.Windows.Forms.Button();
+            this.buttonResume = new System.Windows.Forms.Button();
+            this.buttonPauze = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -80,12 +83,12 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(1442, 562);
+            this.buttonStart.Location = new System.Drawing.Point(1282, 664);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(6);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(270, 79);
             this.buttonStart.TabIndex = 0;
-            this.buttonStart.Text = "Start";
+            this.buttonStart.Text = "Start Game";
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.startGame);
             // 
@@ -93,7 +96,7 @@
             // 
             this.TimeLeft.AutoSize = true;
             this.TimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLeft.Location = new System.Drawing.Point(1500, 417);
+            this.TimeLeft.Location = new System.Drawing.Point(1512, 449);
             this.TimeLeft.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.TimeLeft.Name = "TimeLeft";
             this.TimeLeft.Size = new System.Drawing.Size(129, 48);
@@ -300,7 +303,7 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(1438, 683);
+            this.buttonReset.Location = new System.Drawing.Point(1586, 659);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(6);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(270, 88);
@@ -311,7 +314,7 @@
             // 
             // buttonOptions
             // 
-            this.buttonOptions.Location = new System.Drawing.Point(1438, 813);
+            this.buttonOptions.Location = new System.Drawing.Point(1586, 789);
             this.buttonOptions.Margin = new System.Windows.Forms.Padding(6);
             this.buttonOptions.Name = "buttonOptions";
             this.buttonOptions.Size = new System.Drawing.Size(270, 88);
@@ -401,23 +404,56 @@
             // 
             this.Timername.AutoSize = true;
             this.Timername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timername.Location = new System.Drawing.Point(1496, 344);
+            this.Timername.Location = new System.Drawing.Point(1508, 376);
             this.Timername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timername.Name = "Timername";
             this.Timername.Size = new System.Drawing.Size(133, 48);
             this.Timername.TabIndex = 30;
             this.Timername.Text = "Timer";
             // 
-            // buttonQuitSave
+            // buttonQuit
             // 
-            this.buttonQuitSave.Location = new System.Drawing.Point(1438, 938);
-            this.buttonQuitSave.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonQuitSave.Name = "buttonQuitSave";
-            this.buttonQuitSave.Size = new System.Drawing.Size(270, 88);
-            this.buttonQuitSave.TabIndex = 31;
-            this.buttonQuitSave.Text = "Quit/Save";
-            this.buttonQuitSave.UseVisualStyleBackColor = true;
-            this.buttonQuitSave.Click += new System.EventHandler(this.buttonQuitSave_Click);
+            this.buttonQuit.Location = new System.Drawing.Point(1432, 914);
+            this.buttonQuit.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonQuit.Name = "buttonQuit";
+            this.buttonQuit.Size = new System.Drawing.Size(270, 88);
+            this.buttonQuit.TabIndex = 31;
+            this.buttonQuit.Text = "Quit";
+            this.buttonQuit.UseVisualStyleBackColor = true;
+            this.buttonQuit.Click += new System.EventHandler(this.buttonQuitSave_Click);
+            // 
+            // buttonResume
+            // 
+            this.buttonResume.Location = new System.Drawing.Point(1282, 664);
+            this.buttonResume.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonResume.Name = "buttonResume";
+            this.buttonResume.Size = new System.Drawing.Size(270, 79);
+            this.buttonResume.TabIndex = 32;
+            this.buttonResume.Text = "Resume Game";
+            this.buttonResume.UseVisualStyleBackColor = true;
+            this.buttonResume.Click += new System.EventHandler(this.buttonResume_Click);
+            // 
+            // buttonPauze
+            // 
+            this.buttonPauze.Location = new System.Drawing.Point(1282, 664);
+            this.buttonPauze.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonPauze.Name = "buttonPauze";
+            this.buttonPauze.Size = new System.Drawing.Size(270, 79);
+            this.buttonPauze.TabIndex = 33;
+            this.buttonPauze.Text = "Stop Game";
+            this.buttonPauze.UseVisualStyleBackColor = true;
+            this.buttonPauze.Click += new System.EventHandler(this.buttonPauze_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(1282, 789);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(270, 88);
+            this.buttonSave.TabIndex = 34;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // Gamepanel
             // 
@@ -425,8 +461,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1804, 1140);
-            this.Controls.Add(this.buttonQuitSave);
+            this.ClientSize = new System.Drawing.Size(1894, 1109);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.labelPlayers);
             this.Controls.Add(this.labelTurn);
@@ -457,9 +494,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TimeLeft);
             this.Controls.Add(this.buttonStart);
+            this.Controls.Add(this.buttonPauze);
+            this.Controls.Add(this.buttonResume);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Gamepanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory Game";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -515,6 +555,9 @@
         private System.Windows.Forms.Label labelTurn;
         private System.Windows.Forms.Label labelPlayers;
         private System.Windows.Forms.Label Timername;
-        private System.Windows.Forms.Button buttonQuitSave;
+        private System.Windows.Forms.Button buttonQuit;
+        private System.Windows.Forms.Button buttonResume;
+        private System.Windows.Forms.Button buttonPauze;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
