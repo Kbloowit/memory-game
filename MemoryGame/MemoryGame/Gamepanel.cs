@@ -90,11 +90,11 @@ namespace MemoryGame
         public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
         
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
-        private static IEnumerable<Image> images
+        private static IEnumerable<Bitmap> images
         {
             get
             {
-                return new Image[]
+                return new Bitmap[]
                 {
                     /* o shit onze image files*/
                     Properties.Resources.meme,
