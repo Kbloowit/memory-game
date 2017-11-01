@@ -79,7 +79,7 @@
             this.Gta5.TabIndex = 4;
             this.Gta5.Text = "GTA 5";
             this.Gta5.UseVisualStyleBackColor = true;
-            this.Avengers.Click += new System.EventHandler(this.Avengers_Click);
+            this.Gta5.Click += new System.EventHandler(this.Gta5_Click);
             // 
             // Cars
             // 
