@@ -180,7 +180,11 @@ namespace MemoryGame
         {
             
             HideImages();
-            Sounds.Incorrect();
+            if (Options.Soundeffectsstate == false)
+            {
+                Sounds.Incorrect();
+            }
+            
             allowClick = true;
             
             clickTimer.Stop();
@@ -226,7 +230,10 @@ namespace MemoryGame
                 {
                     P2Score();
                 }
-                Sounds.Correct();
+                if (Options.Soundeffectsstate == false)
+                {
+                    Sounds.Correct();
+                }
 
             }
             else if (pic.Image == firstGuess.Image && pic == firstGuess)
@@ -374,7 +381,12 @@ namespace MemoryGame
         private void Form2_Load(object sender, EventArgs e)
         {
             Sounds.Stopmuziek();
-            Sounds.Grunty();
+            if (Options.CheckboxBGMstate == false)
+            {
+                Sounds.Grunty();
+
+            }
+                                                   
         }
 
         private void buttonQuitSave_Click(object sender, EventArgs e)
@@ -396,5 +408,6 @@ namespace MemoryGame
                 return;
             }
         }
+        
     } 
 }

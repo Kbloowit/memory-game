@@ -39,6 +39,7 @@ namespace MemoryGame
             this.Hide();
             opties.ShowDialog();
             this.Show();
+           
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
 
 
@@ -64,6 +65,8 @@ namespace MemoryGame
         private void Hoofdmenu_Load(object sender, EventArgs e)
         {
             Sounds.Startmuziek();
+
+            
         }
     }
 }

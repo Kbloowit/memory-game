@@ -23,13 +23,14 @@ namespace MemoryGame
         private void button_back_Click(object sender, EventArgs e)
         {
                      
-                this.Dispose();
+                this.Hide();
                  
                        
         }
 
         private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)
         {
+            Options.Soundeffectsstate = true;
 
         }
 
@@ -37,11 +38,38 @@ namespace MemoryGame
 
         private void Options_Load(object sender, EventArgs e)
         {
+            if (Options.CheckboxBGMstate == true)
+            {
+                checkbox_backgroundmusic.CheckState = CheckState.Checked;
+            }
+
 
         }
 
         private void checkbox_mute_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkbox_mute.CheckState == CheckState.Checked)
+            {
+                Options.CheckboxBGMstate = true;
+                Options.Soundeffectsstate = true;
+                Sounds.Stopmuziek();
+            }
+            if (checkbox_mute.CheckState == CheckState.Unchecked)
+            {
+                Options.CheckboxBGMstate = false;
+                Options.Soundeffectsstate = false;
+
+                if (Application.OpenForms.Count == 3)
+                {
+                    Sounds.Grunty();
+                }
+                else
+                {
+                    Sounds.Startmuziek();
+
+                }
+            }
+
 
         }
 
@@ -49,6 +77,7 @@ namespace MemoryGame
         {
             if (checkbox_backgroundmusic.CheckState == CheckState.Unchecked)
             {
+                Options.CheckboxBGMstate = false;
                 if (Application.OpenForms.Count == 3)
                 {
                     Sounds.Grunty();
@@ -61,11 +90,15 @@ namespace MemoryGame
             }
             else if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
             {
-                
+                Options.CheckboxBGMstate = true;
                 Sounds.Stopmuziek();
+
             }
         }
-
+        public static bool CheckboxBGMstate { get; set; }
+        public static bool Soundeffectsstate { get; set; }
+        
+        
        
     }
 }
