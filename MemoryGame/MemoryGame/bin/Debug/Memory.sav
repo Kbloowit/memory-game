@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Game>
+  <players>
+    <Player1></Player1>
+    <Player2></Player2>
+  </players>
+  <Score>
+    <ScoreP1>0</ScoreP1>
+    <ScoreP2>0</ScoreP2>
+  </Score>
+  <Turn>1</Turn>
+  <Plaatjenummers />
+</Game>

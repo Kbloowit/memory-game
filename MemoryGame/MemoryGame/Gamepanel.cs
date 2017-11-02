@@ -160,7 +160,8 @@ namespace MemoryGame
             {
                 num = rnd.Next(0, pictureBoxes.Count());
             }
-            while (pictureBoxes[num].Tag != null);
+            while (pictures[num] != 0);
+            Console.WriteLine("num= " + num + "     ID:" + plaatjenummer);
             pictures[num] = plaatjenummer;
             return pictureBoxes[num];
 
@@ -168,14 +169,16 @@ namespace MemoryGame
 
         public void setRandomImages()
         {
-            int plaatje = 0;
+            int plaatje = 1;
             foreach (var image in images)
             {
                 getFreeSlot(plaatje).Tag = image;
                 getFreeSlot(plaatje).Tag = image;
+
                 plaatje++;
             }
         }
+
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
             
@@ -396,7 +399,7 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes)
             {
                 SaveXML.button_click();
-                Application.Exit();
+                // Application.Exit();
             }
             else if (dialog == DialogResult.No)
             {

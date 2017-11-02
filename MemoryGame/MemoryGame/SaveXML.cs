@@ -47,12 +47,58 @@ namespace MemoryGame
                 writer.WriteStartElement("Turn"); // Start opslaan Turn
                 writer.WriteString(Gamepanel.Turn.ToString()); // turn nummer
                 writer.WriteEndElement(); // Einde opslaan Turn
-                writer.WriteStartElement("Plaatjenummers"); // Start opslaan Plaatjes
-                foreach(int nummer in Gamepanel.pictures)
-                {
-                    writer.WriteString(nummer.ToString());
-                }
-                writer.WriteEndElement(); // Einde opslaan Plaatjes
+                writer.WriteStartElement("PicturesBoxes");
+                writer.WriteStartElement("Picturebox1");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[0]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox2");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[1]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox3");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[2]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox4");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[3]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox5");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[4]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox6");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[5]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox7");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[6]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox8");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[7]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox9");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[8]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox10");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[9]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox11");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[10]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox12");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[11]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox13");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[12]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox14");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[13]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox15");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[14]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picturebox16");
+                writer.WriteString(Convert.ToString(Gamepanel.pictures[15]));
+                writer.WriteEndElement();
+                writer.WriteEndElement(); // Einde opslaan pictureBoxes
+
+               
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
 
