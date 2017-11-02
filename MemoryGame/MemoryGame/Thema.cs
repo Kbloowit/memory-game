@@ -20,7 +20,7 @@ namespace MemoryGame
         }
         public void Cars_Click(object sender, EventArgs e)
         {
-            
+            Themez.Achtergrond = Color.Crimson;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -28,6 +28,7 @@ namespace MemoryGame
         }
         public void Avengers_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.Blue;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -35,6 +36,7 @@ namespace MemoryGame
         }
         public void Royalty_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.Blue;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -42,6 +44,7 @@ namespace MemoryGame
         }
         public void Winx_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.Blue;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -49,6 +52,7 @@ namespace MemoryGame
         }
         public void Gta5_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.Blue;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -56,6 +60,7 @@ namespace MemoryGame
         }
         public void Formule1_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.Blue;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -63,6 +68,7 @@ namespace MemoryGame
         }
         public void Social_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.Azure;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();
@@ -70,6 +76,7 @@ namespace MemoryGame
         }
         public void Disney_Click(object sender, EventArgs e)
         {
+            Themez.Achtergrond = Color.LightPink;
             Player_import importatie = new Player_import();
             /*opent het game form*/
             this.Dispose();

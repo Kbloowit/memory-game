@@ -13,20 +13,7 @@ namespace MemoryGame
     public partial class Form2 : Form
 
     {
-        public override Color BackColor
-        {
-            get
-            {
-                return base.BackColor;
-            }
-            set
-            {
-                
-                    base.BackColor = Color.Blue;
-                
-            }
-        }
-
+        
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
@@ -84,7 +71,7 @@ namespace MemoryGame
         public Form2(String[] players)
         {
             InitializeComponent();
-
+            BackColor=Themez.Achtergrond;
             NameP1.Text = players[0];
             NameP2.Text = players[1];
 

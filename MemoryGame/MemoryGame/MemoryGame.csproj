@@ -88,6 +88,7 @@
     <Compile Include="Thema.Designer.cs">
       <DependentUpon>Thema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Themez.cs" />
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
