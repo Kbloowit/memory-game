@@ -84,11 +84,11 @@ namespace MemoryGame
         public Gamepanel(String[] players)
         {
             InitializeComponent();
-
             NameP1.Text = players[0];
             NameP2.Text = players[1];
             Players.Add(players[0]);
             Players.Add(players[1]);
+            BackColor = Themez.Achtergrond;// ophalen van de in thema bepaalde achtergrondskleur
         }
         /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
@@ -96,28 +96,141 @@ namespace MemoryGame
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
-        
+
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
-        private static IEnumerable<Bitmap> images
+        public static IEnumerable<Image> images
         {
             get
             {
-                return new Bitmap[]
+                if (Themez.Themepicked == 1)
                 {
-                    /* o shit onze image files*/
-                    Properties.Resources.meme,
+                    return new Image[]
+                        {
+                    /*  onze image files voor Cars*/
+                    Properties.Resources.carsfillmore,
+                    Properties.Resources.carsflo,
+                    Properties.Resources.carsluigi,
+                    Properties.Resources.Carsmcqueen,
+                    Properties.Resources.carsramone,
+                    Properties.Resources.carssally,
+                    Properties.Resources.carssarge,
+                    Properties.Resources.carstakel
+                        };
+                }
+                if (Themez.Themepicked == 2)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor Avengers*/
                     Properties.Resources.america,
                     Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
                     Properties.Resources.hulk,
-                    Properties.Resources.widow,
-                    Properties.Resources.thor,
+                    Properties.Resources.meme,
                     Properties.Resources.stark,
-                    Properties.Resources.hawkeyes
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                if (Themez.Themepicked == 3)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor de Royals*/
+                    Properties.Resources.koningshuis1,
+                    Properties.Resources.koningshuis2,
+                    Properties.Resources.koningshuis3,
+                    Properties.Resources.koningshuis4,
+                    Properties.Resources.koningshuis5,
+                    Properties.Resources.koningshuis6,
+                    Properties.Resources.koningshuis7,
+                    Properties.Resources.koningshuis8
+                        };
+                }
+                if (Themez.Themepicked == 4)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor de Winx*/
+                    Properties.Resources.america,
+                    Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
+                    Properties.Resources.hulk,
+                    Properties.Resources.meme,
+                    Properties.Resources.stark,
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                if (Themez.Themepicked == 5)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het GTA 5 thema*/
+                    Properties.Resources.america,
+                    Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
+                    Properties.Resources.hulk,
+                    Properties.Resources.meme,
+                    Properties.Resources.stark,
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                if (Themez.Themepicked == 6)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Formule 1 thema*/
+                    Properties.Resources.america,
+                    Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
+                    Properties.Resources.hulk,
+                    Properties.Resources.meme,
+                    Properties.Resources.stark,
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                if (Themez.Themepicked == 7)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Social Media thema*/
+                    Properties.Resources.america,
+                    Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
+                    Properties.Resources.hulk,
+                    Properties.Resources.meme,
+                    Properties.Resources.stark,
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                if (Themez.Themepicked == 8)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Disney Prinsessen thema*/
+                    Properties.Resources.america,
+                    Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
+                    Properties.Resources.hulk,
+                    Properties.Resources.meme,
+                    Properties.Resources.stark,
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                else
+                {
+                    return new Image[]
+                    {
+                        Properties.Resources.gay
+                    };
 
 
-
-
-                };
+                }
             }
         }
         /*deze method start de Gametimer op, zodat hij naar beneden loopt*/
