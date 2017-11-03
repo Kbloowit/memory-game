@@ -75,7 +75,7 @@ namespace MemoryGame
         public static void Formule1() //formule 1 thema
         {
 
-            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
+            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/F1.mp3";
             
 
         }
@@ -83,7 +83,7 @@ namespace MemoryGame
         public static void Runescape() //runescape thema
         {
 
-            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
+            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/runescape.mp3";
            
 
         }

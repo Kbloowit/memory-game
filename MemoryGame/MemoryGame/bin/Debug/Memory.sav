@@ -6,8 +6,25 @@
   </players>
   <Score>
     <ScoreP1>0</ScoreP1>
-    <ScoreP2>0</ScoreP2>
+    <ScoreP2>1</ScoreP2>
   </Score>
-  <Turn>1</Turn>
-  <Plaatjenummers />
+  <Turn>2</Turn>
+  <PicturesBoxes>
+    <Picturebox1>6</Picturebox1>
+    <Picturebox2>4</Picturebox2>
+    <Picturebox3>8</Picturebox3>
+    <Picturebox4>1</Picturebox4>
+    <Picturebox5>3</Picturebox5>
+    <Picturebox6>2</Picturebox6>
+    <Picturebox7>4</Picturebox7>
+    <Picturebox8>6</Picturebox8>
+    <Picturebox9>5</Picturebox9>
+    <Picturebox10>3</Picturebox10>
+    <Picturebox11>1</Picturebox11>
+    <Picturebox12>5</Picturebox12>
+    <Picturebox13>2</Picturebox13>
+    <Picturebox14>8</Picturebox14>
+    <Picturebox15>7</Picturebox15>
+    <Picturebox16>7</Picturebox16>
+  </PicturesBoxes>
 </Game>

@@ -392,7 +392,7 @@ namespace MemoryGame
         private void Form2_Load(object sender, EventArgs e) // op laden form 2
         {
             Sounds.Stopmuziek(); //stops alle lopende achtergrond muziek
-            Sounds.Groonty();
+            Sounds.Formule1();
             if (Options.CheckboxBGMstate == false) //als in het opties menu muziek is uitgezet
 
             {
