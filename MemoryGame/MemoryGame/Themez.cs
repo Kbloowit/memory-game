@@ -10,5 +10,8 @@ namespace MemoryGame
     class Themez
     {
         public static Color Achtergrond { get; set; }
+        public static int Themepicked { get; set; }
     }
 }
+
+    

@@ -215,30 +215,6 @@
     <None Include="Resources\koningshuis7.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Rugrats1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats7.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rugrats8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Winx1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +256,78 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formule1Hulkenberg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formule1LewisHamilton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formule1massa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formule1schumacher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formule1verstappen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cars%2520mcqueen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520ramone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520sally.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520sarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520takel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520fillmore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520flo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars%2520luigi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Formule 1 Kvyat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Formule1alonso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Formule1Vettel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavLamar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavLester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavmichael.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtaVSteve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavTrevor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavDave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavfranklin.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtavJimmy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

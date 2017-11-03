@@ -202,7 +202,7 @@
   <data name="koningshuis8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\koningshuis8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-   <data name="Winx1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Winx1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winx1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Winx2" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -225,5 +225,77 @@
   </data>
   <data name="Winx8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Winx8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carsfillmore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20fillmore.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carsflo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20flo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carsluigi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20luigi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carsmcqueen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cars%20mcqueen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carsramone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20ramone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carssally" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20sally.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carssarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20sarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carstakel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars%20takel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Formule1alonso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Formule1alonso.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formule1Hulkenberg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formule1Hulkenberg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Formule1Kvyat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Formule 1 Kvyat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formule1LewisHamilton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formule1LewisHamilton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formule1massa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formule1massa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formule1schumacher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formule1schumacher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formule1verstappen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formule1verstappen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Formule1Vettel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Formule1Vettel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavDave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavDave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavfranklin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavfranklin.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavJimmy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavJimmy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavLamar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavLamar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavLester" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavLester.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavmichael_jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavmichael.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtaVSteve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtaVSteve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gtavTrevor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gtavTrevor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

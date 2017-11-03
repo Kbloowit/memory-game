@@ -52,7 +52,7 @@
             // 
             // Avengers
             // 
-            this.Avengers.Location = new System.Drawing.Point(43, 99);
+            this.Avengers.Location = new System.Drawing.Point(162, 99);
             this.Avengers.Name = "Avengers";
             this.Avengers.Size = new System.Drawing.Size(92, 38);
             this.Avengers.TabIndex = 1;
@@ -82,7 +82,7 @@
             // 
             // Cars
             // 
-            this.Cars.Location = new System.Drawing.Point(162, 99);
+            this.Cars.Location = new System.Drawing.Point(43, 99);
             this.Cars.Name = "Cars";
             this.Cars.Size = new System.Drawing.Size(92, 38);
             this.Cars.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // Royalty
             // 
-            this.Royalty.Location = new System.Drawing.Point(401, 99);
+            this.Royalty.Location = new System.Drawing.Point(283, 99);
             this.Royalty.Name = "Royalty";
             this.Royalty.Size = new System.Drawing.Size(92, 38);
             this.Royalty.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             // Winx
             // 
-            this.Winx.Location = new System.Drawing.Point(283, 99);
+            this.Winx.Location = new System.Drawing.Point(401, 99);
             this.Winx.Name = "Winx";
             this.Winx.Size = new System.Drawing.Size(92, 38);
             this.Winx.TabIndex = 5;
