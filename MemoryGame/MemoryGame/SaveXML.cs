@@ -17,8 +17,8 @@ namespace MemoryGame
 
              // Hier mee word de opmaak van het XML-bestand ingesteld
              XmlWriterSettings writerSettings = new XmlWriterSettings();
-             writerSettings.NewLineOnAttributes = true;
-             writerSettings.Indent = true;
+             writerSettings.NewLineOnAttributes = true; // nieuwe regel als een nieuw attribuut wordt gemaakt
+             writerSettings.Indent = true;// indent (tabje in word) voor elk sub element
 
 
 
@@ -27,7 +27,7 @@ namespace MemoryGame
 
                  writer.WriteStartDocument(); // Hiermee wordt de writer gestart
 
-                writer.WriteStartElement("Game");
+                writer.WriteStartElement("Game"); //sub element zodat we weten waar t voor is thonk
                 writer.WriteStartElement("players"); // Start opslaan van Players 
                  writer.WriteStartElement("Player1"); // Start opslaan player1
                  writer.WriteString(Gamepanel.Players[0]);

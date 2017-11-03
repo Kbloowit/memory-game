@@ -11,23 +11,24 @@ namespace MemoryGame
     {
 
 
+        // maakt media player instanties aan
+        // werkt alleen als de computer WMP heeft tho
 
-
-       public static WindowsMediaPlayer startmuziek = new WindowsMediaPlayer();
-        public static WindowsMediaPlayer grunty = new WindowsMediaPlayer();
-        public static WindowsMediaPlayer Nuclear = new WindowsMediaPlayer();
-        public static WindowsMediaPlayer todokete = new WindowsMediaPlayer();
+       public static WindowsMediaPlayer startmuziek = new WindowsMediaPlayer(); //hoofdmenu muziek
+        public static WindowsMediaPlayer grunty = new WindowsMediaPlayer(); //gamepanel muziek
+        public static WindowsMediaPlayer Nuclear = new WindowsMediaPlayer(); // highscore muziek(?)
+        public static WindowsMediaPlayer todokete = new WindowsMediaPlayer(); // meme muziek
            
-        public static void Startmuziek()
+        public static void Startmuziek() //start hoofdmenu muziek
         {
             
             
-            startmuziek.URL = Directory.Basedirectory() + "/muziek/Bloodthirster.mp3";
-            startmuziek.controls.play();
+            startmuziek.URL = Directory.Basedirectory() + "/muziek/Bloodthirster.mp3"; //geeft aan waar het muziek bestand dat je wilt afspelen staat
+            startmuziek.controls.play(); //let it play
             
 
         }
-        public static void Stopmuziek()
+        public static void Stopmuziek() //stopt muziek
         {
             
             
@@ -36,66 +37,66 @@ namespace MemoryGame
 
         }
 
-        public static void Correct()
+        public static void Correct() //correct melodie
         {
             WindowsMediaPlayer correct = new WindowsMediaPlayer();
             correct.URL = Directory.Basedirectory() + "/muziek/SoundFX/correct.wav";
             correct.controls.play();
         }
 
-        public static void Incorrect()
+        public static void Incorrect() //incorrect melodie
         {
             WindowsMediaPlayer incorrect = new WindowsMediaPlayer();
             incorrect.URL = Directory.Basedirectory() + "/muziek/SoundFX/incorrect.wav";
             incorrect.controls.play();
         }
 
-        public static void Grunty()
+        public static void Grunty() //speelt achtergrondmuziek
         {
             
-            grunty.URL = Directory.Basedirectory() + "/muziek/Grunty industries.mp3";
-            grunty.settings.setMode("loop", true);
+            
+            grunty.settings.setMode("loop", true); //loopt het nummer
             grunty.controls.play();
             
         }
 
-        public static void Avengers()
+        public static void Groonty() //zet achtergrond muziek als standaard, onderstaande zetten ze als een andere voor een ander thema
+        {
+            grunty.URL = Directory.Basedirectory() + "/muziek/Grunty industries.mp3";
+        }
+        public static void Avengers() //voor avengers thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/Grunty industries.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void Formule1()
+        public static void Formule1() //formule 1 thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void Runescape()
+        public static void Runescape() //runescape thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+           
 
         }
 
-        public static void Disney()
+        public static void Disney()//didney thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Disney.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void SnowHalation()
+        public static void SnowHalation() //TODOKETE (misschien credits scherm
         {
 
             todokete.URL = Directory.Basedirectory() + "/muziek/BackgroundM/TODOKETE.mp3";
@@ -104,7 +105,7 @@ namespace MemoryGame
 
         }
 
-        public static void Siivagunner()
+        public static void Siivagunner() //highscores scherm
         {
 
             Nuclear.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
@@ -113,48 +114,42 @@ namespace MemoryGame
 
         }
 
-        public static void Gta5()
+        public static void Gta5() //gta 5 thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/GTA V.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void Cars()
+        public static void Cars() //cars thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/cars.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void Social()
+        public static void Social() //social media thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Social.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void Winx()
+        public static void Winx() //winx thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/winx.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
+            
 
         }
 
-        public static void Royalty()
+        public static void Royalty() //wie zijn deze mensen? thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/GODSAVETHEQUEEN.mp3";
-            grunty.settings.setMode("loop", true);
-            grunty.controls.play();
             
         }
 
