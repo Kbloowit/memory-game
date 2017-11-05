@@ -67,7 +67,7 @@ namespace MemoryGame
         public static void Avengers() //voor avengers thema
         {
 
-            grunty.URL = Directory.Basedirectory() + "/muziek/Grunty industries.mp3";
+            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Avengers.mp3";
             
 
         }

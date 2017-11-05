@@ -27,7 +27,7 @@ namespace MemoryGame
             InitializeComponent();
             /* dit start de pentakill muziek*/
 
-            this.TopMost = true; //altijd voorste bois
+            
             
         }
 
@@ -48,10 +48,12 @@ namespace MemoryGame
         public void buttonPlay_Click(object sender, EventArgs e)
         {
             /* geeft aan waar weg hij gecalled wordt*/
-            Player_import import = new Player_import();
+            Thema themaselect = new Thema();
+            //Player_import k = new Player_import();
             /*opent het game form*/
             this.Hide(); //verstopt hoofdmenu form
-            import.ShowDialog();
+            themaselect.ShowDialog();
+            //k.ShowDialog();
 
         }
 

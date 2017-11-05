@@ -92,6 +92,15 @@ namespace MemoryGame
             importatie.ShowDialog();
         }
 
+        public void Rugrats_Click(object sender, EventArgs e)
+        {
+            Themez.Themepicked = 9;
+            Themez.Achtergrond = Color.LightPink;
+            Player_import importatie = new Player_import();
+            /*opent het game form*/
+            this.Dispose();
+            importatie.ShowDialog();
+        }
 
 
     }

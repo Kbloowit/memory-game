@@ -37,6 +37,8 @@
             this.Disney = new System.Windows.Forms.Button();
             this.Royalty = new System.Windows.Forms.Button();
             this.Gta5 = new System.Windows.Forms.Button();
+            this.Rugrats = new System.Windows.Forms.Button();
+            this.Runescape = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +59,7 @@
             this.Avengers.TabIndex = 1;
             this.Avengers.Text = "Avengers";
             this.Avengers.UseVisualStyleBackColor = true;
+            this.Avengers.Click += new System.EventHandler(this.Avengers_Click);
             // 
             // Cars
             // 
@@ -66,6 +69,7 @@
             this.Cars.TabIndex = 2;
             this.Cars.Text = "Cars";
             this.Cars.UseVisualStyleBackColor = true;
+            this.Cars.Click += new System.EventHandler(this.Cars_Click);
             // 
             // Winx
             // 
@@ -75,6 +79,7 @@
             this.Winx.TabIndex = 3;
             this.Winx.Text = "Winx";
             this.Winx.UseVisualStyleBackColor = true;
+            this.Winx.Click += new System.EventHandler(this.Winx_Click);
             // 
             // Formule1
             // 
@@ -84,6 +89,7 @@
             this.Formule1.TabIndex = 4;
             this.Formule1.Text = "Formule1";
             this.Formule1.UseVisualStyleBackColor = true;
+            this.Formule1.Click += new System.EventHandler(this.Formule1_Click);
             // 
             // Social
             // 
@@ -93,6 +99,7 @@
             this.Social.TabIndex = 8;
             this.Social.Text = "Social Media";
             this.Social.UseVisualStyleBackColor = true;
+            this.Social.Click += new System.EventHandler(this.Social_Click);
             // 
             // Disney
             // 
@@ -102,6 +109,7 @@
             this.Disney.TabIndex = 7;
             this.Disney.Text = "Disney Princesses";
             this.Disney.UseVisualStyleBackColor = true;
+            this.Disney.Click += new System.EventHandler(this.Disney_Click);
             // 
             // Royalty
             // 
@@ -111,6 +119,7 @@
             this.Royalty.TabIndex = 6;
             this.Royalty.Text = "Royalty";
             this.Royalty.UseVisualStyleBackColor = true;
+            this.Royalty.Click += new System.EventHandler(this.Royalty_Click);
             // 
             // Gta5
             // 
@@ -120,12 +129,34 @@
             this.Gta5.TabIndex = 5;
             this.Gta5.Text = "Gta5";
             this.Gta5.UseVisualStyleBackColor = true;
+            this.Gta5.Click += new System.EventHandler(this.Gta5_Click);
+            // 
+            // Rugrats
+            // 
+            this.Rugrats.Location = new System.Drawing.Point(42, 262);
+            this.Rugrats.Name = "Rugrats";
+            this.Rugrats.Size = new System.Drawing.Size(141, 42);
+            this.Rugrats.TabIndex = 9;
+            this.Rugrats.Text = "Rugrats";
+            this.Rugrats.UseVisualStyleBackColor = true;
+            this.Rugrats.Click += new System.EventHandler(this.Rugrats_Click);
+            // 
+            // Runescape
+            // 
+            this.Runescape.Location = new System.Drawing.Point(234, 262);
+            this.Runescape.Name = "Runescape";
+            this.Runescape.Size = new System.Drawing.Size(141, 41);
+            this.Runescape.TabIndex = 10;
+            this.Runescape.Text = "NON-FUCTIONING";
+            this.Runescape.UseVisualStyleBackColor = true;
             // 
             // Thema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 280);
+            this.ClientSize = new System.Drawing.Size(771, 319);
+            this.Controls.Add(this.Runescape);
+            this.Controls.Add(this.Rugrats);
             this.Controls.Add(this.Social);
             this.Controls.Add(this.Disney);
             this.Controls.Add(this.Royalty);
@@ -153,5 +184,7 @@
         private System.Windows.Forms.Button Disney;
         private System.Windows.Forms.Button Royalty;
         private System.Windows.Forms.Button Gta5;
+        private System.Windows.Forms.Button Rugrats;
+        private System.Windows.Forms.Button Runescape;
     }
 }

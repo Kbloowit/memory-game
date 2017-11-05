@@ -284,6 +284,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Memory.ico" />
+    <None Include="Resources\gtav8.png" />
+    <None Include="Resources\social media Whatsapp.png" />
+    <None Include="Resources\social media twitter.png" />
+    <None Include="Resources\social media skype.png" />
+    <None Include="Resources\social media instagram.jpg" />
+    <None Include="Resources\social media Hyves.png" />
+    <None Include="Resources\social media google plus.png" />
+    <None Include="Resources\social media facebook.png" />
+    <None Include="Resources\social media Discord.png" />
+    <None Include="Resources\gtaVSteve.png" />
+    <None Include="Resources\gtavmichael.jpg.png" />
+    <None Include="Resources\gtavLester.png" />
+    <None Include="Resources\gtavLamar.png" />
+    <None Include="Resources\gtavJimmy.png" />
+    <None Include="Resources\gtavfranklin.jpg.png" />
+    <None Include="Resources\gtavDave.png" />
+    <None Include="Resources\Formule1Vettel.jpg" />
+    <None Include="Resources\formule1verstappen.jpg" />
+    <None Include="Resources\formule1schumacher.jpg" />
+    <None Include="Resources\formule1massa.jpg" />
+    <None Include="Resources\formule1LewisHamilton.jpg" />
+    <None Include="Resources\formule1Hulkenberg.jpg" />
+    <None Include="Resources\Formule1alonso.jpg" />
+    <None Include="Resources\Formule 1 Kvyat.jpg" />
+    <None Include="Resources\cars%2520takel.jpg" />
+    <None Include="Resources\cars%2520sarge.jpg" />
+    <None Include="Resources\cars%2520sally.jpg" />
+    <None Include="Resources\cars%2520ramone.jpg" />
+    <None Include="Resources\Cars%2520mcqueen.jpg" />
+    <None Include="Resources\cars%2520luigi.jpg" />
+    <None Include="Resources\cars%2520flo.jpg" />
+    <None Include="Resources\cars%2520fillmore.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -107,14 +107,14 @@ namespace MemoryGame
                     return new Image[]
                         {
                     /*  onze image files voor Cars*/
-                    Properties.Resources.carsfillmore,
-                    Properties.Resources.carsflo,
-                    Properties.Resources.carsluigi,
-                    Properties.Resources.Carsmcqueen,
-                    Properties.Resources.carsramone,
-                    Properties.Resources.carssally,
-                    Properties.Resources.carssarge,
-                    Properties.Resources.carstakel
+                    Properties.Resources.cars1,
+                    Properties.Resources.cars2,
+                    Properties.Resources.cars3,
+                    Properties.Resources.cars4,
+                    Properties.Resources.cars5,
+                    Properties.Resources.cars6,
+                    Properties.Resources.cars7,
+                    Properties.Resources.cars8
                         };
                 }
                 if (Themez.Themepicked == 2)
@@ -152,14 +152,14 @@ namespace MemoryGame
                     return new Image[]
                         {
                     /*  onze image files voor de Winx*/
-                    Properties.Resources.america,
-                    Properties.Resources.fury,
-                    Properties.Resources.hawkeyes,
-                    Properties.Resources.hulk,
-                    Properties.Resources.meme,
-                    Properties.Resources.stark,
-                    Properties.Resources.thor,
-                    Properties.Resources.widow
+                    Properties.Resources.Winx1,
+                    Properties.Resources.Winx2,
+                    Properties.Resources.Winx3,
+                    Properties.Resources.Winx4,
+                    Properties.Resources.Winx5,
+                    Properties.Resources.Winx6,
+                    Properties.Resources.Winx7,
+                    Properties.Resources.Winx8
                         };
                 }
                 if (Themez.Themepicked == 5)
@@ -167,14 +167,14 @@ namespace MemoryGame
                     return new Image[]
                         {
                     /*  onze image files voor het GTA 5 thema*/
-                    Properties.Resources.america,
-                    Properties.Resources.fury,
-                    Properties.Resources.hawkeyes,
-                    Properties.Resources.hulk,
-                    Properties.Resources.meme,
-                    Properties.Resources.stark,
-                    Properties.Resources.thor,
-                    Properties.Resources.widow
+                    Properties.Resources.gtav1,
+                    Properties.Resources.gtav2,
+                    Properties.Resources.gtav3,
+                    Properties.Resources.gtav4,
+                    Properties.Resources.gtav5,
+                    Properties.Resources.gtav6,
+                    Properties.Resources.gtav7,
+                    Properties.Resources.gtav8
                         };
                 }
                 if (Themez.Themepicked == 6)
@@ -182,14 +182,14 @@ namespace MemoryGame
                     return new Image[]
                         {
                     /*  onze image files voor het Formule 1 thema*/
-                    Properties.Resources.america,
-                    Properties.Resources.fury,
-                    Properties.Resources.hawkeyes,
-                    Properties.Resources.hulk,
-                    Properties.Resources.meme,
-                    Properties.Resources.stark,
-                    Properties.Resources.thor,
-                    Properties.Resources.widow
+                    Properties.Resources.Formule1,
+                    Properties.Resources.Formule2,
+                    Properties.Resources.formule3,
+                    Properties.Resources.formule4,
+                    Properties.Resources.formule5,
+                    Properties.Resources.formule6,
+                    Properties.Resources.formule7,
+                    Properties.Resources.formule8
                         };
                 }
                 if (Themez.Themepicked == 7)
@@ -197,14 +197,14 @@ namespace MemoryGame
                     return new Image[]
                         {
                     /*  onze image files voor het Social Media thema*/
-                    Properties.Resources.america,
-                    Properties.Resources.fury,
-                    Properties.Resources.hawkeyes,
-                    Properties.Resources.hulk,
-                    Properties.Resources.meme,
-                    Properties.Resources.stark,
-                    Properties.Resources.thor,
-                    Properties.Resources.widow
+                    Properties.Resources.social1,
+                    Properties.Resources.social2,
+                    Properties.Resources.social3,
+                    Properties.Resources.social4,
+                    Properties.Resources.social5,
+                    Properties.Resources.social6,
+                    Properties.Resources.social7,
+                    Properties.Resources.social8
                         };
                 }
                 if (Themez.Themepicked == 8)
@@ -212,17 +212,33 @@ namespace MemoryGame
                     return new Image[]
                         {
                     /*  onze image files voor het Disney Prinsessen thema*/
-                    Properties.Resources.america,
-                    Properties.Resources.fury,
-                    Properties.Resources.hawkeyes,
-                    Properties.Resources.hulk,
-                    Properties.Resources.meme,
-                    Properties.Resources.stark,
-                    Properties.Resources.thor,
-                    Properties.Resources.widow
+                    Properties.Resources.Disney1,
+                    Properties.Resources.Disney2,
+                    Properties.Resources.Disney3,
+                    Properties.Resources.Disney4,
+                    Properties.Resources.Disney5,
+                    Properties.Resources.Disney6,
+                    Properties.Resources.Disney7,
+                    Properties.Resources.Disney8
                         };
                 }
-                else
+                if (Themez.Themepicked == 9)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Rugrats thema*/
+                    Properties.Resources.Rugrats1,
+                    Properties.Resources.Rugrats2,
+                    Properties.Resources.Rugrats3,
+                    Properties.Resources.Rugrats4,
+                    Properties.Resources.Rugrats5,
+                    Properties.Resources.Rugrats6,
+                    Properties.Resources.Rugrats7,
+                    Properties.Resources.Rugrats8
+                        };
+                }
+                              
+               else
                 {
                     return new Image[]
                     {
@@ -385,25 +401,28 @@ namespace MemoryGame
             timer.Stop(); //stopt gametimer
             countP1 = countP1 * ((100 - (60 - time) * -100)); //(slechte) score formule
             countP2 = countP2 * ((100 - (60 - time) * -100));
-            SaveXML.Compare(); //maakt een opslag bestand voor vergelijken van highscores(weet niet zeker of dit goed is)
+            
             if (countP1 > countP2) //speler 1 heeft de meeste punten
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
+                
             }
 
             else if (countP2 > countP1) //speler 2 heeft de meeste punten
             {
                 MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
+                
             }
             else if (countP1 == countP2)// puntenaantal is gelijk
             {
                 MessageBox.Show("Gelijkspel!");
+                
             }
 
             
             ResetScore(); //scores worden weer 0
             ResetImages(); //pic boxes worden visible etc
-
+            
 
 
 
@@ -477,14 +496,14 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
                 SaveXML.button_click(); //slaat op
-                Player_import killme = new Player_import();
+                Thema killme = new Thema();
                 killme.Show();
                 this.Dispose(); //gooit form instance uit het geheugen
 
             }
             else if (dialog == DialogResult.No) // als No wordt gekozen
             {
-                Player_import killme = new Player_import();
+                Thema killme = new Thema();
                 killme.Show();
                 this.Dispose();
             }
@@ -505,7 +524,43 @@ namespace MemoryGame
         private void Form2_Load(object sender, EventArgs e) // op laden form 2
         {
             Sounds.Stopmuziek(); //stops alle lopende achtergrond muziek
-            Sounds.Formule1();
+            switch (Themez.Themepicked)
+            {
+                case 1:
+                    Sounds.Cars();
+                    break;
+                case 2:
+                    Sounds.Avengers();
+                    break;
+                case 3:
+                    Sounds.Royalty();
+                    break;
+                case 4:
+                    Sounds.Winx();
+                    break;
+                case 5:
+                    Sounds.Gta5();
+                    break;
+                case 6:
+                    Sounds.Formule1();
+                    break;
+                case 7:
+                    Sounds.Social();
+                    break;
+                case 8:
+                    Sounds.Disney();
+                    break;
+                case 9: //rugrats heeft nog geen muziek dus nu deze placeholder
+                    Sounds.Siivagunner();
+                    break;
+
+               
+
+                
+                
+            }
+
+
             if (Options.CheckboxBGMstate == false) //als in het opties menu muziek is uitgezet
 
             {

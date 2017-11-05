@@ -42,3 +42,4 @@ C:\Users\Alett\Desktop\Project Memroy Game groep 22\vanaf 2 november\memory-game
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\vanaf 2 november\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.ResolveComReference.cache
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\vanaf 2 november\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
 C:\Users\Alett\Desktop\Project Memroy Game groep 22\vanaf 2 november\memory-game\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\Ikke\Documents\programma-memory\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Thema.resources
