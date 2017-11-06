@@ -146,7 +146,7 @@
     <None Include="Resources\kony stark.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gay.jpg" />
+    <None Include="Resources\BackFont.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pentakill - Lightbringer.wav" />
@@ -274,6 +274,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Memory.ico" />
+    <None Include="Resources\gay.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

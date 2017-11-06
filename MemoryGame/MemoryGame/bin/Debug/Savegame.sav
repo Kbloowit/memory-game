@@ -2,15 +2,30 @@
 <Game>
   <players>
     <Player1>Jesper</Player1>
-    <Player2>Kruyt</Player2>
+    <Player2>Jan</Player2>
   </players>
   <Score>
-    <ScoreP1>2</ScoreP1>
-    <ScoreP2>3</ScoreP2>
+    <ScoreP1>1</ScoreP1>
+    <ScoreP2>2</ScoreP2>
   </Score>
   <Turn>1</Turn>
   <PicturesBoxes>
-    <Picturebox1>3</Picturebox1>
+    <Picturebox1>1</Picturebox1>
+    <Picturebox2>3</Picturebox2>
+    <Picturebox3>4</Picturebox3>
+    <Picturebox4>5</Picturebox4>
+    <Picturebox5>5</Picturebox5>
+    <Picturebox6>0</Picturebox6>
+    <Picturebox7>7</Picturebox7>
+    <Picturebox8>1</Picturebox8>
+    <Picturebox9>6</Picturebox9>
+    <Picturebox10>2</Picturebox10>
+    <Picturebox11>4</Picturebox11>
+    <Picturebox12>3</Picturebox12>
+    <Picturebox13>0</Picturebox13>
+    <Picturebox14>2</Picturebox14>
+    <Picturebox15>7</Picturebox15>
+    <Picturebox16>6</Picturebox16>
   </PicturesBoxes>
-  <Plaatjenummers>3246715020174653</Plaatjenummers>
+  <Time>35</Time>
 </Game>

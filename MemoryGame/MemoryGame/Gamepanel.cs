@@ -14,11 +14,14 @@ namespace MemoryGame
     public partial class Gamepanel : Form
 
     {
+
         public static List<string> Players = new List<string>();
+        public static List<int> Plaatjenummer = new List<int>();
+        public static Dictionary<int, Image> frontImage = new Dictionary<int, Image>();
+        public static int[] ID = new int[16];
 
         public static int Turn = 1;
-        public static List<int> Time = new List<int>();
-        public static List<string> Cards = new List<string>();
+       
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
@@ -43,7 +46,7 @@ namespace MemoryGame
         /// </summary>
         Timer clickTimer = new Timer();
         #endregion
-        int time = 60;
+        public static int time = 60;
         #region
         /// <summary>
         /// Timer van de game
@@ -83,12 +86,12 @@ namespace MemoryGame
             Players.Add(players[1]);
         }
         /* maakt een picturebox array*/
-        private PictureBox[] pictureBoxes
+        public PictureBox[] pictureBoxes
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
-        
+
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         private static IEnumerable<Image> images
         {
@@ -136,48 +139,53 @@ namespace MemoryGame
                 pic.Tag = null;
                 pic.Visible = true;
             }
-            HideImages();
-            setRandomImages();
+            frontImage.Clear();
+            //setRandomImages();
             time = 60;
             timer.Start();
         }
-        public void HideImages()
-        {
-            foreach (var pic in pictureBoxes)
-            {
-                pic.Image = Properties.Resources.gay;
-            }
-        }
-
-        private PictureBox getFreeSlot(int plaatjenummer)
+        
+        private void getFreeSlot(int Plaatjenummer)
         {
             int num;
 
             do
-            {
                 num = rnd.Next(0, pictureBoxes.Count());
-            }
             while (pictureBoxes[num].Tag != null);
-            pictures[num] = plaatjenummer;
-            return pictureBoxes[num];
+
+            //Console.WriteLine("num = " + num + "    :" + pictureBoxes.Count() + "    ID" + Plaatjenummer);
+            //pictures[num] = Plaatjenummer;
+            pictureBoxes[num].Image = Properties.Resources.BackFont;
+            pictureBoxes[num].Tag = Plaatjenummer;
+            ID[num] = Plaatjenummer;
 
         }
+        
+
 
         public void setRandomImages()
         {
+             
             int plaatje = 0;
             foreach (var image in images)
             {
-                getFreeSlot(plaatje).Tag = image;
-                getFreeSlot(plaatje).Tag = image;
+                getFreeSlot(plaatje);                
+                getFreeSlot(plaatje);
+
+                frontImage.Add(plaatje, image);
+                // Plaatjenummer.Add(nummer);
                 plaatje++;
-            }
+           
+    }
         }
 
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
-            
-            HideImages();
+
+            //HideImages();
+            if (firstGuess != null)
+                firstGuess.Image = Properties.Resources.BackFont;
+
             Sounds.Incorrect();
             allowClick = true;
             
@@ -197,24 +205,41 @@ namespace MemoryGame
                 omgedraaid2++;
             }
             var pic = (PictureBox)sender;
+            int ID = Convert.ToInt32(pic.Tag);
 
             if (firstGuess == null)
             {
                 firstGuess = pic;
-                pic.Image = (Image)pic.Tag;
+                pic.Image = frontImage[ID];
+                //MessageBox.Show(ID.ToString());
+                //pic.Image = (Image)pic.Tag;
                 return;
             }
 
-            pic.Image = (Image)pic.Tag;
+
+            pic.Image = frontImage[ID];
 
 
-            if (pic.Image == firstGuess.Image && pic != firstGuess)
+            #region
+            /// <summary>
+            /// hier wordt even een pauze gedaan voordat de kaarten weer worden omgedraaid
+            /// </summary>
+            DateTime Tthen = DateTime.Now;
+            do
+            {
+                Application.DoEvents();
+            } while (Tthen.AddMilliseconds(500) > DateTime.Now);
+            #endregion
+            //MessageBox.Show(pic.Tag.ToString());
+
+            if (pic == firstGuess)
+                return;
+
+            if (ID == Convert.ToInt32(firstGuess.Tag))
             {
                 pic.Visible = firstGuess.Visible = false;
-                {
-                    firstGuess = pic;
-                }
-                HideImages();
+
+                
 
                 if (x1.Text == "x")
                 {
@@ -227,25 +252,15 @@ namespace MemoryGame
                 Sounds.Correct();
 
             }
-            else if (pic.Image == firstGuess.Image && pic == firstGuess)
-            {
-                pic.Visible = firstGuess.Visible = true;
-                {
-                    firstGuess = pic;
-                }
-                HideImages();
-            }
-
             else
             {
-                
-                allowClick = false;
-                clickTimer.Start();
+                pic.Visible = firstGuess.Visible = true;
+                pic.Image = firstGuess.Image = Properties.Resources.BackFont;
+                firstGuess = null;
                 ToTurn();
-                
             }
-
-
+            
+            
 
             firstGuess = null;
             if (pictureBoxes.Any(p => p.Visible)) return;
@@ -270,15 +285,12 @@ namespace MemoryGame
             ResetScore();
             ResetImages();
 
-
-
-
         }
         private void startGame(object sender, EventArgs e)
         {
             allowClick = true;
             setRandomImages();
-            HideImages();
+            //HideImages();
             startGameTimer();
             clickTimer.Interval = 1000;
             clickTimer.Tick += CLICKTIMER_TICK;
@@ -392,7 +404,7 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes)
             {
                 SaveXML.button_click();
-                Application.Exit();
+               // Application.Exit();
             }
             else if (dialog == DialogResult.No)
             {
@@ -409,5 +421,6 @@ namespace MemoryGame
         {
             SaveXML.button_click();
         }
+
     } 
 }
