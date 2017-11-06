@@ -93,7 +93,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Hoofdmenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory Game";
             this.Load += new System.EventHandler(this.Hoofdmenu_Load);
             this.ResumeLayout(false);

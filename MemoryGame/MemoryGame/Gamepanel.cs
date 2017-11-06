@@ -14,14 +14,14 @@ namespace MemoryGame
     public partial class Gamepanel : Form
 
     {
-
         public static List<string> Players = new List<string>();
-        public static List<int> Plaatjenummer = new List<int>();
+        public static List<int> plaatjenummer = new List<int>();
         public static Dictionary<int, Image> frontImage = new Dictionary<int, Image>();
-        public static int[] ID = new int[16];
+        public static int[] meme = new int[16];
+
 
         public static int Turn = 1;
-       
+
         #region allowClick
         /// <summary>
         /// Bool die de plaatjes klikbaar kan maken of juist niet.
@@ -34,20 +34,29 @@ namespace MemoryGame
         /// </summary>
         PictureBox firstGuess;
         #endregion
+
         #region rnd
         /// <summary>
         /// Geeft een Random getal.
         /// </summary>
         Random rnd = new Random();
         #endregion
+
         #region clicktimer
         /// <summary>
         /// Tijd voordat je weer op de plaatjes mag klikken
         /// </summary>
         Timer clickTimer = new Timer();
         #endregion
+        #region time
+        /// <summary>
+        /// geeft de overgebleven tijd aan
+        /// </summary>
         public static int time = 60;
-        #region
+
+        #endregion
+
+        #region timer
         /// <summary>
         /// Timer van de game
         /// </summary>
@@ -55,19 +64,19 @@ namespace MemoryGame
         #endregion
 
 
-        #region
+        #region Count P1
         /// <summary>
         /// Score Speler 1
         /// </summary>
-       public static int countP1 = 0;
+        public static int countP1 = 0;
         #endregion
-        #region
+        #region Count P2
         /// <summary>
         /// Score Speler 2
         /// </summary>
-       public static int countP2 = 0;
+        public static int countP2 = 0;
         #endregion
-        #region
+        #region Omgedraaid
         /// <summary>
         /// geeft aan hoe vaak speler x een kaart heeft omgedraaid
         /// </summary>
@@ -79,47 +88,179 @@ namespace MemoryGame
         public Gamepanel(String[] players)
         {
             InitializeComponent();
-
             NameP1.Text = players[0];
             NameP2.Text = players[1];
             Players.Add(players[0]);
             Players.Add(players[1]);
+            BackColor = Themez.Achtergrond;// ophalen van de in thema bepaalde achtergrondskleur
         }
         /* maakt een picturebox array*/
-        public PictureBox[] pictureBoxes
+        private PictureBox[] pictureBoxes
         {
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
 
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
-        private static IEnumerable<Image> images
+        public static IEnumerable<Image> images
         {
             get
             {
-                return new Image[]
+                if (Themez.Themepicked == 1)
                 {
-                    /* o shit onze image files*/
-                    Properties.Resources.meme,
+                    return new Image[]
+                        {
+                    /*  onze image files voor Cars*/
+                    Properties.Resources.cars1,
+                    Properties.Resources.cars2,
+                    Properties.Resources.cars3,
+                    Properties.Resources.cars4,
+                    Properties.Resources.cars5,
+                    Properties.Resources.cars6,
+                    Properties.Resources.cars7,
+                    Properties.Resources.cars8
+                        };
+                }
+                if (Themez.Themepicked == 2)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor Avengers*/
                     Properties.Resources.america,
                     Properties.Resources.fury,
+                    Properties.Resources.hawkeyes,
                     Properties.Resources.hulk,
-                    Properties.Resources.widow,
-                    Properties.Resources.thor,
+                    Properties.Resources.meme,
                     Properties.Resources.stark,
-                    Properties.Resources.hawkeyes
+                    Properties.Resources.thor,
+                    Properties.Resources.widow
+                        };
+                }
+                if (Themez.Themepicked == 3)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor de Royals*/
+                    Properties.Resources.koningshuis1,
+                    Properties.Resources.koningshuis2,
+                    Properties.Resources.koningshuis3,
+                    Properties.Resources.koningshuis4,
+                    Properties.Resources.koningshuis5,
+                    Properties.Resources.koningshuis6,
+                    Properties.Resources.koningshuis7,
+                    Properties.Resources.koningshuis8
+                        };
+                }
+                if (Themez.Themepicked == 4)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor de Winx*/
+                    Properties.Resources.Winx1,
+                    Properties.Resources.Winx2,
+                    Properties.Resources.Winx3,
+                    Properties.Resources.Winx4,
+                    Properties.Resources.Winx5,
+                    Properties.Resources.Winx6,
+                    Properties.Resources.Winx7,
+                    Properties.Resources.Winx8
+                        };
+                }
+                if (Themez.Themepicked == 5)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het GTA 5 thema*/
+                    Properties.Resources.gtav1,
+                    Properties.Resources.gtav2,
+                    Properties.Resources.gtav3,
+                    Properties.Resources.gtav4,
+                    Properties.Resources.gtav5,
+                    Properties.Resources.gtav6,
+                    Properties.Resources.gtav7,
+                    Properties.Resources.gtav8
+                        };
+                }
+                if (Themez.Themepicked == 6)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Formule 1 thema*/
+                    Properties.Resources.Formule1,
+                    Properties.Resources.Formule2,
+                    Properties.Resources.formule3,
+                    Properties.Resources.formule4,
+                    Properties.Resources.formule5,
+                    Properties.Resources.formule6,
+                    Properties.Resources.formule7,
+                    Properties.Resources.formule8
+                        };
+                }
+                if (Themez.Themepicked == 7)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Social Media thema*/
+                    Properties.Resources.social1,
+                    Properties.Resources.social2,
+                    Properties.Resources.social3,
+                    Properties.Resources.social4,
+                    Properties.Resources.social5,
+                    Properties.Resources.social6,
+                    Properties.Resources.social7,
+                    Properties.Resources.social8
+                        };
+                }
+                if (Themez.Themepicked == 8)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Disney Prinsessen thema*/
+                    Properties.Resources.Disney1,
+                    Properties.Resources.Disney2,
+                    Properties.Resources.Disney3,
+                    Properties.Resources.Disney4,
+                    Properties.Resources.Disney5,
+                    Properties.Resources.Disney6,
+                    Properties.Resources.Disney7,
+                    Properties.Resources.Disney8
+                        };
+                }
+                if (Themez.Themepicked == 9)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Rugrats thema*/
+                    Properties.Resources.Rugrats1,
+                    Properties.Resources.Rugrats2,
+                    Properties.Resources.Rugrats3,
+                    Properties.Resources.Rugrats4,
+                    Properties.Resources.Rugrats5,
+                    Properties.Resources.Rugrats6,
+                    Properties.Resources.Rugrats7,
+                    Properties.Resources.Rugrats8
+                        };
+                }
 
-                };
+                else
+                {
+                    return new Image[]
+                    {
+                        Properties.Resources.BackImage
+                    };
+
+
+                }
             }
         }
         /*deze method start de Gametimer op, zodat hij naar beneden loopt*/
         private void startGameTimer()
         {
             timer.Start();
-            /*delegate*/
+            /*delegate zet 2 methodes in elkaar*/
             timer.Tick += delegate
             {
-                time--;
+                time--; //tijd loopt af
                 if (time < 0)
                 {
                     timer.Stop();
@@ -127,75 +268,81 @@ namespace MemoryGame
                     ResetScore();
                     ResetImages();
                 }
-                var ssTime = TimeSpan.FromSeconds(time);
-                TimeLeft.Text = "00:" + time.ToString();
+                var ssTime = TimeSpan.FromSeconds(time); //zet de tijd afloop naar secondes ipv erg snel
+                TimeLeft.Text = "00:" + time.ToString(); // updatet de time label op het form
             };
         }
 
         public void ResetImages()
         {
+            Console.WriteLine("Work");
             foreach (var pic in pictureBoxes)
             {
-                pic.Tag = null;
-                pic.Visible = true;
+                pic.Tag = null; //zet de tag van de picturebox op leeg
+                pic.Visible = true; //maakt de pictureboxes zichtbaar
+                
             }
-            frontImage.Clear();
-            //setRandomImages();
-            time = 60;
-            timer.Start();
+            
+            frontImage.Clear(); //gooit de frontImage dictionary leeg, anders werkt de reset knop niet goed
+            setRandomImages();
+            time = 60; //zet de int time naar 60
+            timer.Start(); //start de timer
+            Console.WriteLine("Already");
         }
         
-        private void getFreeSlot(int Plaatjenummer)
+        private void getFreeSlot(int plaatjenummer)
         {
-            int num;
-
+            
+            int num; // maakt een getal aan voor de random functie
+            
             do
-                num = rnd.Next(0, pictureBoxes.Count());
-            while (pictureBoxes[num].Tag != null);
-
-            //Console.WriteLine("num = " + num + "    :" + pictureBoxes.Count() + "    ID" + Plaatjenummer);
-            //pictures[num] = Plaatjenummer;
-            pictureBoxes[num].Image = Properties.Resources.BackFont;
-            pictureBoxes[num].Tag = Plaatjenummer;
-            ID[num] = Plaatjenummer;
-
+            {
+                num = rnd.Next(0, pictureBoxes.Count()); //random getal tussen 0(niet genomen) en het aantal pictureboxes (hier 16, en wel megenomen)
+            }
+            while (pictureBoxes[num].Tag != null); //het bovenste doet hij totdat pictures[num](array om de getallen van de plaatjes in op te slaan) niet meer 0 is.
+            pictureBoxes[num].Image = Properties.Resources.BackImage; // Verstopt het plaatje
+            pictureBoxes[num].Tag = plaatjenummer;
+            meme[num] = plaatjenummer;
+            
         }
-        
-
 
         public void setRandomImages()
         {
-             
+           
             int plaatje = 0;
             foreach (var image in images)
             {
-                getFreeSlot(plaatje);                
+                getFreeSlot(plaatje);// zoekt 2 lege PB op en zet een image erin
                 getFreeSlot(plaatje);
-
                 frontImage.Add(plaatje, image);
-                // Plaatjenummer.Add(nummer);
                 plaatje++;
-           
-    }
+            }
+            
         }
 
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
 
-            //HideImages();
-            if (firstGuess != null)
-                firstGuess.Image = Properties.Resources.BackFont;
-
-            Sounds.Incorrect();
-            allowClick = true;
             
+            if (Options.Soundeffectsstate == false) // deze wordt veranderd in het opties menu, als deze optie niet is aangevinkt speelt hij het geluidje af
+            {
+                Sounds.Incorrect(); // puh-uh
+            }
+
+            allowClick = true;
+
             clickTimer.Stop();
         }
 
         public void clickImage(object sender, EventArgs e)
         {
-            if (!allowClick) return;
-            if (x1.Text == "x")
+            foreach (int num in meme)
+            {
+                Console.WriteLine(meme[num]);
+                Console.WriteLine("ok");
+            }
+            if (!allowClick) return; //als allowclick false is, doet hij niks als je op n kaart klikt
+            if (x1.Text == "x") // voor de omgedraaid aantal kaarten int
 
             {
                 omgedraaid1++;
@@ -207,41 +354,38 @@ namespace MemoryGame
             var pic = (PictureBox)sender;
             int ID = Convert.ToInt32(pic.Tag);
 
-            if (firstGuess == null)
+            if (firstGuess == null) // als dit het eerste plaatje is
             {
                 firstGuess = pic;
                 pic.Image = frontImage[ID];
-                //MessageBox.Show(ID.ToString());
-                //pic.Image = (Image)pic.Tag;
                 return;
             }
 
-
-            pic.Image = frontImage[ID];
-
+            pic.Image = frontImage[ID]; //tweede plaatje
 
             #region
             /// <summary>
             /// hier wordt even een pauze gedaan voordat de kaarten weer worden omgedraaid
             /// </summary>
-            DateTime Tthen = DateTime.Now;
+            DateTime pauze = DateTime.Now; //tijd van omdraaien kaart
             do
             {
                 Application.DoEvents();
-            } while (Tthen.AddMilliseconds(500) > DateTime.Now);
+            } while (pauze.AddMilliseconds(500) > DateTime.Now);
             #endregion
-            //MessageBox.Show(pic.Tag.ToString());
 
-            if (pic == firstGuess)
-                return;
 
-            if (ID == Convert.ToInt32(firstGuess.Tag))
+            if (pic == firstGuess)// als first guess en pic hetzelfde zijn (er is 2 keer op dezelfde pic box geklikt)
             {
-                pic.Visible = firstGuess.Visible = false;
-
+                return;// het programma doet niks
+            }
+            if (ID == Convert.ToInt32(firstGuess.Tag)) //als plaatje 1 gelijk is aan plaatje 2 en niet hetzelfde plaatjes is (eg zelfde pic box)
+            {
+                pic.Visible = firstGuess.Visible = false; // de afbeeldingen worden onzicht baar en onklikbaar
+                
                 
 
-                if (x1.Text == "x")
+                if (x1.Text == "x") //score p1 omhoog als p1 degene is die het kiest
                 {
                     P1Score();
                 }
@@ -249,106 +393,107 @@ namespace MemoryGame
                 {
                     P2Score();
                 }
-                Sounds.Correct();
+                if (Options.Soundeffectsstate == false) //speelt correct geluidseffect
+                {
+                    Sounds.Correct(); // tu-du-du-ding!
+                }
 
             }
-            else
+            else  // als first guess en pic niet hetzelfde zijn (er is 2 keer op dezelfde pic box geklikt)
             {
-                pic.Visible = firstGuess.Visible = true;
-                pic.Image = firstGuess.Image = Properties.Resources.BackFont;
+                pic.Visible = firstGuess.Visible = true; //zet hem weer op zichtbaar
+                pic.Image = firstGuess.Image = Properties.Resources.BackImage;
                 firstGuess = null;
                 ToTurn();
+
+
+
             }
-            
+
             
 
-            firstGuess = null;
-            if (pictureBoxes.Any(p => p.Visible)) return;
-            timer.Stop();
-            countP1 = countP1 * ((100 - (60 - time) * -100));
+
+
+            firstGuess = null; //firstguess is weer niks
+            if (pictureBoxes.Any(p => p.Visible)) return; //als er geen pictureboxes meer visible zijn (dus alles is geraden)
+            timer.Stop(); //stopt gametimer
+            countP1 = countP1 * ((100 - (60 - time) * -100)); //(slechte) score formule
             countP2 = countP2 * ((100 - (60 - time) * -100));
-            if (countP1 > countP2)
+
+            if (countP1 > countP2) //speler 1 heeft de meeste punten
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
+
             }
 
-            else if (countP2 > countP1)
+            else if (countP2 > countP1) //speler 2 heeft de meeste punten
             {
                 MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
+
             }
-            else if (countP1 == countP2)
+            else if (countP1 == countP2)// puntenaantal is gelijk
             {
                 MessageBox.Show("Gelijkspel!");
+
             }
 
             
-            ResetScore();
-            ResetImages();
+            ResetScore(); //scores worden weer 0
+            ResetImages(); //pic boxes worden visible etc
+
+
+
 
         }
-        private void startGame(object sender, EventArgs e)
+        private void startGame(object sender, EventArgs e)//als op de startknop gedrukt wordt
         {
-            allowClick = true;
-            setRandomImages();
-            //HideImages();
-            startGameTimer();
-            clickTimer.Interval = 1000;
-            clickTimer.Tick += CLICKTIMER_TICK;
-            buttonStart.Hide();
-            buttonPauze.Show();
+            allowClick = true; //je kan op plaatjes klikken
+            setRandomImages(); //random image verdelen
+            startGameTimer(); //gametimer gaat lopen
+            clickTimer.Interval = 1000; //interval clicktimer (1000ms = 1s)
+            clickTimer.Tick += CLICKTIMER_TICK; // de clicktimer loopt gelijk aan de gametimer
+            buttonStart.Enabled = false; //je kan niet meer op de startknop drukken
         }
 
-        private void buttonPauze_Click(object sender, EventArgs e)
-        {
-            allowClick = false;
-            timer.Stop();
-            buttonPauze.Hide();
-            buttonResume.Show();
-        }
-
-        private void buttonResume_Click(object sender, EventArgs e)
-        {
-            allowClick = true;
-            timer.Start();
-            buttonPauze.Show();
-
-        }
-
-        public void P1Score()
+        public void P1Score() //score p1 wordt geupdate
         {
             countP1++;
-            score1.Text = countP1.ToString();
+            score1.Text = countP1.ToString(); //update label met score p1
         }
 
 
-        public void P2Score()
+        public void P2Score()// score p2 wordt geupdate
         {
             countP2++;
-            score2.Text = countP2.ToString();
+            score2.Text = countP2.ToString(); //update label met score p2
 
         }
 
 
-        public void ToTurn()
+        public void ToTurn() // wisselt beurt
         {
-            if (x1.Text == "x")
+            if (x1.Text == "x") //als p1 aan de beurt was
             {
                 x1.Text = "...";
                 x2.Text = "x";
                 Turn = 2;
             }
-            else if (x2.Text == "x")
+            else if (x2.Text == "x") //als p2 aan de beurt was
             {
                 x1.Text = "x";
                 x2.Text = "...";
                 Turn = 1;
             }
 
+
+
+
         }
 
-        public void ResetScore()
+        public void ResetScore() //zet de score weer op 0 en updatet de labels
         {
-            x1.Text = "x";
+            
+            x1.Text = "x"; //p1 is standaard eerst aan de beurt, dus we resetten de labels weer
             x2.Text = "...";
             score1.Text = "0";
             score2.Text = "0";
@@ -356,71 +501,131 @@ namespace MemoryGame
             countP2 = 0;
             omgedraaid1 = 0;
             omgedraaid2 = 0;
-
+            
         }
 
-        private void buttonReset_Click(object sender, EventArgs e)
+
+
+
+        private void buttonReset_Click(object sender, EventArgs e) //als op de reset knop wordt gedrukt
         {
-            timer.Stop();
-            DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel);
-            if (dialog == DialogResult.Yes)
+            timer.Stop(); // stopt gametimer
+            DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het gereset wordt?", "Reset", MessageBoxButtons.YesNoCancel); // messagebox met knoppen erin , "reset:" is de titel
+            if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
-                SaveXML.button_click();
-                Player_import killme = new Player_import();
-                killme.Show();
-                this.Dispose();
+                SaveXML.button_click(); //slaat op
+                Thema theme = new Thema();
+                time = 60;
+                frontImage.Clear();
+                theme.Show();
+                this.Dispose(); //gooit form instance uit het geheugen
 
             }
-            else if (dialog == DialogResult.No)
+            else if (dialog == DialogResult.No) // als No wordt gekozen
             {
-                Player_import killme = new Player_import();
-                killme.Show();
+                Thema theme = new Thema();
+                frontImage.Clear();
+                time = 60;
+                theme.Show();
                 this.Dispose();
             }
             else if (dialog == DialogResult.Cancel)
             {
-                timer.Start();
+                timer.Start(); //start de timer weer op vanaf waar hij gebleven was
                 return;
-                
+
             }
         }
 
-        private void buttonOptions_Click(object sender, EventArgs e)
+        private void buttonOptions_Click(object sender, EventArgs e) //als op de opties knop wordt gedrukt
         {
-            Options opties = new Options();
+            Options opties = new Options(); //opent nieuw opties form
             opties.ShowDialog();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e) // op laden form 2
         {
-            Sounds.Stopmuziek();
-            Sounds.Grunty();
+            Sounds.Stopmuziek(); //stops alle lopende achtergrond muziek
+            switch (Themez.Themepicked)
+            {
+                case 1:
+                    Sounds.Cars();
+                    break;
+                case 2:
+                    Sounds.Avengers();
+                    break;
+                case 3:
+                    Sounds.Royalty();
+                    break;
+                case 4:
+                    Sounds.Winx();
+                    break;
+                case 5:
+                    Sounds.Gta5();
+                    break;
+                case 6:
+                    Sounds.Formule1();
+                    break;
+                case 7:
+                    Sounds.Social();
+                    break;
+                case 8:
+                    Sounds.Disney();
+                    break;
+                case 9: //rugrats heeft nog geen muziek dus nu deze placeholder
+                    Sounds.Siivagunner();
+                    break;
+
+
+
+
+
+            }
+
+
+            if (Options.CheckboxBGMstate == false) //als in het opties menu muziek is uitgezet
+
+            {
+                Sounds.Grunty(); //achtergrond muziek
+
+            }
+
         }
 
-        private void buttonQuitSave_Click(object sender, EventArgs e)
+        private void buttonQuitSave_Click(object sender, EventArgs e) //als de save knop wordt ingedrukt
         {
             timer.Stop();
             DialogResult dialog = MessageBox.Show("Wilt u het spel opslaan voordat het wordt afgesloten?", "Afsluiten", MessageBoxButtons.YesNoCancel);
-            if (dialog == DialogResult.Yes)
+            if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
                 SaveXML.button_click();
-               // Application.Exit();
+                // Application.Exit();
             }
-            else if (dialog == DialogResult.No)
+            else if (dialog == DialogResult.No) //als No wordt gekozen
             {
                 Application.Exit();
             }
-            else if (dialog == DialogResult.Cancel)
+            else if (dialog == DialogResult.Cancel) //als cancel wordt gekozen
             {
                 timer.Start();
                 return;
             }
+
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void Gamepanel_FormClosing(object sender, FormClosedEventArgs e)
         {
-            SaveXML.button_click();
+            foreach(int i in pictures)
+            {
+                pictures[i] = 0;
+            }
         }
+        
+            
+            
+
+
+
 
     } 
 }

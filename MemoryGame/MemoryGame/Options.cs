@@ -23,25 +23,49 @@ namespace MemoryGame
         private void button_back_Click(object sender, EventArgs e)
         {
                      
-                this.Dispose();
+                this.Dispose(); // gooit instantie uit geheugen
                  
                        
         }
 
-        private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)
+        private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)// soundeffect checkbox
         {
+            if (Options.Soundeffectsstate == false)
+            Options.Soundeffectsstate = true; //zet de geluidseffecten op UIT
+            if (Options.Soundeffectsstate == true)
+                Options.Soundeffectsstate = false; // zet de geluidseffecten op AAN
+                
 
         }
 
         
 
-        private void Options_Load(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void checkbox_mute_CheckedChanged(object sender, EventArgs e)
+        private void checkbox_mute_CheckedChanged(object sender, EventArgs e) //global mute
         {
+            if (checkbox_mute.CheckState == CheckState.Checked) //checkbox aangevinkt
+            {
+                Options.CheckboxBGMstate = true; //Muziek uit
+                Options.Soundeffectsstate = true; //Soundeffects uit
+                Sounds.Stopmuziek(); //stopt alle muziek
+            }
+            if (checkbox_mute.CheckState == CheckState.Unchecked)
+            {
+                Options.CheckboxBGMstate = false; //zet muziek weer aan
+                Options.Soundeffectsstate = false; //zet soundeffect weer aan
+
+                if (Application.OpenForms.Count == 3) //als 3 forms openzijn (je komt van gameform)
+                {
+                    Sounds.Grunty();
+                }
+                else
+                {
+                    Sounds.Startmuziek();
+
+                }
+            }
+
 
         }
 
@@ -49,6 +73,7 @@ namespace MemoryGame
         {
             if (checkbox_backgroundmusic.CheckState == CheckState.Unchecked)
             {
+                Options.CheckboxBGMstate = false;
                 if (Application.OpenForms.Count == 3)
                 {
                     Sounds.Grunty();
@@ -61,11 +86,25 @@ namespace MemoryGame
             }
             else if (checkbox_backgroundmusic.CheckState == CheckState.Checked)
             {
-                
+                Options.CheckboxBGMstate = true;
                 Sounds.Stopmuziek();
+
             }
         }
+        #region
+        /// <summary>
+        /// Geeft je de staat van het muziek checkboxje of laat je de staat veranderen
+        /// </summary>
+        public static bool CheckboxBGMstate { get; set; }
+        #endregion
+        #region
+        /// <summary>
+        /// Geeft je de staat van de geluidseffecten checkbox of laat je de staat veranderen
+        /// </summary>
+        public static bool Soundeffectsstate { get; set; }
+        #endregion
 
-       
+
+
     }
 }

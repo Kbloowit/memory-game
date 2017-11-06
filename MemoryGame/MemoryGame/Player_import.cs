@@ -24,7 +24,7 @@ namespace MemoryGame
             game.Show();
             
             this.Dispose();
-            game.Focus();
+            
 
 
         }

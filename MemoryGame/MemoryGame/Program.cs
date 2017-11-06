@@ -17,7 +17,7 @@ namespace MemoryGame
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             /*wat hier onder staat na new is het form wat hij als eerste opent*/
-            Application.Run(new Hoofdmenu());
+            Application.Run(new Hoofdmenu()); //hoera, het hoofdmenu is eerst
         }
     }
 }
