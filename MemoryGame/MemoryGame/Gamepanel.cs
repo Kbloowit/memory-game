@@ -15,6 +15,10 @@ namespace MemoryGame
 
     {
         public static List<string> Players = new List<string>();
+        public static List<int> plaatjenummer = new List<int>();
+        public static Dictionary<int, Image> frontImage = new Dictionary<int, Image>();
+        public static int[] meme = new int[16];
+
 
         public static int Turn = 1;
 
@@ -30,7 +34,7 @@ namespace MemoryGame
         /// </summary>
         PictureBox firstGuess;
         #endregion
-        
+
         #region rnd
         /// <summary>
         /// Geeft een Random getal.
@@ -64,13 +68,13 @@ namespace MemoryGame
         /// <summary>
         /// Score Speler 1
         /// </summary>
-       public static int countP1 = 0;
+        public static int countP1 = 0;
         #endregion
         #region Count P2
         /// <summary>
         /// Score Speler 2
         /// </summary>
-       public static int countP2 = 0;
+        public static int countP2 = 0;
         #endregion
         #region Omgedraaid
         /// <summary>
@@ -237,12 +241,12 @@ namespace MemoryGame
                     Properties.Resources.Rugrats8
                         };
                 }
-                              
-               else
+
+                else
                 {
                     return new Image[]
                     {
-                        Properties.Resources.gay
+                        Properties.Resources.BackImage
                     };
 
 
@@ -271,67 +275,72 @@ namespace MemoryGame
 
         public void ResetImages()
         {
+            Console.WriteLine("Work");
             foreach (var pic in pictureBoxes)
             {
                 pic.Tag = null; //zet de tag van de picturebox op leeg
                 pic.Visible = true; //maakt de pictureboxes zichtbaar
+                
             }
-            HideImages();
+            
+            frontImage.Clear(); //gooit de frontImage dictionary leeg, anders werkt de reset knop niet goed
             setRandomImages();
             time = 60; //zet de int time naar 60
             timer.Start(); //start de timer
+            Console.WriteLine("Already");
         }
-        public void HideImages()
+        
+        private void getFreeSlot(int plaatjenummer)
         {
-            foreach (var pic in pictureBoxes)
-            {
-                pic.Image = Properties.Resources.gay; //verstopt de foto's door de picturebox een andere afbeelding te geven (echte zit nog in de tag)
-            }
-        }
-
-        private PictureBox getFreeSlot(int plaatjenummer)
-        {
+            
             int num; // maakt een getal aan voor de random functie
-
+            
             do
             {
                 num = rnd.Next(0, pictureBoxes.Count()); //random getal tussen 0(niet genomen) en het aantal pictureboxes (hier 16, en wel megenomen)
             }
-            while (pictures[num] != 0); //het bovenste doet hij totdat pictures[num](array om de getallen van de plaatjes in op te slaan) niet meer 0 is.
-            Console.WriteLine("num= " + num + "     ID:" + plaatjenummer); // was om te kijken welk plaatje wat kreeg
-            pictures[num] = plaatjenummer; // slaat het id van het plaatje op
-            return pictureBoxes[num]; // geeft de waarde van hte plaatje in de picturebox weer terug aan de picturebox
-
+            while (pictureBoxes[num].Tag != null); //het bovenste doet hij totdat pictures[num](array om de getallen van de plaatjes in op te slaan) niet meer 0 is.
+            pictureBoxes[num].Image = Properties.Resources.BackImage; // Verstopt het plaatje
+            pictureBoxes[num].Tag = plaatjenummer;
+            meme[num] = plaatjenummer;
+            
         }
 
         public void setRandomImages()
         {
-            int plaatje = 1;
+           
+            int plaatje = 0;
             foreach (var image in images)
             {
-                getFreeSlot(plaatje).Tag = image;// zoekt 2 lege PB op en zet een image erin
-                getFreeSlot(plaatje).Tag = image;
-
+                getFreeSlot(plaatje);// zoekt 2 lege PB op en zet een image erin
+                getFreeSlot(plaatje);
+                frontImage.Add(plaatje, image);
                 plaatje++;
             }
+            
         }
 
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
+
             
-            HideImages();
             if (Options.Soundeffectsstate == false) // deze wordt veranderd in het opties menu, als deze optie niet is aangevinkt speelt hij het geluidje af
             {
                 Sounds.Incorrect(); // puh-uh
             }
-            
+
             allowClick = true;
-            
+
             clickTimer.Stop();
         }
 
         public void clickImage(object sender, EventArgs e)
         {
+            foreach (int num in meme)
+            {
+                Console.WriteLine(meme[num]);
+                Console.WriteLine("ok");
+            }
             if (!allowClick) return; //als allowclick false is, doet hij niks als je op n kaart klikt
             if (x1.Text == "x") // voor de omgedraaid aantal kaarten int
 
@@ -343,24 +352,38 @@ namespace MemoryGame
                 omgedraaid2++;
             }
             var pic = (PictureBox)sender;
+            int ID = Convert.ToInt32(pic.Tag);
 
             if (firstGuess == null) // als dit het eerste plaatje is
             {
                 firstGuess = pic;
-                pic.Image = (Image)pic.Tag;
+                pic.Image = frontImage[ID];
                 return;
             }
 
-            pic.Image = (Image)pic.Tag; //tweede plaatje
+            pic.Image = frontImage[ID]; //tweede plaatje
+
+            #region
+            /// <summary>
+            /// hier wordt even een pauze gedaan voordat de kaarten weer worden omgedraaid
+            /// </summary>
+            DateTime pauze = DateTime.Now; //tijd van omdraaien kaart
+            do
+            {
+                Application.DoEvents();
+            } while (pauze.AddMilliseconds(500) > DateTime.Now);
+            #endregion
 
 
-            if (pic.Image == firstGuess.Image && pic != firstGuess) //als plaatje 1 gelijk is aan plaatje 2 en niet hetzelfde plaatjes is (eg zelfde pic box)
+            if (pic == firstGuess)// als first guess en pic hetzelfde zijn (er is 2 keer op dezelfde pic box geklikt)
+            {
+                return;// het programma doet niks
+            }
+            if (ID == Convert.ToInt32(firstGuess.Tag)) //als plaatje 1 gelijk is aan plaatje 2 en niet hetzelfde plaatjes is (eg zelfde pic box)
             {
                 pic.Visible = firstGuess.Visible = false; // de afbeeldingen worden onzicht baar en onklikbaar
-                {
-                    firstGuess = pic; //firstguess is hier hetzelfde als wat pic is, dus ook dezelfde staat
-                }
-                HideImages(); // hide images om het weer terug te zetten
+                
+                
 
                 if (x1.Text == "x") //score p1 omhoog als p1 degene is die het kiest
                 {
@@ -376,23 +399,18 @@ namespace MemoryGame
                 }
 
             }
-            else if (pic.Image == firstGuess.Image && pic == firstGuess) // als first guess en pic wel hetzelfde zijn (er is 2 keer op dezelfde pic box geklikt)
+            else  // als first guess en pic niet hetzelfde zijn (er is 2 keer op dezelfde pic box geklikt)
             {
                 pic.Visible = firstGuess.Visible = true; //zet hem weer op zichtbaar
-                {
-                    firstGuess = pic; //firstguess wordt weer pic
-                }
-                HideImages(); //verstopt
+                pic.Image = firstGuess.Image = Properties.Resources.BackImage;
+                firstGuess = null;
+                ToTurn();
+
+
+
             }
 
-            else //als de plaatjes niet gelijk zijn
-            {
-                
-                allowClick = false; //allowclick gaat uit (je kan dus niet op andere plaatjes klikken
-                clickTimer.Start(); //start clicktimer (1sec)
-                ToTurn();// wisselt van beurt van speler 1 naar speler 2 of andersom
-                
-            }
+            
 
 
 
@@ -401,28 +419,28 @@ namespace MemoryGame
             timer.Stop(); //stopt gametimer
             countP1 = countP1 * ((100 - (60 - time) * -100)); //(slechte) score formule
             countP2 = countP2 * ((100 - (60 - time) * -100));
-            
+
             if (countP1 > countP2) //speler 1 heeft de meeste punten
             {
                 MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
-                
+
             }
 
             else if (countP2 > countP1) //speler 2 heeft de meeste punten
             {
                 MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
-                
+
             }
             else if (countP1 == countP2)// puntenaantal is gelijk
             {
                 MessageBox.Show("Gelijkspel!");
-                
+
             }
 
             
             ResetScore(); //scores worden weer 0
             ResetImages(); //pic boxes worden visible etc
-            
+
 
 
 
@@ -431,7 +449,6 @@ namespace MemoryGame
         {
             allowClick = true; //je kan op plaatjes klikken
             setRandomImages(); //random image verdelen
-            HideImages(); // achtergrond plaatje in pictureboxes zetten
             startGameTimer(); //gametimer gaat lopen
             clickTimer.Interval = 1000; //interval clicktimer (1000ms = 1s)
             clickTimer.Tick += CLICKTIMER_TICK; // de clicktimer loopt gelijk aan de gametimer
@@ -467,7 +484,7 @@ namespace MemoryGame
                 x2.Text = "...";
                 Turn = 1;
             }
-            
+
 
 
 
@@ -475,6 +492,7 @@ namespace MemoryGame
 
         public void ResetScore() //zet de score weer op 0 en updatet de labels
         {
+            
             x1.Text = "x"; //p1 is standaard eerst aan de beurt, dus we resetten de labels weer
             x2.Text = "...";
             score1.Text = "0";
@@ -483,7 +501,7 @@ namespace MemoryGame
             countP2 = 0;
             omgedraaid1 = 0;
             omgedraaid2 = 0;
-
+            
         }
 
 
@@ -496,22 +514,26 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
                 SaveXML.button_click(); //slaat op
-                Thema killme = new Thema();
-                killme.Show();
+                Thema theme = new Thema();
+                time = 60;
+                frontImage.Clear();
+                theme.Show();
                 this.Dispose(); //gooit form instance uit het geheugen
 
             }
             else if (dialog == DialogResult.No) // als No wordt gekozen
             {
-                Thema killme = new Thema();
-                killme.Show();
+                Thema theme = new Thema();
+                frontImage.Clear();
+                time = 60;
+                theme.Show();
                 this.Dispose();
             }
             else if (dialog == DialogResult.Cancel)
             {
                 timer.Start(); //start de timer weer op vanaf waar hij gebleven was
                 return;
-                
+
             }
         }
 
@@ -554,10 +576,10 @@ namespace MemoryGame
                     Sounds.Siivagunner();
                     break;
 
-               
 
-                
-                
+
+
+
             }
 
 
@@ -567,7 +589,7 @@ namespace MemoryGame
                 Sounds.Grunty(); //achtergrond muziek
 
             }
-                                                   
+
         }
 
         private void buttonQuitSave_Click(object sender, EventArgs e) //als de save knop wordt ingedrukt
@@ -588,7 +610,22 @@ namespace MemoryGame
                 timer.Start();
                 return;
             }
+
+        }
+
+        private void Gamepanel_FormClosing(object sender, FormClosedEventArgs e)
+        {
+            foreach(int i in pictures)
+            {
+                pictures[i] = 0;
+            }
         }
         
+            
+            
+
+
+
+
     } 
 }

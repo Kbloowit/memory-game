@@ -97,8 +97,8 @@ namespace MemoryGame
                 writer.WriteString(Convert.ToString(Gamepanel.pictures[15]));
                 writer.WriteEndElement();
                 writer.WriteEndElement(); // Einde opslaan pictureBoxes
-
-               
+                writer.WriteStartElement("Achtergrond");
+                writer.WriteString(Convert.ToString(Themez.Achtergrond));
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
 

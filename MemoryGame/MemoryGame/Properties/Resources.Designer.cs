@@ -73,6 +73,16 @@ namespace MemoryGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap BackImage {
+            get {
+                object obj = ResourceManager.GetObject("BackImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap cars1 {
             get {
                 object obj = ResourceManager.GetObject("cars1", resourceCulture);
@@ -325,16 +335,6 @@ namespace MemoryGame.Properties {
         public static System.Drawing.Bitmap fury {
             get {
                 object obj = ResourceManager.GetObject("fury", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap gay {
-            get {
-                object obj = ResourceManager.GetObject("gay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
