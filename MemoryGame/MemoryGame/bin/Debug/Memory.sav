@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Game>
   <players>
-    <Player>Jan</Player>
-    <Player>Jesper</Player>
+    <Player1>a</Player1>
+    <Player2>s</Player2>
   </players>
   <Score>
-    <ScoreP1>0</ScoreP1>
-    <ScoreP2>0</ScoreP2>
+    <ScoreP1>2</ScoreP1>
+    <ScoreP2>1</ScoreP2>
   </Score>
-  <Turn>2</Turn>
+  <Turn>1</Turn>
   <PicturesBoxes>
-    <Picturebox>1</Picturebox>
-    <Picturebox>1</Picturebox>
-    <Picturebox>5</Picturebox>
-    <Picturebox>2</Picturebox>
-    <Picturebox>5</Picturebox>
-    <Picturebox>2</Picturebox>
-    <Picturebox>4</Picturebox>
-    <Picturebox>0</Picturebox>
-    <Picturebox>4</Picturebox>
-    <Picturebox>6</Picturebox>
-    <Picturebox>3</Picturebox>
-    <Picturebox>7</Picturebox>
-    <Picturebox>3</Picturebox>
-    <Picturebox>6</Picturebox>
-    <Picturebox>7</Picturebox>
-    <Picturebox>0</Picturebox>
+    <Picturebox1>0</Picturebox1>
+    <Picturebox2>0</Picturebox2>
+    <Picturebox3>0</Picturebox3>
+    <Picturebox4>0</Picturebox4>
+    <Picturebox5>0</Picturebox5>
+    <Picturebox6>0</Picturebox6>
+    <Picturebox7>0</Picturebox7>
+    <Picturebox8>0</Picturebox8>
+    <Picturebox9>0</Picturebox9>
+    <Picturebox10>0</Picturebox10>
+    <Picturebox11>0</Picturebox11>
+    <Picturebox12>0</Picturebox12>
+    <Picturebox13>0</Picturebox13>
+    <Picturebox14>0</Picturebox14>
+    <Picturebox15>0</Picturebox15>
+    <Picturebox16>0</Picturebox16>
   </PicturesBoxes>
-  <Achtergrond>Color [Crimson]</Achtergrond>
+  <Achtergrond>Color [RoyalBlue]</Achtergrond>
 </Game>

@@ -59,20 +59,22 @@
             // 
             // buttonMenu
             // 
+            this.buttonMenu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMenu.Location = new System.Drawing.Point(712, 473);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(150, 52);
             this.buttonMenu.TabIndex = 2;
-            this.buttonMenu.Text = "Menu";
-            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Text = "Terug";
+            this.buttonMenu.UseVisualStyleBackColor = false;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // Highscores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 558);
             this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.listBoxScores);
@@ -80,9 +82,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Highscores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memorie";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Highscores_FormClosed);
             this.ResumeLayout(false);
 
         }

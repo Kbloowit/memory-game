@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gamepanel));
             this.buttonStart = new System.Windows.Forms.Button();
-            this.timelabel = new System.Windows.Forms.Label();
+            this.TimeLeft = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -89,16 +89,16 @@
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.startGame);
             // 
-            // timelabel
+            // TimeLeft
             // 
-            this.timelabel.AutoSize = true;
-            this.timelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timelabel.Location = new System.Drawing.Point(1500, 417);
-            this.timelabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.timelabel.Name = "timelabel";
-            this.timelabel.Size = new System.Drawing.Size(129, 48);
-            this.timelabel.TabIndex = 1;
-            this.timelabel.Text = "00:60";
+            this.TimeLeft.AutoSize = true;
+            this.TimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLeft.Location = new System.Drawing.Point(1500, 417);
+            this.TimeLeft.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.TimeLeft.Name = "TimeLeft";
+            this.TimeLeft.Size = new System.Drawing.Size(129, 48);
+            this.TimeLeft.TabIndex = 1;
+            this.TimeLeft.Text = "00:60";
             // 
             // pictureBox1
             // 
@@ -283,9 +283,9 @@
             this.NameP1.Location = new System.Drawing.Point(1284, 121);
             this.NameP1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameP1.Name = "NameP1";
-            this.NameP1.Size = new System.Drawing.Size(102, 37);
+            this.NameP1.Size = new System.Drawing.Size(133, 37);
             this.NameP1.TabIndex = 18;
-            this.NameP1.Text = "label2";
+            this.NameP1.Text = "Speler 1";
             // 
             // NameP2
             // 
@@ -294,9 +294,9 @@
             this.NameP2.Location = new System.Drawing.Point(1284, 215);
             this.NameP2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameP2.Name = "NameP2";
-            this.NameP2.Size = new System.Drawing.Size(102, 37);
+            this.NameP2.Size = new System.Drawing.Size(135, 37);
             this.NameP2.TabIndex = 19;
-            this.NameP2.Text = "label3";
+            this.NameP2.Text = "Speler 2";
             // 
             // buttonReset
             // 
@@ -371,9 +371,9 @@
             this.labelPairs.Location = new System.Drawing.Point(1538, 38);
             this.labelPairs.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPairs.Name = "labelPairs";
-            this.labelPairs.Size = new System.Drawing.Size(118, 42);
+            this.labelPairs.Size = new System.Drawing.Size(97, 42);
             this.labelPairs.TabIndex = 27;
-            this.labelPairs.Text = "Paren";
+            this.labelPairs.Text = "Paar";
             // 
             // labelTurn
             // 
@@ -401,12 +401,12 @@
             // 
             this.Timername.AutoSize = true;
             this.Timername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timername.Location = new System.Drawing.Point(1508, 348);
+            this.Timername.Location = new System.Drawing.Point(1472, 344);
             this.Timername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timername.Name = "Timername";
-            this.Timername.Size = new System.Drawing.Size(93, 48);
+            this.Timername.Size = new System.Drawing.Size(191, 48);
             this.Timername.TabIndex = 30;
-            this.Timername.Text = "Tijd";
+            this.Timername.Text = "Speeltijd";
             // 
             // buttonQuitSave
             // 
@@ -425,7 +425,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1842, 1140);
+            this.ClientSize = new System.Drawing.Size(1858, 1140);
             this.Controls.Add(this.buttonQuitSave);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.labelPlayers);
@@ -455,12 +455,11 @@
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.timelabel);
+            this.Controls.Add(this.TimeLeft);
             this.Controls.Add(this.buttonStart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Gamepanel";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memorie";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gamepanel_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -488,7 +487,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Label timelabel;
+        private System.Windows.Forms.Label TimeLeft;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;

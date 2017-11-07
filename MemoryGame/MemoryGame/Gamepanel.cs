@@ -17,9 +17,9 @@ namespace MemoryGame
         public static List<string> Players = new List<string>();
         public static List<int> plaatjenummer = new List<int>();
         public static Dictionary<int, Image> frontImage = new Dictionary<int, Image>();
-        //public static int[] meme = new int[16];
-        public static int[] id = new int[16];
-        public static string[,] Highscores = new String[10,2] ;
+        public static int[] meme = new int[16];
+
+
         public static int Turn = 1;
 
         #region allowClick
@@ -122,7 +122,7 @@ namespace MemoryGame
                     Properties.Resources.cars8
                         };
                 }
-                // Avengers
+                // Avengers 
                 if (Themez.Themepicked == 2)
                 {
                     return new Image[]
@@ -138,8 +138,7 @@ namespace MemoryGame
                     Properties.Resources.widow
                         };
                 }
-
-                // Koningshuis
+                // Royality
                 if (Themez.Themepicked == 3)
                 {
                     return new Image[]
@@ -155,7 +154,6 @@ namespace MemoryGame
                     Properties.Resources.koningshuis8
                         };
                 }
-
                 // Winx
                 if (Themez.Themepicked == 4)
                 {
@@ -172,8 +170,7 @@ namespace MemoryGame
                     Properties.Resources.Winx8
                         };
                 }
-
-                // GTA5
+                // GTA 5
                 if (Themez.Themepicked == 5)
                 {
                     return new Image[]
@@ -189,8 +186,7 @@ namespace MemoryGame
                     Properties.Resources.gtav8
                         };
                 }
-
-                // Formule 1
+                // Formule1
                 if (Themez.Themepicked == 6)
                 {
                     return new Image[]
@@ -206,8 +202,7 @@ namespace MemoryGame
                     Properties.Resources.formule8
                         };
                 }
-
-                // Social Media
+                // Social
                 if (Themez.Themepicked == 7)
                 {
                     return new Image[]
@@ -223,7 +218,6 @@ namespace MemoryGame
                     Properties.Resources.social8
                         };
                 }
-
                 // Disney
                 if (Themez.Themepicked == 8)
                 {
@@ -240,8 +234,7 @@ namespace MemoryGame
                     Properties.Resources.Disney8
                         };
                 }
-
-                // Rugrats
+                // Regrats
                 if (Themez.Themepicked == 9)
                 {
                     return new Image[]
@@ -257,7 +250,6 @@ namespace MemoryGame
                     Properties.Resources.Rugrats8
                         };
                 }
-
                 // Storage
                 if (Themez.Themepicked == 10)
                 {
@@ -302,7 +294,7 @@ namespace MemoryGame
                     ResetImages();
                 }
                 var ssTime = TimeSpan.FromSeconds(time); //zet de tijd afloop naar secondes ipv erg snel
-                timelabel.Text = "00:" + time.ToString(); // updatet de time label op het form
+                TimeLeft.Text = "00:" + time.ToString(); // updatet de time label op het form
             };
         }
 
@@ -335,7 +327,8 @@ namespace MemoryGame
             while (pictureBoxes[num].Tag != null); //het bovenste doet hij totdat pictures[num](array om de getallen van de plaatjes in op te slaan) niet meer 0 is.
             pictureBoxes[num].Image = Properties.Resources.BackImage; // Verstopt het plaatje
             pictureBoxes[num].Tag = plaatjenummer;
-            id[num] = plaatjenummer;
+            meme[num] = plaatjenummer;
+            
         }
 
         public void setRandomImages()
@@ -355,6 +348,7 @@ namespace MemoryGame
         private void CLICKTIMER_TICK(object sender, EventArgs e)
         {
 
+            
             if (Options.Soundeffectsstate == false) // deze wordt veranderd in het opties menu, als deze optie niet is aangevinkt speelt hij het geluidje af
             {
                 Sounds.Incorrect(); // puh-uh
@@ -367,9 +361,9 @@ namespace MemoryGame
 
         public void clickImage(object sender, EventArgs e)
         {
-            foreach (int num in id)
+            foreach (int num in meme)
             {
-                Console.WriteLine(id[num]);
+                Console.WriteLine(meme[num]);
                 Console.WriteLine("ok");
             }
             if (!allowClick) return; //als allowclick false is, doet hij niks als je op n kaart klikt
@@ -402,6 +396,7 @@ namespace MemoryGame
             do
             {
                 Application.DoEvents();
+
             } while (pauze.AddMilliseconds(500) > DateTime.Now);
             #endregion
 
@@ -413,6 +408,7 @@ namespace MemoryGame
             if (ID == Convert.ToInt32(firstGuess.Tag)) //als plaatje 1 gelijk is aan plaatje 2 en niet hetzelfde plaatjes is (eg zelfde pic box)
             {
                 pic.Visible = firstGuess.Visible = false; // de afbeeldingen worden onzicht baar en onklikbaar
+                
                 
 
                 if (x1.Text == "x") //score p1 omhoog als p1 degene is die het kiest
@@ -434,9 +430,19 @@ namespace MemoryGame
                 pic.Visible = firstGuess.Visible = true; //zet hem weer op zichtbaar
                 pic.Image = firstGuess.Image = Properties.Resources.BackImage;
                 firstGuess = null;
+                if (Options.Soundeffectsstate == false) //speelt correct geluidseffect
+                {
+                    Sounds.Incorrect(); // tu-du-du-ding!
+                }
                 ToTurn();
 
+
+
             }
+
+            
+
+
 
             firstGuess = null; //firstguess is weer niks
             if (pictureBoxes.Any(p => p.Visible)) return; //als er geen pictureboxes meer visible zijn (dus alles is geraden)
@@ -444,10 +450,9 @@ namespace MemoryGame
             countP1 = countP1 * ((100 - (60 - time) * -100)); //(slechte) score formule
             countP2 = countP2 * ((100 - (60 - time) * -100));
 
-
             if (countP1 > countP2) //speler 1 heeft de meeste punten
             {
-                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten! " + NameP2.Text + " had " + countP2 + " punten.");
+                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
 
             }
 
@@ -462,13 +467,16 @@ namespace MemoryGame
 
             }
 
+            
             ResetScore(); //scores worden weer 0
             ResetImages(); //pic boxes worden visible etc
+
+
+
 
         }
         private void startGame(object sender, EventArgs e)//als op de startknop gedrukt wordt
         {
-            
             allowClick = true; //je kan op plaatjes klikken
             setRandomImages(); //random image verdelen
             startGameTimer(); //gametimer gaat lopen
@@ -507,6 +515,9 @@ namespace MemoryGame
                 Turn = 1;
             }
 
+
+
+
         }
 
         public void ResetScore() //zet de score weer op 0 en updatet de labels
@@ -523,6 +534,9 @@ namespace MemoryGame
             
         }
 
+
+
+
         private void buttonReset_Click(object sender, EventArgs e) //als op de reset knop wordt gedrukt
         {
             timer.Stop(); // stopt gametimer
@@ -534,6 +548,8 @@ namespace MemoryGame
                 time = 60;
                 frontImage.Clear();
                 theme.Show();
+                Sounds.Stopmuziek();
+                Sounds.Startmuziek();
                 this.Dispose(); //gooit form instance uit het geheugen
 
             }
@@ -543,6 +559,8 @@ namespace MemoryGame
                 frontImage.Clear();
                 time = 60;
                 theme.Show();
+                Sounds.Stopmuziek();
+                Sounds.Startmuziek();
                 this.Dispose();
             }
             else if (dialog == DialogResult.Cancel)
@@ -555,7 +573,6 @@ namespace MemoryGame
 
         private void buttonOptions_Click(object sender, EventArgs e) //als op de opties knop wordt gedrukt
         {
-            timer.Stop();
             Options opties = new Options(); //opent nieuw opties form
             opties.ShowDialog();
         }
@@ -563,6 +580,7 @@ namespace MemoryGame
         private void Form2_Load(object sender, EventArgs e) // op laden form 2
         {
             Sounds.Stopmuziek(); //stops alle lopende achtergrond muziek
+            // Overzicht achtergrond muziek
             switch (Themez.Themepicked)
             {
                 case 1:
@@ -592,21 +610,19 @@ namespace MemoryGame
                 case 9: //rugrats heeft nog geen muziek dus nu deze placeholder
                     Sounds.Siivagunner();
                     break;
-                //case 10: //rugrats heeft nog geen muziek dus nu deze placeholder
-                //    Sounds.Siivagunner();
-                //    break;
-                case 11: //rugrats heeft nog geen muziek dus nu deze placeholder
+                case 10:
                     Sounds.Storage();
                     break;
-
-
-
             }
+
 
             if (Options.CheckboxBGMstate == false) //als in het opties menu muziek is uitgezet
+
             {
                 Sounds.Grunty(); //achtergrond muziek
+
             }
+
         }
 
         private void buttonQuitSave_Click(object sender, EventArgs e) //als de save knop wordt ingedrukt
@@ -616,7 +632,7 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
                 SaveXML.button_click();
-                Application.Exit();
+                // Application.Exit();
             }
             else if (dialog == DialogResult.No) //als No wordt gekozen
             {
@@ -630,9 +646,17 @@ namespace MemoryGame
 
         }
 
+        private void Gamepanel_FormClosing(object sender, FormClosedEventArgs e)
+        {
+            foreach(int i in pictures)
+            {
+                pictures[i] = 0;
+            }
+        }
+
         private void Gamepanel_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+             Application.Exit();
         }
     } 
 }

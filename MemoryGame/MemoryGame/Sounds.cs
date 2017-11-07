@@ -34,6 +34,7 @@ namespace MemoryGame
             
             startmuziek.controls.stop();
             grunty.controls.stop();
+            Nuclear.controls.stop();
 
         }
 
@@ -80,6 +81,8 @@ namespace MemoryGame
 
         }
 
+        
+
         public static void Disney()//didney thema
         {
 
@@ -100,9 +103,9 @@ namespace MemoryGame
         public static void Siivagunner() //highscores scherm
         {
 
-            Nuclear.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
-            Nuclear.settings.setMode("loop", true);
-            Nuclear.controls.play();
+            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Nuclear.mp3";
+            grunty.settings.setMode("loop", true);
+            grunty.controls.play();
 
         }
 
@@ -145,7 +148,7 @@ namespace MemoryGame
             
         }
 
-        public static void Storage() //wie zijn deze mensen? thema
+        public static void Storage() //Storage thema
         {
 
             grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Storage.mp3";

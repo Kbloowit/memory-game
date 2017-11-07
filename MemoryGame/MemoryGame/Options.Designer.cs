@@ -46,9 +46,9 @@
             this.LabelSoundeffects.Location = new System.Drawing.Point(92, 183);
             this.LabelSoundeffects.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelSoundeffects.Name = "LabelSoundeffects";
-            this.LabelSoundeffects.Size = new System.Drawing.Size(297, 37);
+            this.LabelSoundeffects.Size = new System.Drawing.Size(306, 37);
             this.LabelSoundeffects.TabIndex = 0;
-            this.LabelSoundeffects.Text = "Geluidseffecten UIT";
+            this.LabelSoundeffects.Text = "Geluids effecten UIT";
             // 
             // labelBackgroundmusic
             // 
@@ -118,6 +118,7 @@
             // 
             // button_back
             // 
+            this.button_back.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_back.Location = new System.Drawing.Point(764, 571);
             this.button_back.Margin = new System.Windows.Forms.Padding(4);
@@ -125,7 +126,7 @@
             this.button_back.Size = new System.Drawing.Size(128, 67);
             this.button_back.TabIndex = 7;
             this.button_back.Text = "Terug";
-            this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.UseVisualStyleBackColor = false;
             this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // Options
@@ -133,6 +134,7 @@
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(960, 660);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.labelOptions);
@@ -145,7 +147,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Options";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memorie";
             this.ResumeLayout(false);
             this.PerformLayout();

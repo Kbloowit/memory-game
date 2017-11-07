@@ -7,10 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
-using System.IO;
 using WMPLib;
-
+using System.IO;
 
 namespace MemoryGame
 {
@@ -19,7 +17,7 @@ namespace MemoryGame
     {
         /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet(hoe is wat onder tutorials)*/
 
-
+        public string meme;
 
 
         /* dit stuk hieronder zet de muziek voor het startmenu klaar, ik heb hier eerst als placeholder Pentakill - Lightbringer gebruikt*/
@@ -28,9 +26,7 @@ namespace MemoryGame
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-
         }
-
 
         private void buttonOptions_Click(object sender, EventArgs e)
         {
@@ -42,34 +38,22 @@ namespace MemoryGame
            
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
 
-
         }
 
         public void buttonPlay_Click(object sender, EventArgs e)
         {
-            string load = null; 
-            DialogResult dialog = MessageBox.Show("Wil je het opgeslagen bestand openen?", " Opgeslagen spel openen", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes)
+            if (File.Exists("Memory.sav"))
             {
-                string[] players = new string[2];
-
-                SaveXML.LoadGame(load);
-                Gamepanel spel = new Gamepanel(players);
-
-                //try
-                //{
+                DialogResult dialog = MessageBox.Show("Wilt u verder met het vorige spel?", "Spel laden?", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    SaveXML.Load(meme);
+                }
+                else
+                {
                     
-                 
-                //}
-                //catch
-                //{
-                //   MessageBox.Show("Helaas! Er is geen saved-file gevonden");
-            
-                //};
+                }
             }
-            else if (dialog == DialogResult.No)
-            {
-                
             /* geeft aan waar weg hij gecalled wordt*/
             Thema themaselect = new Thema();
             //Player_import k = new Player_import();
@@ -78,7 +62,6 @@ namespace MemoryGame
             themaselect.ShowDialog();
             //k.ShowDialog();
 
-            }
 
         }
 
@@ -94,11 +77,7 @@ namespace MemoryGame
         {
             Sounds.Startmuziek();
 
-        }
-
-        private void Hoofdmenu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            
         }
     }
 }
