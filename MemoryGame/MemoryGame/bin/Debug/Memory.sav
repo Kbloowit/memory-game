@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Game>
   <players>
-    <Player1></Player1>
-    <Player2></Player2>
+    <Player1>a</Player1>
+    <Player2>s</Player2>
   </players>
   <Score>
-    <ScoreP1>0</ScoreP1>
-    <ScoreP2>0</ScoreP2>
+    <ScoreP1>2</ScoreP1>
+    <ScoreP2>1</ScoreP2>
   </Score>
   <Turn>1</Turn>
   <PicturesBoxes>
@@ -27,5 +27,5 @@
     <Picturebox15>0</Picturebox15>
     <Picturebox16>0</Picturebox16>
   </PicturesBoxes>
-  <Achtergrond>Color [Crimson]</Achtergrond>
+  <Achtergrond>Color [RoyalBlue]</Achtergrond>
 </Game>

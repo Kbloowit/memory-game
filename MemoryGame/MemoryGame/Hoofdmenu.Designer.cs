@@ -40,51 +40,56 @@
             // LabelTitel
             // 
             this.LabelTitel.AutoSize = true;
+            this.LabelTitel.BackColor = System.Drawing.Color.White;
             this.LabelTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitel.Location = new System.Drawing.Point(436, 106);
+            this.LabelTitel.Location = new System.Drawing.Point(504, 106);
             this.LabelTitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelTitel.Name = "LabelTitel";
-            this.LabelTitel.Size = new System.Drawing.Size(342, 55);
+            this.LabelTitel.Size = new System.Drawing.Size(211, 55);
             this.LabelTitel.TabIndex = 0;
-            this.LabelTitel.Text = "Memory Game";
+            this.LabelTitel.Text = "Memorie";
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Location = new System.Drawing.Point(456, 227);
+            this.buttonPlay.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPlay.Location = new System.Drawing.Point(471, 222);
             this.buttonPlay.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(272, 104);
             this.buttonPlay.TabIndex = 1;
-            this.buttonPlay.Text = "Play";
-            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Text = "Start";
+            this.buttonPlay.UseVisualStyleBackColor = false;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // buttonOptions
             // 
-            this.buttonOptions.Location = new System.Drawing.Point(456, 371);
+            this.buttonOptions.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonOptions.Location = new System.Drawing.Point(471, 366);
             this.buttonOptions.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOptions.Name = "buttonOptions";
             this.buttonOptions.Size = new System.Drawing.Size(272, 104);
             this.buttonOptions.TabIndex = 2;
-            this.buttonOptions.Text = "Options";
-            this.buttonOptions.UseVisualStyleBackColor = true;
+            this.buttonOptions.Text = "Opties";
+            this.buttonOptions.UseVisualStyleBackColor = false;
             this.buttonOptions.Click += new System.EventHandler(this.buttonOptions_Click);
             // 
             // buttonHighscore
             // 
-            this.buttonHighscore.Location = new System.Drawing.Point(456, 513);
+            this.buttonHighscore.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonHighscore.Location = new System.Drawing.Point(471, 508);
             this.buttonHighscore.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHighscore.Name = "buttonHighscore";
             this.buttonHighscore.Size = new System.Drawing.Size(272, 104);
             this.buttonHighscore.TabIndex = 3;
-            this.buttonHighscore.Text = "Highscores";
-            this.buttonHighscore.UseVisualStyleBackColor = true;
+            this.buttonHighscore.Text = "Ranglijst";
+            this.buttonHighscore.UseVisualStyleBackColor = false;
             this.buttonHighscore.Click += new System.EventHandler(this.buttonHighscore_Click);
             // 
             // Hoofdmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 733);
             this.Controls.Add(this.buttonHighscore);
             this.Controls.Add(this.buttonOptions);
@@ -93,7 +98,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Hoofdmenu";
-            this.Text = "Memory Game";
+            this.Text = "Memorie";
             this.Load += new System.EventHandler(this.Hoofdmenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
