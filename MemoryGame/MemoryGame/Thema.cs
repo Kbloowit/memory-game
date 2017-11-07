@@ -101,6 +101,18 @@ namespace MemoryGame
             this.Dispose();
             importatie.ShowDialog();
         }
+
+        private void Storage_Click(object sender, EventArgs e)
+        {
+            Themez.Themepicked = 10;
+            Themez.Achtergrond = Color.White;
+            Player_import importatie = new Player_import();
+            /*opent het game form*/
+            this.Dispose();
+            importatie.ShowDialog();
+        }
+
+
         public void voided(object sender, EventArgs e)
         {
             Player_import importatie = new Player_import();
@@ -108,6 +120,5 @@ namespace MemoryGame
             this.Dispose();
             importatie.ShowDialog();
         }
-
     }
 }

@@ -29,5 +29,10 @@ namespace MemoryGame
         {
             this.Close();
         }
+
+        private void Highscores_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

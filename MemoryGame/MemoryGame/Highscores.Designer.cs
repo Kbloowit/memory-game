@@ -80,7 +80,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Highscores";
-            this.Text = "Memory Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Memorie";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Highscores_FormClosed);
             this.ResumeLayout(false);
 
         }

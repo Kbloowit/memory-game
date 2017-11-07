@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.IO;
 using WMPLib;
 
 
@@ -27,8 +29,6 @@ namespace MemoryGame
             InitializeComponent();
             /* dit start de pentakill muziek*/
 
-            
-            
         }
 
 
@@ -47,6 +47,29 @@ namespace MemoryGame
 
         public void buttonPlay_Click(object sender, EventArgs e)
         {
+            string load = null; 
+            DialogResult dialog = MessageBox.Show("Wil je het opgeslagen bestand openen?", " Opgeslagen spel openen", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                string[] players = new string[2];
+
+                SaveXML.LoadGame(load);
+                Gamepanel spel = new Gamepanel(players);
+
+                //try
+                //{
+                    
+                 
+                //}
+                //catch
+                //{
+                //   MessageBox.Show("Helaas! Er is geen saved-file gevonden");
+            
+                //};
+            }
+            else if (dialog == DialogResult.No)
+            {
+                
             /* geeft aan waar weg hij gecalled wordt*/
             Thema themaselect = new Thema();
             //Player_import k = new Player_import();
@@ -54,6 +77,8 @@ namespace MemoryGame
             this.Hide(); //verstopt hoofdmenu form
             themaselect.ShowDialog();
             //k.ShowDialog();
+
+            }
 
         }
 
@@ -69,7 +94,11 @@ namespace MemoryGame
         {
             Sounds.Startmuziek();
 
-            
+        }
+
+        private void Hoofdmenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

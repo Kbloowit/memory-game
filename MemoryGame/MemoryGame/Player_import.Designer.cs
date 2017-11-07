@@ -44,9 +44,9 @@
             this.labelP1.Location = new System.Drawing.Point(60, 192);
             this.labelP1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelP1.Name = "labelP1";
-            this.labelP1.Size = new System.Drawing.Size(140, 37);
+            this.labelP1.Size = new System.Drawing.Size(142, 37);
             this.labelP1.TabIndex = 0;
-            this.labelP1.Text = "Player 1:";
+            this.labelP1.Text = "Speler 1:";
             // 
             // labelP2
             // 
@@ -55,9 +55,9 @@
             this.labelP2.Location = new System.Drawing.Point(60, 298);
             this.labelP2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelP2.Name = "labelP2";
-            this.labelP2.Size = new System.Drawing.Size(142, 37);
+            this.labelP2.Size = new System.Drawing.Size(144, 37);
             this.labelP2.TabIndex = 1;
-            this.labelP2.Text = "Player 2:";
+            this.labelP2.Text = "Speler 2:";
             // 
             // importP2
             // 
@@ -96,9 +96,9 @@
             this.labelPlayerImport.Location = new System.Drawing.Point(60, 71);
             this.labelPlayerImport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPlayerImport.Name = "labelPlayerImport";
-            this.labelPlayerImport.Size = new System.Drawing.Size(249, 42);
+            this.labelPlayerImport.Size = new System.Drawing.Size(295, 42);
             this.labelPlayerImport.TabIndex = 6;
-            this.labelPlayerImport.Text = "Player import";
+            this.labelPlayerImport.Text = "Speler invoeren";
             // 
             // Player_import
             // 
@@ -114,7 +114,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Player_import";
-            this.Text = "Memory Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Memorie";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gamepanel));
             this.buttonStart = new System.Windows.Forms.Button();
-            this.TimeLeft = new System.Windows.Forms.Label();
+            this.timelabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -89,16 +89,16 @@
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.startGame);
             // 
-            // TimeLeft
+            // timelabel
             // 
-            this.TimeLeft.AutoSize = true;
-            this.TimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLeft.Location = new System.Drawing.Point(1500, 417);
-            this.TimeLeft.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.TimeLeft.Name = "TimeLeft";
-            this.TimeLeft.Size = new System.Drawing.Size(129, 48);
-            this.TimeLeft.TabIndex = 1;
-            this.TimeLeft.Text = "00:60";
+            this.timelabel.AutoSize = true;
+            this.timelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timelabel.Location = new System.Drawing.Point(1500, 417);
+            this.timelabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.timelabel.Name = "timelabel";
+            this.timelabel.Size = new System.Drawing.Size(129, 48);
+            this.timelabel.TabIndex = 1;
+            this.timelabel.Text = "00:60";
             // 
             // pictureBox1
             // 
@@ -357,7 +357,7 @@
             // 
             this.x2.AutoSize = true;
             this.x2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x2.Location = new System.Drawing.Point(1720, 208);
+            this.x2.Location = new System.Drawing.Point(1734, 208);
             this.x2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.x2.Name = "x2";
             this.x2.Size = new System.Drawing.Size(53, 44);
@@ -371,9 +371,9 @@
             this.labelPairs.Location = new System.Drawing.Point(1538, 38);
             this.labelPairs.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPairs.Name = "labelPairs";
-            this.labelPairs.Size = new System.Drawing.Size(103, 42);
+            this.labelPairs.Size = new System.Drawing.Size(118, 42);
             this.labelPairs.TabIndex = 27;
-            this.labelPairs.Text = "Pairs";
+            this.labelPairs.Text = "Paren";
             // 
             // labelTurn
             // 
@@ -382,9 +382,9 @@
             this.labelTurn.Location = new System.Drawing.Point(1704, 38);
             this.labelTurn.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTurn.Name = "labelTurn";
-            this.labelTurn.Size = new System.Drawing.Size(95, 42);
+            this.labelTurn.Size = new System.Drawing.Size(107, 42);
             this.labelTurn.TabIndex = 28;
-            this.labelTurn.Text = "Turn";
+            this.labelTurn.Text = "Beurt";
             // 
             // labelPlayers
             // 
@@ -393,20 +393,20 @@
             this.labelPlayers.Location = new System.Drawing.Point(1286, 38);
             this.labelPlayers.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPlayers.Name = "labelPlayers";
-            this.labelPlayers.Size = new System.Drawing.Size(143, 42);
+            this.labelPlayers.Size = new System.Drawing.Size(145, 42);
             this.labelPlayers.TabIndex = 29;
-            this.labelPlayers.Text = "Players";
+            this.labelPlayers.Text = "Spelers";
             // 
             // Timername
             // 
             this.Timername.AutoSize = true;
             this.Timername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timername.Location = new System.Drawing.Point(1496, 344);
+            this.Timername.Location = new System.Drawing.Point(1508, 348);
             this.Timername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timername.Name = "Timername";
-            this.Timername.Size = new System.Drawing.Size(133, 48);
+            this.Timername.Size = new System.Drawing.Size(93, 48);
             this.Timername.TabIndex = 30;
-            this.Timername.Text = "Timer";
+            this.Timername.Text = "Tijd";
             // 
             // buttonQuitSave
             // 
@@ -415,7 +415,7 @@
             this.buttonQuitSave.Name = "buttonQuitSave";
             this.buttonQuitSave.Size = new System.Drawing.Size(270, 88);
             this.buttonQuitSave.TabIndex = 31;
-            this.buttonQuitSave.Text = "Quit/Save";
+            this.buttonQuitSave.Text = "Afsluiten/Opslaan";
             this.buttonQuitSave.UseVisualStyleBackColor = true;
             this.buttonQuitSave.Click += new System.EventHandler(this.buttonQuitSave_Click);
             // 
@@ -425,7 +425,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1804, 1140);
+            this.ClientSize = new System.Drawing.Size(1842, 1140);
             this.Controls.Add(this.buttonQuitSave);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.labelPlayers);
@@ -455,12 +455,14 @@
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.TimeLeft);
+            this.Controls.Add(this.timelabel);
             this.Controls.Add(this.buttonStart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Gamepanel";
-            this.Text = "Memory Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Memorie";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gamepanel_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -486,7 +488,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Label TimeLeft;
+        private System.Windows.Forms.Label timelabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;

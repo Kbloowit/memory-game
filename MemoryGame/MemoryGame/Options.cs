@@ -102,9 +102,10 @@ namespace MemoryGame
         /// Geeft je de staat van de geluidseffecten checkbox of laat je de staat veranderen
         /// </summary>
         public static bool Soundeffectsstate { get; set; }
+
+
         #endregion
 
-
-
+      
     }
 }
