@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
-
+using System.IO;
 
 namespace MemoryGame
 {
@@ -17,7 +17,7 @@ namespace MemoryGame
     {
         /*tip: zet de dingen die je wilt gebruiken in de memory game in de resources.resx bestand, lees doc dat hierbij zit voor hoe dat moet(hoe is wat onder tutorials)*/
 
-
+        public string meme;
 
 
         /* dit stuk hieronder zet de muziek voor het startmenu klaar, ik heb hier eerst als placeholder Pentakill - Lightbringer gebruikt*/
@@ -26,7 +26,7 @@ namespace MemoryGame
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-
+            
             
             
         }
@@ -47,6 +47,18 @@ namespace MemoryGame
 
         public void buttonPlay_Click(object sender, EventArgs e)
         {
+            if (File.Exists("Memory.sav"))
+            {
+                DialogResult dialog = MessageBox.Show("Wilt u verder met het vorige spel?", "Resume?", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    SaveXML.Load(meme);
+                }
+                else
+                {
+                    
+                }
+            }
             /* geeft aan waar weg hij gecalled wordt*/
             Thema themaselect = new Thema();
             //Player_import k = new Player_import();
@@ -54,6 +66,7 @@ namespace MemoryGame
             this.Hide(); //verstopt hoofdmenu form
             themaselect.ShowDialog();
             //k.ShowDialog();
+
 
         }
 

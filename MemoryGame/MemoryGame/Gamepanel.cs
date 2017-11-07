@@ -518,6 +518,8 @@ namespace MemoryGame
                 time = 60;
                 frontImage.Clear();
                 theme.Show();
+                Sounds.Stopmuziek();
+                Sounds.Startmuziek();
                 this.Dispose(); //gooit form instance uit het geheugen
 
             }
@@ -527,6 +529,8 @@ namespace MemoryGame
                 frontImage.Clear();
                 time = 60;
                 theme.Show();
+                Sounds.Stopmuziek();
+                Sounds.Startmuziek();
                 this.Dispose();
             }
             else if (dialog == DialogResult.Cancel)
