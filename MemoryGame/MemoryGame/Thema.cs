@@ -101,13 +101,7 @@ namespace MemoryGame
             this.Dispose();
             importatie.ShowDialog();
         }
-        public void voided(object sender, EventArgs e)
-        {
-            Player_import importatie = new Player_import();
-            /*opent het game form*/
-            this.Dispose();
-            importatie.ShowDialog();
-        }
 
+               
     }
 }

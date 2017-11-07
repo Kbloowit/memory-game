@@ -156,7 +156,7 @@ namespace MemoryGame
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load("Memory.sav");
 
-            xDoc.SelectSingleNode("Game/Turn").InnerText
+            //xDoc.SelectSingleNode("Game/Turn").InnerText;
             SaveXML.Load("Game/players/Player1");
             SaveXML.Load("Game/players/Player2");
 

@@ -81,13 +81,7 @@ namespace MemoryGame
 
         }
 
-        public static void Runescape() //runescape thema
-        {
-
-            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/runescape.mp3";
-           
-
-        }
+        
 
         public static void Disney()//didney thema
         {

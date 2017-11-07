@@ -371,6 +371,7 @@ namespace MemoryGame
             do
             {
                 Application.DoEvents();
+
             } while (pauze.AddMilliseconds(500) > DateTime.Now);
             #endregion
 
@@ -404,6 +405,10 @@ namespace MemoryGame
                 pic.Visible = firstGuess.Visible = true; //zet hem weer op zichtbaar
                 pic.Image = firstGuess.Image = Properties.Resources.BackImage;
                 firstGuess = null;
+                if (Options.Soundeffectsstate == false) //speelt correct geluidseffect
+                {
+                    Sounds.Incorrect(); // tu-du-du-ding!
+                }
                 ToTurn();
 
 

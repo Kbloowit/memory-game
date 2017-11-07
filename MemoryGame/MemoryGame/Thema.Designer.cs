@@ -38,15 +38,13 @@
             this.Royalty = new System.Windows.Forms.Button();
             this.Gta5 = new System.Windows.Forms.Button();
             this.Rugrats = new System.Windows.Forms.Button();
-            this.Runescape = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(270, 68);
+            this.label1.Location = new System.Drawing.Point(293, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 31);
             this.label1.TabIndex = 0;
@@ -54,7 +52,7 @@
             // 
             // Avengers
             // 
-            this.Avengers.Location = new System.Drawing.Point(42, 133);
+            this.Avengers.Location = new System.Drawing.Point(59, 133);
             this.Avengers.Name = "Avengers";
             this.Avengers.Size = new System.Drawing.Size(141, 44);
             this.Avengers.TabIndex = 1;
@@ -124,7 +122,7 @@
             // 
             // Gta5
             // 
-            this.Gta5.Location = new System.Drawing.Point(42, 200);
+            this.Gta5.Location = new System.Drawing.Point(59, 200);
             this.Gta5.Name = "Gta5";
             this.Gta5.Size = new System.Drawing.Size(141, 44);
             this.Gta5.TabIndex = 5;
@@ -134,7 +132,7 @@
             // 
             // Rugrats
             // 
-            this.Rugrats.Location = new System.Drawing.Point(42, 262);
+            this.Rugrats.Location = new System.Drawing.Point(324, 265);
             this.Rugrats.Name = "Rugrats";
             this.Rugrats.Size = new System.Drawing.Size(141, 42);
             this.Rugrats.TabIndex = 9;
@@ -142,32 +140,11 @@
             this.Rugrats.UseVisualStyleBackColor = true;
             this.Rugrats.Click += new System.EventHandler(this.Rugrats_Click);
             // 
-            // Runescape
-            // 
-            this.Runescape.Location = new System.Drawing.Point(234, 262);
-            this.Runescape.Name = "Runescape";
-            this.Runescape.Size = new System.Drawing.Size(141, 41);
-            this.Runescape.TabIndex = 10;
-            this.Runescape.Text = "NON-FUCTIONING";
-            this.Runescape.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(66, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.voided);
-            // 
             // Thema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 319);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Runescape);
             this.Controls.Add(this.Rugrats);
             this.Controls.Add(this.Social);
             this.Controls.Add(this.Disney);
@@ -197,7 +174,5 @@
         private System.Windows.Forms.Button Royalty;
         private System.Windows.Forms.Button Gta5;
         private System.Windows.Forms.Button Rugrats;
-        private System.Windows.Forms.Button Runescape;
-        private System.Windows.Forms.Button button1;
     }
 }

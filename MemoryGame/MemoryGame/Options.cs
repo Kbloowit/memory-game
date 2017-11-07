@@ -30,15 +30,21 @@ namespace MemoryGame
 
         private void checkbox_soundeffects_CheckedChanged(object sender, EventArgs e)// soundeffect checkbox
         {
-            if (Options.Soundeffectsstate == false)
-            Options.Soundeffectsstate = true; //zet de geluidseffecten op UIT
-            if (Options.Soundeffectsstate == true)
-                Options.Soundeffectsstate = false; // zet de geluidseffecten op AAN
-                
+            if (checkbox_soundeffects.CheckState == CheckState.Checked) //checkbox aangevinkt
+            {
+
+                Options.Soundeffectsstate = true; //Soundeffects uit
+
+            }
+            if (checkbox_soundeffects.CheckState == CheckState.Unchecked)
+            {
+
+                Options.Soundeffectsstate = false; //zet soundeffect weer aan
+
+
+            }
 
         }
-
-        
 
        
 
