@@ -564,6 +564,7 @@ namespace MemoryGame
                 Thema theme = new Thema();
                 time = 60;
                 frontImage.Clear();
+                ResetScore();
                 theme.Show();
                 Sounds.Stopmuziek();
                 Sounds.Startmuziek();
@@ -575,6 +576,7 @@ namespace MemoryGame
                 Thema theme = new Thema();
                 frontImage.Clear();
                 time = 60;
+                ResetScore();
                 theme.Show();
                 Sounds.Stopmuziek();
                 Sounds.Startmuziek();
