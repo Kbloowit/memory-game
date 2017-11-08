@@ -567,7 +567,6 @@ namespace MemoryGame
                 ResetScore();
                 theme.Show();
                 Sounds.Stopmuziek();
-               
                 Sounds.Startmuziek();
                 this.Dispose(); //gooit form instance uit het geheugen
 

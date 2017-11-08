@@ -83,7 +83,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(40, 46);
+            this.buttonStart.Location = new System.Drawing.Point(16, 33);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(270, 88);
@@ -303,7 +303,7 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(335, 46);
+            this.buttonReset.Location = new System.Drawing.Point(311, 33);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(270, 88);
@@ -314,7 +314,7 @@
             // 
             // buttonOptions
             // 
-            this.buttonOptions.Location = new System.Drawing.Point(40, 163);
+            this.buttonOptions.Location = new System.Drawing.Point(16, 144);
             this.buttonOptions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonOptions.Name = "buttonOptions";
             this.buttonOptions.Size = new System.Drawing.Size(270, 88);
@@ -327,7 +327,7 @@
             // 
             this.score1.AutoSize = true;
             this.score1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score1.Location = new System.Drawing.Point(1560, 121);
+            this.score1.Location = new System.Drawing.Point(1608, 121);
             this.score1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.score1.Name = "score1";
             this.score1.Size = new System.Drawing.Size(41, 44);
@@ -338,7 +338,7 @@
             // 
             this.score2.AutoSize = true;
             this.score2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score2.Location = new System.Drawing.Point(1560, 215);
+            this.score2.Location = new System.Drawing.Point(1608, 215);
             this.score2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.score2.Name = "score2";
             this.score2.Size = new System.Drawing.Size(41, 44);
@@ -349,7 +349,7 @@
             // 
             this.x1.AutoSize = true;
             this.x1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x1.Location = new System.Drawing.Point(1734, 121);
+            this.x1.Location = new System.Drawing.Point(1772, 121);
             this.x1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.x1.Name = "x1";
             this.x1.Size = new System.Drawing.Size(39, 44);
@@ -360,7 +360,7 @@
             // 
             this.x2.AutoSize = true;
             this.x2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x2.Location = new System.Drawing.Point(1734, 208);
+            this.x2.Location = new System.Drawing.Point(1772, 208);
             this.x2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.x2.Name = "x2";
             this.x2.Size = new System.Drawing.Size(53, 44);
@@ -371,7 +371,7 @@
             // 
             this.labelPairs.AutoSize = true;
             this.labelPairs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPairs.Location = new System.Drawing.Point(1538, 38);
+            this.labelPairs.Location = new System.Drawing.Point(1586, 38);
             this.labelPairs.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPairs.Name = "labelPairs";
             this.labelPairs.Size = new System.Drawing.Size(97, 42);
@@ -382,7 +382,7 @@
             // 
             this.labelTurn.AutoSize = true;
             this.labelTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTurn.Location = new System.Drawing.Point(1704, 38);
+            this.labelTurn.Location = new System.Drawing.Point(1742, 38);
             this.labelTurn.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTurn.Name = "labelTurn";
             this.labelTurn.Size = new System.Drawing.Size(107, 42);
@@ -413,7 +413,7 @@
             // 
             // buttonQuitSave
             // 
-            this.buttonQuitSave.Location = new System.Drawing.Point(192, 283);
+            this.buttonQuitSave.Location = new System.Drawing.Point(164, 256);
             this.buttonQuitSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonQuitSave.Name = "buttonQuitSave";
             this.buttonQuitSave.Size = new System.Drawing.Size(270, 88);
@@ -424,7 +424,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(335, 163);
+            this.button1.Location = new System.Drawing.Point(311, 144);
             this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(270, 88);
@@ -435,14 +435,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonReset);
-            this.groupBox1.Controls.Add(this.buttonQuitSave);
             this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonQuitSave);
             this.groupBox1.Controls.Add(this.buttonStart);
+            this.groupBox1.Controls.Add(this.buttonReset);
             this.groupBox1.Controls.Add(this.buttonOptions);
-            this.groupBox1.Location = new System.Drawing.Point(1278, 560);
+            this.groupBox1.Location = new System.Drawing.Point(1268, 581);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(635, 406);
+            this.groupBox1.Size = new System.Drawing.Size(600, 363);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
@@ -453,7 +453,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1961, 1076);
+            this.ClientSize = new System.Drawing.Size(1941, 1079);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.labelPlayers);
@@ -484,7 +484,7 @@
             this.Controls.Add(this.TimeLeft);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.MinimumSize = new System.Drawing.Size(1872, 1090);
+            this.MinimumSize = new System.Drawing.Size(1967, 1150);
             this.Name = "Gamepanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memorie";
