@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Game>
   <players>
-    <Player1>a</Player1>
-    <Player2>s</Player2>
+    <Player1></Player1>
+    <Player2></Player2>
   </players>
   <Score>
-    <ScoreP1>2</ScoreP1>
-    <ScoreP2>1</ScoreP2>
+    <ScoreP1>0</ScoreP1>
+    <ScoreP2>0</ScoreP2>
   </Score>
   <Turn>1</Turn>
-  <PicturesBoxes>
+  <PictureBoxes>
     <Picturebox1>0</Picturebox1>
     <Picturebox2>0</Picturebox2>
     <Picturebox3>0</Picturebox3>
@@ -26,6 +26,26 @@
     <Picturebox14>0</Picturebox14>
     <Picturebox15>0</Picturebox15>
     <Picturebox16>0</Picturebox16>
-  </PicturesBoxes>
-  <Achtergrond>Color [RoyalBlue]</Achtergrond>
+  </PictureBoxes>
+  <Timer>60</Timer>
+  <Turn>1</Turn>
+  <Thema>4</Thema>
+  <Visible>
+    <Picbox1>False</Picbox1>
+    <Picbox2>False</Picbox2>
+    <Picbox3>False</Picbox3>
+    <Picbox4>False</Picbox4>
+    <Picbox5>False</Picbox5>
+    <Picbox6>False</Picbox6>
+    <Picbox7>False</Picbox7>
+    <Picbox8>False</Picbox8>
+    <Picbox9>False</Picbox9>
+    <Picbox10>False</Picbox10>
+    <Picbox11>False</Picbox11>
+    <Picbox12>False</Picbox12>
+    <Picbox13>False</Picbox13>
+    <Picbox14>False</Picbox14>
+    <Picbox15>False</Picbox15>
+    <Picbox16>False</Picbox16>
+  </Visible>
 </Game>

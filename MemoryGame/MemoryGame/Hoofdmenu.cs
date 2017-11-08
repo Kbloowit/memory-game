@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.IO;
+using System.Xml;
 
 namespace MemoryGame
 {
@@ -44,10 +45,22 @@ namespace MemoryGame
         {
             if (File.Exists("Memory.sav"))
             {
+                string[] spelernamen = new string[2];
                 DialogResult dialog = MessageBox.Show("Wilt u verder met het vorige spel?", "Spel laden?", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
-                    SaveXML.Load(meme);
+                    XmlDocument xDoc = new XmlDocument();
+                    xDoc.Load("Memory.sav");
+
+                    spelernamen[0] = Convert.ToString(xDoc.SelectSingleNode("Game/players/Player1").InnerText);
+                    spelernamen[1] = Convert.ToString(xDoc.SelectSingleNode("Game/players/Player2").InnerText);
+
+                    Savegameused = true;
+                    Gamepanel game = new Gamepanel(spelernamen);
+                    this.Hide();
+                    game.ShowDialog();
+
+
                 }
                 else
                 {
@@ -79,5 +92,9 @@ namespace MemoryGame
 
             
         }
+
+        public static bool Savegameused { get; set; }
+
+
     }
 }

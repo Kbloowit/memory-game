@@ -48,7 +48,7 @@ namespace MemoryGame
                 writer.WriteStartElement("Turn"); // Start opslaan Turn
                 writer.WriteString(Gamepanel.Turn.ToString()); // turn nummer
                 writer.WriteEndElement(); // Einde opslaan Turn
-                writer.WriteStartElement("PicturesBoxes");
+                writer.WriteStartElement("PictureBoxes");
                 writer.WriteStartElement("Picturebox1");
                 writer.WriteString(Convert.ToString(Gamepanel.pictures[0]));
                 writer.WriteEndElement();
@@ -98,8 +98,64 @@ namespace MemoryGame
                 writer.WriteString(Convert.ToString(Gamepanel.pictures[15]));
                 writer.WriteEndElement();
                 writer.WriteEndElement(); // Einde opslaan pictureBoxes
-                writer.WriteStartElement("Achtergrond");
-                writer.WriteString(Convert.ToString(Themez.Achtergrond));
+                writer.WriteStartElement("Timer");
+                writer.WriteString(Convert.ToString(Gamepanel.time));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Turn");
+                writer.WriteString(Convert.ToString(Gamepanel.Turn));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Thema");
+                writer.WriteString(Convert.ToString(Themez.Themepicked));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Visible");
+                writer.WriteStartElement("Picbox1");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[0]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox2");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[1]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox3");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[2]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox4");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[3]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox5");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[4]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox6");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[5]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox7");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[6]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox8");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[7]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox9");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[8]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox10");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[9]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox11");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[10]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox12");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[11]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox13");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[12]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox14");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[13]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox15");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[14]));
+                writer.WriteEndElement();
+                writer.WriteStartElement("Picbox16");
+                writer.WriteString(Convert.ToString(Gamepanel.visible[15]));
+                writer.WriteEndElement();
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
 

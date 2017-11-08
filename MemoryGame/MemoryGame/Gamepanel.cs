@@ -17,7 +17,7 @@ namespace MemoryGame
         public static List<string> Players = new List<string>();
         public static List<int> plaatjenummer = new List<int>();
         public static Dictionary<int, Image> frontImage = new Dictionary<int, Image>();
-        public static int[] meme = new int[16];
+        
 
 
         public static int Turn = 1;
@@ -93,6 +93,7 @@ namespace MemoryGame
             Players.Add(players[0]);
             Players.Add(players[1]);
             BackColor = Themez.Achtergrond;// ophalen van de in thema bepaalde achtergrondskleur
+           
         }
         /* maakt een picturebox array*/
         private PictureBox[] pictureBoxes
@@ -100,7 +101,7 @@ namespace MemoryGame
             get { return Controls.OfType<PictureBox>().ToArray(); }
         }
         public static int[] pictures = new int[16]; // Hier worden alle random cijfers in opgeslagen, zodat deze worden onthouden voor de save-game.
-
+        public static bool[] visible = new bool[16];
         /*maakt een array met images, IEnumerable zorgt ervoor dat de Image class gebruikt kan worden voor een Foreach loop(ggrks)*/
         public static IEnumerable<Image> images
         {
@@ -300,7 +301,7 @@ namespace MemoryGame
 
         public void ResetImages()
         {
-            Console.WriteLine("Work");
+            
             foreach (var pic in pictureBoxes)
             {
                 pic.Tag = null; //zet de tag van de picturebox op leeg
@@ -312,7 +313,7 @@ namespace MemoryGame
             setRandomImages();
             time = 60; //zet de int time naar 60
             timer.Start(); //start de timer
-            Console.WriteLine("Already");
+            
         }
         
         private void getFreeSlot(int plaatjenummer)
@@ -327,7 +328,7 @@ namespace MemoryGame
             while (pictureBoxes[num].Tag != null); //het bovenste doet hij totdat pictures[num](array om de getallen van de plaatjes in op te slaan) niet meer 0 is.
             pictureBoxes[num].Image = Properties.Resources.BackImage; // Verstopt het plaatje
             pictureBoxes[num].Tag = plaatjenummer;
-            meme[num] = plaatjenummer;
+            pictures[num] = plaatjenummer;
             
         }
 
@@ -342,7 +343,7 @@ namespace MemoryGame
                 frontImage.Add(plaatje, image);
                 plaatje++;
             }
-            
+                      
         }
 
         private void CLICKTIMER_TICK(object sender, EventArgs e)
@@ -361,11 +362,7 @@ namespace MemoryGame
 
         public void clickImage(object sender, EventArgs e)
         {
-            foreach (int num in meme)
-            {
-                Console.WriteLine(meme[num]);
-                Console.WriteLine("ok");
-            }
+
             if (!allowClick) return; //als allowclick false is, doet hij niks als je op n kaart klikt
             if (x1.Text == "x") // voor de omgedraaid aantal kaarten int
 
@@ -408,7 +405,24 @@ namespace MemoryGame
             if (ID == Convert.ToInt32(firstGuess.Tag)) //als plaatje 1 gelijk is aan plaatje 2 en niet hetzelfde plaatjes is (eg zelfde pic box)
             {
                 pic.Visible = firstGuess.Visible = false; // de afbeeldingen worden onzicht baar en onklikbaar
-                
+                int vischeck = 0;
+                foreach (var i in pictureBoxes)
+                {
+                    if (i.Visible == false)
+                    {
+                        visible[vischeck] = false;
+                        vischeck++;
+                    }
+                    else
+                    {
+                        vischeck++;
+                    }
+                        
+            
+
+                    
+
+                }
                 
 
                 if (x1.Text == "x") //score p1 omhoog als p1 degene is die het kiest
@@ -432,7 +446,7 @@ namespace MemoryGame
                 firstGuess = null;
                 if (Options.Soundeffectsstate == false) //speelt correct geluidseffect
                 {
-                    Sounds.Incorrect(); // tu-du-du-ding!
+                    Sounds.Incorrect(); // tu-du.
                 }
                 ToTurn();
 
@@ -452,13 +466,13 @@ namespace MemoryGame
 
             if (countP1 > countP2) //speler 1 heeft de meeste punten
             {
-                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
+                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten!" + NameP2.Text + " had " + countP2 + " punten");
 
             }
 
             else if (countP2 > countP1) //speler 2 heeft de meeste punten
             {
-                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
+                MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
 
             }
             else if (countP1 == countP2)// puntenaantal is gelijk
@@ -483,6 +497,7 @@ namespace MemoryGame
             clickTimer.Interval = 1000; //interval clicktimer (1000ms = 1s)
             clickTimer.Tick += CLICKTIMER_TICK; // de clicktimer loopt gelijk aan de gametimer
             buttonStart.Enabled = false; //je kan niet meer op de startknop drukken
+            Setnumberwang(); // zet alle nummers in de visible array op true
         }
 
         public void P1Score() //score p1 wordt geupdate
@@ -502,13 +517,13 @@ namespace MemoryGame
 
         public void ToTurn() // wisselt beurt
         {
-            if (x1.Text == "x") //als p1 aan de beurt was
+            if (Turn == 1) //als p1 aan de beurt was
             {
                 x1.Text = "...";
                 x2.Text = "x";
                 Turn = 2;
             }
-            else if (x2.Text == "x") //als p2 aan de beurt was
+            else if (Turn == 2) //als p2 aan de beurt was
             {
                 x1.Text = "x";
                 x2.Text = "...";
@@ -574,7 +589,10 @@ namespace MemoryGame
         private void buttonOptions_Click(object sender, EventArgs e) //als op de opties knop wordt gedrukt
         {
             Options opties = new Options(); //opent nieuw opties form
+            timer.Stop();
             opties.ShowDialog();
+            timer.Start();
+
         }
 
         private void Form2_Load(object sender, EventArgs e) // op laden form 2
@@ -623,6 +641,154 @@ namespace MemoryGame
 
             }
 
+            if (Hoofdmenu.Savegameused == true)
+            {
+                XmlDocument xDoc = new XmlDocument();
+                xDoc.Load("Memory.sav");
+
+                score1.Text = Convert.ToString(xDoc.SelectSingleNode("Game/Score/ScoreP1").InnerText);
+                countP1 = Convert.ToInt32(xDoc.SelectSingleNode("Game/Score/ScoreP1").InnerText);
+
+                score2.Text = Convert.ToString(xDoc.SelectSingleNode("Game/Score/ScoreP2").InnerText);
+                countP2 = Convert.ToInt32(xDoc.SelectSingleNode("Game/Score/ScoreP2").InnerText);
+
+                time = Convert.ToInt32(xDoc.SelectSingleNode("Game/Timer").InnerText);
+                TimeLeft.Text = "00:" + Convert.ToString(xDoc.SelectSingleNode("Game/Timer").InnerText);
+
+                Turn = Convert.ToInt32(xDoc.SelectSingleNode("Game/Turn").InnerText);
+                ToTurn();
+
+                Themez.Themepicked = Convert.ToInt32(xDoc.SelectSingleNode("Game/Thema").InnerText);
+
+                switch (Themez.Themepicked)
+                {
+                    case 1:
+                        {
+                            BackColor = Color.Crimson;
+                            break;
+                        }
+                    case 2:
+                        {
+
+                            BackColor = Color.Blue;
+                            break;
+                        }
+                    case 3:
+                        {
+                            BackColor = Color.RoyalBlue;
+                            break;
+                        }
+                    case 4:
+                        {
+                            BackColor = Color.BlueViolet;
+                            break;
+                        }
+                    case 5:
+                        {
+                            BackColor = Color.YellowGreen;
+                            break;
+                        }
+                    case 6:
+                        {
+                            BackColor = Color.DarkOrange;
+                            break;
+                        }
+                    case 7:
+                        {
+                            BackColor = Color.PaleTurquoise;
+                            break;
+                        }
+                    case 8:
+                        {
+                            BackColor = Color.LightPink;
+                            break;
+                        }
+                    case 9:
+                        {
+                            BackColor = Color.Beige;
+                            break;
+                        }
+                    case 10:
+                        {
+                            BackColor = Color.White;
+                            break;
+                        }
+
+                }
+                int plaatje = 0;
+                foreach (var image in images)
+                {
+
+                    frontImage.Add(plaatje, image);
+                    plaatje++;
+                }
+
+                int[] picboxid = new int[16];
+                picboxid[0] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox1").InnerText);
+                picboxid[1] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox2").InnerText);
+                picboxid[2] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox3").InnerText);
+                picboxid[3] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox4").InnerText);
+                picboxid[4] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox5").InnerText);
+                picboxid[5] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox6").InnerText);
+                picboxid[6] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox7").InnerText);
+                picboxid[7] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox8").InnerText);
+                picboxid[8] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox9").InnerText);
+                picboxid[9] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox10").InnerText);
+                picboxid[10] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox11").InnerText);
+                picboxid[11] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox12").InnerText);
+                picboxid[12] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox13").InnerText);
+                picboxid[13] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox14").InnerText);
+                picboxid[14] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox15").InnerText);
+                picboxid[15] = Convert.ToInt32(xDoc.SelectSingleNode("Game/PictureBoxes/Picturebox16").InnerText);
+                
+
+                int ugh = 0;
+                foreach (var num in pictureBoxes)
+                {
+                    num.Tag = picboxid[ugh];
+                    num.Visible = true;
+                    pictureBoxes[ugh].Image = Properties.Resources.BackImage; // Verstopt het plaatje
+                    pictures[ugh] = picboxid[ugh];
+                    ugh++;
+                }
+                visible[0] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox1").InnerText);
+                visible[1] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox2").InnerText);
+                visible[2] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox3").InnerText);
+                visible[3] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox4").InnerText);
+                visible[4] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox5").InnerText);
+                visible[5] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox6").InnerText);
+                visible[6] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox7").InnerText);
+                visible[7] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox8").InnerText);
+                visible[8] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox9").InnerText);
+                visible[9] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox10").InnerText);
+                visible[10] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox11").InnerText);
+                visible[11] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox12").InnerText);
+                visible[12] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox13").InnerText);
+                visible[13] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox14").InnerText);
+                visible[14] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox15").InnerText);
+                visible[15] = Convert.ToBoolean(xDoc.SelectSingleNode("Game/Visible/Picbox16").InnerText);
+                int uuu = 0;
+                foreach (var pic in pictureBoxes)
+                {
+                    pic.Visible = visible[uuu];
+                    uuu++;
+                   
+                }
+                
+
+                allowClick = true;
+                startGameTimer();
+                clickTimer.Interval = 1000; //interval clicktimer (1000ms = 1s)
+                clickTimer.Tick += CLICKTIMER_TICK; // de clicktimer loopt gelijk aan de gametimer
+                buttonStart.Enabled = false; //je kan niet meer op de startknop drukken
+
+
+
+
+            }
+
+
+
         }
 
         private void buttonQuitSave_Click(object sender, EventArgs e) //als de save knop wordt ingedrukt
@@ -632,7 +798,7 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
                 SaveXML.button_click();
-                // Application.Exit();
+                Application.Exit();
             }
             else if (dialog == DialogResult.No) //als No wordt gekozen
             {
@@ -648,15 +814,23 @@ namespace MemoryGame
 
         private void Gamepanel_FormClosing(object sender, FormClosedEventArgs e)
         {
-            foreach(int i in pictures)
-            {
-                pictures[i] = 0;
-            }
+            Application.Exit();
         }
 
         private void Gamepanel_FormClosed(object sender, FormClosedEventArgs e)
         {
              Application.Exit();
         }
+
+        private void Setnumberwang()
+        {
+            int foreachinvisible = 0;
+            foreach (bool item in visible)
+            {
+                visible[foreachinvisible] = true;
+                foreachinvisible++;
+            }
+        }
+
     } 
 }
