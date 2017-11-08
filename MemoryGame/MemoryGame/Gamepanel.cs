@@ -317,7 +317,7 @@ namespace MemoryGame
                 frontImage.Add(plaatje, image);
                 plaatje++;
             }
-            
+                      
         }
 
         private void CLICKTIMER_TICK(object sender, EventArgs e)
@@ -624,10 +624,7 @@ namespace MemoryGame
 
         private void Gamepanel_FormClosing(object sender, FormClosedEventArgs e)
         {
-            foreach(int i in pictures)
-            {
-                pictures[i] = 0;
-            }
+            Application.Exit();
         }
         
             

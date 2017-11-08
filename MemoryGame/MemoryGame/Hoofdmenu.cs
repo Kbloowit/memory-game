@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.IO;
+using System.Xml;
 
 namespace MemoryGame
 {
@@ -52,7 +53,10 @@ namespace MemoryGame
                 DialogResult dialog = MessageBox.Show("Wilt u verder met het vorige spel?", "Resume?", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
-                    SaveXML.Load(meme);
+                    XmlDocument xDoc = new XmlDocument();
+                    xDoc.Load("Memory.sav");
+
+
                 }
                 else
                 {
