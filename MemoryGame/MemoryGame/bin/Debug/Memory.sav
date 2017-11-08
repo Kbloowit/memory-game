@@ -5,47 +5,47 @@
     <Player2></Player2>
   </players>
   <Score>
-    <ScoreP1>1</ScoreP1>
+    <ScoreP1>0</ScoreP1>
     <ScoreP2>0</ScoreP2>
   </Score>
   <Turn>1</Turn>
   <PictureBoxes>
-    <Picturebox1>6</Picturebox1>
-    <Picturebox2>5</Picturebox2>
-    <Picturebox3>1</Picturebox3>
-    <Picturebox4>3</Picturebox4>
-    <Picturebox5>7</Picturebox5>
+    <Picturebox1>0</Picturebox1>
+    <Picturebox2>0</Picturebox2>
+    <Picturebox3>0</Picturebox3>
+    <Picturebox4>0</Picturebox4>
+    <Picturebox5>0</Picturebox5>
     <Picturebox6>0</Picturebox6>
-    <Picturebox7>2</Picturebox7>
-    <Picturebox8>7</Picturebox8>
-    <Picturebox9>4</Picturebox9>
-    <Picturebox10>6</Picturebox10>
-    <Picturebox11>4</Picturebox11>
-    <Picturebox12>3</Picturebox12>
+    <Picturebox7>0</Picturebox7>
+    <Picturebox8>0</Picturebox8>
+    <Picturebox9>0</Picturebox9>
+    <Picturebox10>0</Picturebox10>
+    <Picturebox11>0</Picturebox11>
+    <Picturebox12>0</Picturebox12>
     <Picturebox13>0</Picturebox13>
-    <Picturebox14>1</Picturebox14>
-    <Picturebox15>5</Picturebox15>
-    <Picturebox16>2</Picturebox16>
+    <Picturebox14>0</Picturebox14>
+    <Picturebox15>0</Picturebox15>
+    <Picturebox16>0</Picturebox16>
   </PictureBoxes>
-  <Timer>53</Timer>
+  <Timer>60</Timer>
   <Turn>1</Turn>
-  <Thema>1</Thema>
+  <Thema>4</Thema>
   <Visible>
-    <Picbox1>True</Picbox1>
-    <Picbox2>True</Picbox2>
-    <Picbox3>True</Picbox3>
-    <Picbox4>True</Picbox4>
+    <Picbox1>False</Picbox1>
+    <Picbox2>False</Picbox2>
+    <Picbox3>False</Picbox3>
+    <Picbox4>False</Picbox4>
     <Picbox5>False</Picbox5>
-    <Picbox6>True</Picbox6>
-    <Picbox7>True</Picbox7>
+    <Picbox6>False</Picbox6>
+    <Picbox7>False</Picbox7>
     <Picbox8>False</Picbox8>
-    <Picbox9>True</Picbox9>
-    <Picbox10>True</Picbox10>
-    <Picbox11>True</Picbox11>
-    <Picbox12>True</Picbox12>
-    <Picbox13>True</Picbox13>
-    <Picbox14>True</Picbox14>
-    <Picbox15>True</Picbox15>
-    <Picbox16>True</Picbox16>
+    <Picbox9>False</Picbox9>
+    <Picbox10>False</Picbox10>
+    <Picbox11>False</Picbox11>
+    <Picbox12>False</Picbox12>
+    <Picbox13>False</Picbox13>
+    <Picbox14>False</Picbox14>
+    <Picbox15>False</Picbox15>
+    <Picbox16>False</Picbox16>
   </Visible>
 </Game>

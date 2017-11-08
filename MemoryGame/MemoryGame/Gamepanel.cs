@@ -466,13 +466,13 @@ namespace MemoryGame
 
             if (countP1 > countP2) //speler 1 heeft de meeste punten
             {
-                MessageBox.Show(NameP1.Text + " Heeft gewonnen met " + countP1 + " Punten!" + NameP2.Text + " had " + countP2 + "Punten");
+                MessageBox.Show(NameP1.Text + " heeft gewonnen met " + countP1 + " punten!" + NameP2.Text + " had " + countP2 + " punten");
 
             }
 
             else if (countP2 > countP1) //speler 2 heeft de meeste punten
             {
-                MessageBox.Show(NameP2.Text + " Heeft gewonnen met " + countP2 + " Punten! " + NameP1.Text + " had " + countP1 + "Punten");
+                MessageBox.Show(NameP2.Text + " heeft gewonnen met " + countP2 + " punten! " + NameP1.Text + " had " + countP1 + " punten");
 
             }
             else if (countP1 == countP2)// puntenaantal is gelijk
@@ -589,7 +589,10 @@ namespace MemoryGame
         private void buttonOptions_Click(object sender, EventArgs e) //als op de opties knop wordt gedrukt
         {
             Options opties = new Options(); //opent nieuw opties form
+            timer.Stop();
             opties.ShowDialog();
+            timer.Start();
+
         }
 
         private void Form2_Load(object sender, EventArgs e) // op laden form 2
@@ -795,7 +798,7 @@ namespace MemoryGame
             if (dialog == DialogResult.Yes) //als Yes wordt gekozen
             {
                 SaveXML.button_click();
-                // Application.Exit();
+                Application.Exit();
             }
             else if (dialog == DialogResult.No) //als No wordt gekozen
             {
