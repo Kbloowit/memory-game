@@ -481,7 +481,9 @@ namespace MemoryGame
 
             }
 
-            
+            Highscores meme = new Highscores();
+            meme.ShowDialog();
+
             ResetScore(); //scores worden weer 0
             ResetImages(); //pic boxes worden visible etc
 
@@ -782,7 +784,7 @@ namespace MemoryGame
                 clickTimer.Tick += CLICKTIMER_TICK; // de clicktimer loopt gelijk aan de gametimer
                 buttonStart.Enabled = false; //je kan niet meer op de startknop drukken
 
-
+                
 
 
             }
@@ -832,5 +834,11 @@ namespace MemoryGame
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Highscores meme = new Highscores();
+            meme.ShowDialog();
+            this.Hide();
+        }
     } 
 }

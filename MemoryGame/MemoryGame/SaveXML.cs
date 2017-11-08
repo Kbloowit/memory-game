@@ -204,43 +204,10 @@ namespace MemoryGame
             }
         }
 
-        public static string Load(string data)
+        public static void uggggh()
         {
-            if (!File.Exists("Memory.sav"))
-                return String.Empty;
 
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load("Memory.sav");
-
-            //xDoc.SelectSingleNode("Game/Turn").InnerText;
-            SaveXML.Load("Game/players/Player1");
-            SaveXML.Load("Game/players/Player2");
-
-            SaveXML.Load("Game/Score/ScoreP1");
-            SaveXML.Load("Game/Score/ScoreP2");
-
-            SaveXML.Load("Game/Turn");
-
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[0]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[1]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[2]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[3]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[4]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[5]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[6]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[7]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[8]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[9]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[10]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[11]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[12]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[13]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[14]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[15]));
-
-            return xDoc.SelectSingleNode(data).InnerText;
         }
-
 
 
 
