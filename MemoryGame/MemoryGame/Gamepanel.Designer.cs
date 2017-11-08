@@ -283,9 +283,9 @@
             this.NameP1.Location = new System.Drawing.Point(1284, 121);
             this.NameP1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameP1.Name = "NameP1";
-            this.NameP1.Size = new System.Drawing.Size(102, 37);
+            this.NameP1.Size = new System.Drawing.Size(133, 37);
             this.NameP1.TabIndex = 18;
-            this.NameP1.Text = "label2";
+            this.NameP1.Text = "Speler 1";
             // 
             // NameP2
             // 
@@ -294,9 +294,9 @@
             this.NameP2.Location = new System.Drawing.Point(1284, 215);
             this.NameP2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.NameP2.Name = "NameP2";
-            this.NameP2.Size = new System.Drawing.Size(102, 37);
+            this.NameP2.Size = new System.Drawing.Size(135, 37);
             this.NameP2.TabIndex = 19;
-            this.NameP2.Text = "label3";
+            this.NameP2.Text = "Speler 2";
             // 
             // buttonReset
             // 
@@ -357,7 +357,7 @@
             // 
             this.x2.AutoSize = true;
             this.x2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.x2.Location = new System.Drawing.Point(1720, 208);
+            this.x2.Location = new System.Drawing.Point(1734, 208);
             this.x2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.x2.Name = "x2";
             this.x2.Size = new System.Drawing.Size(53, 44);
@@ -371,9 +371,9 @@
             this.labelPairs.Location = new System.Drawing.Point(1538, 38);
             this.labelPairs.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPairs.Name = "labelPairs";
-            this.labelPairs.Size = new System.Drawing.Size(103, 42);
+            this.labelPairs.Size = new System.Drawing.Size(97, 42);
             this.labelPairs.TabIndex = 27;
-            this.labelPairs.Text = "Pairs";
+            this.labelPairs.Text = "Paar";
             // 
             // labelTurn
             // 
@@ -382,9 +382,9 @@
             this.labelTurn.Location = new System.Drawing.Point(1704, 38);
             this.labelTurn.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTurn.Name = "labelTurn";
-            this.labelTurn.Size = new System.Drawing.Size(95, 42);
+            this.labelTurn.Size = new System.Drawing.Size(107, 42);
             this.labelTurn.TabIndex = 28;
-            this.labelTurn.Text = "Turn";
+            this.labelTurn.Text = "Beurt";
             // 
             // labelPlayers
             // 
@@ -393,20 +393,20 @@
             this.labelPlayers.Location = new System.Drawing.Point(1286, 38);
             this.labelPlayers.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPlayers.Name = "labelPlayers";
-            this.labelPlayers.Size = new System.Drawing.Size(143, 42);
+            this.labelPlayers.Size = new System.Drawing.Size(145, 42);
             this.labelPlayers.TabIndex = 29;
-            this.labelPlayers.Text = "Players";
+            this.labelPlayers.Text = "Spelers";
             // 
             // Timername
             // 
             this.Timername.AutoSize = true;
             this.Timername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timername.Location = new System.Drawing.Point(1496, 344);
+            this.Timername.Location = new System.Drawing.Point(1472, 344);
             this.Timername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Timername.Name = "Timername";
-            this.Timername.Size = new System.Drawing.Size(133, 48);
+            this.Timername.Size = new System.Drawing.Size(191, 48);
             this.Timername.TabIndex = 30;
-            this.Timername.Text = "Timer";
+            this.Timername.Text = "Speeltijd";
             // 
             // buttonQuitSave
             // 
@@ -415,7 +415,7 @@
             this.buttonQuitSave.Name = "buttonQuitSave";
             this.buttonQuitSave.Size = new System.Drawing.Size(270, 88);
             this.buttonQuitSave.TabIndex = 31;
-            this.buttonQuitSave.Text = "Quit/Save";
+            this.buttonQuitSave.Text = "Afsluiten/Opslaan";
             this.buttonQuitSave.UseVisualStyleBackColor = true;
             this.buttonQuitSave.Click += new System.EventHandler(this.buttonQuitSave_Click);
             // 
@@ -425,7 +425,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1804, 1140);
+            this.ClientSize = new System.Drawing.Size(1858, 1140);
             this.Controls.Add(this.buttonQuitSave);
             this.Controls.Add(this.Timername);
             this.Controls.Add(this.labelPlayers);
@@ -460,7 +460,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Gamepanel";
-            this.Text = "Memory Game";
+            this.Text = "Memorie";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gamepanel_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();

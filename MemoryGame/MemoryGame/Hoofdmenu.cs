@@ -27,11 +27,7 @@ namespace MemoryGame
         {
             InitializeComponent();
             /* dit start de pentakill muziek*/
-            
-            
-            
         }
-
 
         private void buttonOptions_Click(object sender, EventArgs e)
         {
@@ -43,14 +39,13 @@ namespace MemoryGame
            
             /* dit moet het hoofdmenu form sluiten maar het doet nog niet helemaal wat ik wil*/
 
-
         }
 
         public void buttonPlay_Click(object sender, EventArgs e)
         {
             if (File.Exists("Memory.sav"))
             {
-                DialogResult dialog = MessageBox.Show("Wilt u verder met het vorige spel?", "Resume?", MessageBoxButtons.YesNo);
+                DialogResult dialog = MessageBox.Show("Wilt u verder met het vorige spel?", "Spel laden?", MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.Yes)
                 {
                     XmlDocument xDoc = new XmlDocument();

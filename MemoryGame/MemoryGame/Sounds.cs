@@ -148,5 +148,12 @@ namespace MemoryGame
             
         }
 
+        public static void Storage() //Storage thema
+        {
+
+            grunty.URL = Directory.Basedirectory() + "/muziek/BackgroundM/Storage.mp3";
+
+        }
+
     }
 }

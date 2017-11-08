@@ -106,6 +106,7 @@ namespace MemoryGame
         {
             get
             {
+                // Cars
                 if (Themez.Themepicked == 1)
                 {
                     return new Image[]
@@ -121,6 +122,7 @@ namespace MemoryGame
                     Properties.Resources.cars8
                         };
                 }
+                // Avengers 
                 if (Themez.Themepicked == 2)
                 {
                     return new Image[]
@@ -136,6 +138,7 @@ namespace MemoryGame
                     Properties.Resources.widow
                         };
                 }
+                // Royality
                 if (Themez.Themepicked == 3)
                 {
                     return new Image[]
@@ -151,6 +154,7 @@ namespace MemoryGame
                     Properties.Resources.koningshuis8
                         };
                 }
+                // Winx
                 if (Themez.Themepicked == 4)
                 {
                     return new Image[]
@@ -166,6 +170,7 @@ namespace MemoryGame
                     Properties.Resources.Winx8
                         };
                 }
+                // GTA 5
                 if (Themez.Themepicked == 5)
                 {
                     return new Image[]
@@ -181,6 +186,7 @@ namespace MemoryGame
                     Properties.Resources.gtav8
                         };
                 }
+                // Formule1
                 if (Themez.Themepicked == 6)
                 {
                     return new Image[]
@@ -196,6 +202,7 @@ namespace MemoryGame
                     Properties.Resources.formule8
                         };
                 }
+                // Social
                 if (Themez.Themepicked == 7)
                 {
                     return new Image[]
@@ -211,6 +218,7 @@ namespace MemoryGame
                     Properties.Resources.social8
                         };
                 }
+                // Disney
                 if (Themez.Themepicked == 8)
                 {
                     return new Image[]
@@ -226,6 +234,7 @@ namespace MemoryGame
                     Properties.Resources.Disney8
                         };
                 }
+                // Regrats
                 if (Themez.Themepicked == 9)
                 {
                     return new Image[]
@@ -239,6 +248,22 @@ namespace MemoryGame
                     Properties.Resources.Rugrats6,
                     Properties.Resources.Rugrats7,
                     Properties.Resources.Rugrats8
+                        };
+                }
+                // Storage
+                if (Themez.Themepicked == 10)
+                {
+                    return new Image[]
+                        {
+                    /*  onze image files voor het Rugrats thema*/
+                    Properties.Resources.StorageCD,
+                    Properties.Resources.StorageCloud,
+                    Properties.Resources.StorageDVD,
+                    Properties.Resources.StorageFloppy,
+                    Properties.Resources.StorageHDD,
+                    Properties.Resources.StorageRAM,
+                    Properties.Resources.StorageSD,
+                    Properties.Resources.StorageUSB
                         };
                 }
 
@@ -555,6 +580,7 @@ namespace MemoryGame
         private void Form2_Load(object sender, EventArgs e) // op laden form 2
         {
             Sounds.Stopmuziek(); //stops alle lopende achtergrond muziek
+            // Overzicht achtergrond muziek
             switch (Themez.Themepicked)
             {
                 case 1:
@@ -584,11 +610,9 @@ namespace MemoryGame
                 case 9: //rugrats heeft nog geen muziek dus nu deze placeholder
                     Sounds.Siivagunner();
                     break;
-
-
-
-
-
+                case 10:
+                    Sounds.Storage();
+                    break;
             }
 
 
@@ -626,12 +650,10 @@ namespace MemoryGame
         {
             Application.Exit();
         }
-        
-            
-            
 
-
-
-
+        private void Gamepanel_FormClosed(object sender, FormClosedEventArgs e)
+        {
+             Application.Exit();
+        }
     } 
 }

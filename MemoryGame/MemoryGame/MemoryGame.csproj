@@ -284,6 +284,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Memory.ico" />
+    <None Include="Resources\StorageUSB.png" />
+    <None Include="Resources\StorageSD.png" />
+    <None Include="Resources\StorageRAM.png" />
+    <None Include="Resources\StorageHDD.png" />
+    <None Include="Resources\StorageFloppy.png" />
+    <None Include="Resources\StorageDVD.png" />
+    <None Include="Resources\StorageCloud.png" />
+    <None Include="Resources\StorageCD.png" />
     <None Include="Resources\gtav8.png" />
     <None Include="Resources\social media Whatsapp.png" />
     <None Include="Resources\social media twitter.png" />
