@@ -12,31 +12,31 @@ namespace MemoryGame
     {
 
 
-        
-         public static void button_click ()
-         {
 
-             // Hier mee word de opmaak van het XML-bestand ingesteld
-             XmlWriterSettings writerSettings = new XmlWriterSettings();
-             writerSettings.NewLineOnAttributes = true; // nieuwe regel als een nieuw attribuut wordt gemaakt
-             writerSettings.Indent = true;// indent (tabje in word) voor elk sub element
+        public static void button_click()
+        {
+
+            // Hier mee word de opmaak van het XML-bestand ingesteld
+            XmlWriterSettings writerSettings = new XmlWriterSettings();
+            writerSettings.NewLineOnAttributes = true; // nieuwe regel als een nieuw attribuut wordt gemaakt
+            writerSettings.Indent = true;// indent (tabje in word) voor elk sub element
 
 
 
-             using (XmlWriter writer = XmlWriter.Create("Memory.sav", writerSettings)) // hiermee wordt het document aangemaakt
-             {
+            using (XmlWriter writer = XmlWriter.Create("Memory.sav", writerSettings)) // hiermee wordt het document aangemaakt
+            {
 
-                 writer.WriteStartDocument(); // Hiermee wordt de writer gestart
+                writer.WriteStartDocument(); // Hiermee wordt de writer gestart
 
                 writer.WriteStartElement("Game"); //sub element zodat we weten waar t voor is thonk
                 writer.WriteStartElement("players"); // Start opslaan van Players 
-                 writer.WriteStartElement("Player1"); // Start opslaan player1
-                 writer.WriteString(Gamepanel.Players[0]);
-                 writer.WriteEndElement(); // Einde naam player 1
-                 writer.WriteStartElement("Player2"); // Begin opslaan player 2
-                 writer.WriteString(Gamepanel.Players[1]);
-                 writer.WriteEndElement(); // Einde opslaan player2
-                 writer.WriteEndElement(); // Einde opslaan Players 
+                writer.WriteStartElement("Player1"); // Start opslaan player1
+                writer.WriteString(Gamepanel.Players[0]);
+                writer.WriteEndElement(); // Einde naam player 1
+                writer.WriteStartElement("Player2"); // Begin opslaan player 2
+                writer.WriteString(Gamepanel.Players[1]);
+                writer.WriteEndElement(); // Einde opslaan player2
+                writer.WriteEndElement(); // Einde opslaan Players 
                 writer.WriteStartElement("Score"); // Start opslaan Score
                 writer.WriteStartElement("ScoreP1"); // Start opslaan Score p1
                 writer.WriteString(Convert.ToString(Gamepanel.countP1));
@@ -170,9 +170,9 @@ namespace MemoryGame
 
 
 
-             }
+            }
 
-         }
+        }
         public static void Compare()
         {
             XmlWriterSettings writerSettings = new XmlWriterSettings();
@@ -204,49 +204,28 @@ namespace MemoryGame
             }
         }
 
-        public static string Load(string data)
+        public static void uggggh()
         {
-            if (!File.Exists("Memory.sav"))
-                return String.Empty;
 
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load("Memory.sav");
-
-            //xDoc.SelectSingleNode("Game/Turn").InnerText;
-            SaveXML.Load("Game/players/Player1");
-            SaveXML.Load("Game/players/Player2");
-
-            SaveXML.Load("Game/Score/ScoreP1");
-            SaveXML.Load("Game/Score/ScoreP2");
-
-            SaveXML.Load("Game/Turn");
-
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[0]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[1]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[2]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[3]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[4]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[5]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[6]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[7]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[8]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[9]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[10]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[11]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[12]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[13]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[14]));
-            SaveXML.Load(Convert.ToString(Gamepanel.pictures[15]));
-
-            return xDoc.SelectSingleNode(data).InnerText;
         }
 
 
+        public static void Highscores()
+        {
+            XmlWriterSettings writerSettings = new XmlWriterSettings();
+            writerSettings.NewLineOnAttributes = true;
+            writerSettings.Indent = true;
+
+            using (XmlWriter writer = XmlWriter.Create("Highscores.xml", writerSettings)) // ongeveer hetzelfde als het deel hierboven maar dan specifiek voor de highscores vergelijken, ik maak zo een om de higscores in op te slaan
+            {
+                writer.WriteStartDocument();
+
+                writer.WriteStartElement("Highscores");
 
 
 
 
-
-
+            }
+        }
     }
 }
